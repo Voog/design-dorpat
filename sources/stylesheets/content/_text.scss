@@ -1,0 +1,610 @@
+// Styling rules for the site's editable content areas.
+// NB! Each editable content-area - {% content %} - should be wrapped in the element that has the "content-area" class.
+// NB! Contact forms, image galleries and tables styling rules are located in the separate partials: "_forms.scss", "_gallery.scss" and "_tables.scss".
+.content-area {
+  &:empty {
+    display: none;
+  }
+
+  @extend %clearfix;
+  @include hyphenate(true);
+  color: rgba($black, .7);
+  font-size: 18px;
+  line-height: 1.7;
+
+  .dark-background & {
+    color: rgba($white, 1);
+
+    .site-footer & {
+      color: rgba($white, 1);
+    }
+  }
+
+  .site-footer & {
+    text-align: center;
+    font-size: 14px;
+    color: rgba($black, .7);
+  }
+
+  &.footer-left {
+    font-size: 20px;
+  }
+
+  &.footer-right {
+    font-size: 16px;
+  }
+
+  // Resets the top margin for the first element and bottom margin for the last element in the content area (to prevent unwanted white-space at the beginning and the end of a content-area).
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dl,
+  table,
+  pre,
+  code,
+  iframe,
+  table,
+  form,
+  .table-container,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-center-block,
+  .edy-positionable-container-right-block,
+  .edy-texteditor-container-wrapper-left-block,
+  .edy-texteditor-container-wrapper-center,
+  .edy-texteditor-container-wrapper-right-block,
+  .edy-positionable-container-maxwidth {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Styling rules for the editable content area headings and paragraphs.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  pre,
+  code,
+  table {
+    .dark-background & {
+      color: rgba($white, 1);
+    }
+
+    .footer-inner.dark-background & {
+      color: rgba($white, .5);
+    }
+  }
+
+  // Styling rules for the editable content area headings.
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 300;
+    color: rgba($black, 1);
+    line-height: 1.4;
+
+    a {
+      color: rgba($black, 1);
+      text-decoration: none;
+    }
+  }
+
+  h1,
+  h2 {
+    .site-header & {
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+
+    @media screen and (max-width: $tablet-3) {
+      font-size: 28px;
+    }
+
+    .site-header & {
+      margin-top: .3em;
+      margin-bottom: .3em;
+      text-transform: uppercase;
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 1.1;
+
+      &.blog-title {
+        &,
+        & a {
+          margin-top: .3em;
+          margin-bottom: .3em;
+          font-size: 70px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.1;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+
+      @media screen and (max-width: $tablet-3) {
+        font-size: 32px;
+      }
+    }
+
+    &.article-title {
+      font-style: normal;
+      text-decoration: none;
+
+      // scss-lint:disable NestingDepth
+      .blog-article-page & {
+        text-align: center;
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  h2 {
+    font-size: 26px;
+    line-height: 1.4;
+
+    @media screen and (max-width: $tablet-3) {
+      font-size: 24px;
+    }
+
+    .site-header & {
+      margin-top: .2em;
+      margin-bottom: .2em;
+    }
+
+    .contacts & {
+      font-size: 28px;
+    }
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 22px;
+
+    .contacts & {
+      font-weight: 400;
+      font-size: 24px;
+    }
+  }
+
+  // Styling rules for the editable content area paragraphs, lists and links.
+  p,
+  ul,
+  ol,
+  dl {
+    font-size: 18px;
+
+    .site-footer & {
+      font-size: 14px;
+      color: rgba($black, .7);
+    }
+
+    .dark-background & {
+      .site-footer & {
+        color: rgba($white, 1);
+      }
+    }
+  }
+
+  ul,
+  ol,
+  dl {
+    text-align: left;
+
+    li {
+      margin-top: 10px;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        top: 0.2em;
+        left: -15px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1em;
+        font-weight: 700;
+        line-height: inherit;
+        content: '°';
+      }
+    }
+  }
+
+  a {
+    color: rgba($black, 1);
+    text-decoration: underline;
+
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .dark-background & {
+      color: rgba($white, 1);
+    }
+  }
+
+  b,
+  strong {
+    font-weight: 400;
+    color: rgba($black, 1);
+  }
+
+  // Disables hyphenation for the elements that shouldn't hyphenate.
+  pre,
+  code,
+  iframe,
+  table,
+  form {
+    @include hyphenate(false);
+  }
+
+  // Top and bottom margin for the elements that doesn't have the default margin.
+  pre,
+  .edy-positionable-container-left-block,
+  .edy-positionable-container-right-block,
+  .edy-positionable-container-center-block,
+  .embed-container,
+  .table-container,
+  .editmode & table {
+    margin-top: $margin-medium;
+    margin-bottom: $margin-medium;
+  }
+
+  // Code blocks and preformatted content.
+  pre,
+  code {
+    font-size: 14px;
+    background-color: rgba($black, .1);
+  }
+
+  pre {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px;
+
+    code {
+      display: inline;
+      padding: 0;
+      white-space: pre;
+      line-height: inherit;
+      background-color: transparent;
+      @include word-wrap(normal);
+    }
+  }
+
+  code {
+    display: inline-block;
+    padding: 5px;
+    @include word-wrap(break-word);
+  }
+
+  blockquote {
+    margin: 20px 40px 20px 0;
+    padding-left: 20px;
+    border-left: 2px solid;
+  }
+
+  // Styling rules for the editable content area images, embedded videos, preformatted texts, code examples etc.
+  iframe {
+    max-width: 100%;
+
+    .map & {
+      margin-top: 0;
+    }
+  }
+
+  .custom-btn {
+    display: inline-block;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding: 12px 30px 13px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: center;
+    @include hyphenate(true);
+    text-decoration: none;
+
+    .publicmode & {
+      cursor: pointer;
+    }
+
+    .site-header & {
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .dark-background & {
+      border: 2px solid rgba($white, 1);
+      color: rgba($white, 1);
+    }
+
+    .light-background & {
+      border: 2px solid rgba($grey, 1);
+      color: rgba($grey, 1);
+    }
+
+    .dark-background &,
+    .light-background & {
+      &-disabled {
+        // scss-lint:disable NestingDepth
+        .publicmode & {
+          &,
+          &:hover {
+            color: $disabled-color;
+            cursor: default;
+            border: 2px solid $disabled-color;
+          }
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        // scss-lint:enable NestingDepth
+      }
+    }
+
+    &:hover {
+      transition: $transition;
+
+      .dark-background & {
+        border: 2px solid rgba($white, 1);
+        background-color: rgba($white, 1);
+        color: rgba($black, .7);
+      }
+
+      .light-background & {
+        border: 2px solid rgba($grey, 1);
+        background-color: rgba($grey, 1);
+        color: rgba($white, 1);
+      }
+    }
+  }
+
+  .contacts::first-line {
+    color: red !important;
+  }
+
+  .edy-positionable-container-left {
+    margin-right: 3%;
+  }
+
+  .edy-positionable-container-right {
+    margin-left: 3%;
+  }
+
+  // Content area image title
+  .edy-image-container-with-title {
+    &:after {
+      display: block;
+      padding: 4px;
+      font-size: 13px;
+      line-height: 1.4em;
+      content: attr(data-title);
+    }
+  }
+
+  // Styling rules for the site's editable content area tables.
+  // NB! Works only if editable content-area - {% content %} -  is wrapped into the element that has the "content-area" class.
+
+  // Container around editable content-area table.
+  .table-container {
+    border-right: 1px solid rgba($black, .1);
+    border-left: 1px solid rgba($black, .1);
+
+    .content & {
+      margin-bottom: 35px;
+    }
+  }
+
+  // Overthrow plugin to support horizontal scrolling on older devices that have touch-screens. For example Android 2.3 devices.
+  .overthrow {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .contacts & {
+      -webkit-overflow-scrolling: none;
+    }
+  }
+
+  form {
+    margin: $margin-low 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    .content & {
+      .editmode & {
+        margin-bottom: 35px;
+      }
+    }
+
+    .contacts &,
+    .editmode .contacts & {
+      margin-bottom: 0;
+    }
+
+
+    th,
+    td {
+      padding: 9px 13px;
+
+      .dark-background & {
+        border-color: rgba($white, 1);
+        border-style: solid;
+        border-width: 1px;
+      }
+    }
+
+    th {
+      text-align: left;
+      font-weight: 400;
+      color: rgba($white, 1);
+      background-color: rgba($black, 1);
+      border-color: rgba($black, 1);
+      border-style: solid;
+      border-width: 1px;
+
+      .footer & {
+        color: rgba($white, .5);
+      }
+    }
+
+    td {
+      border-color: rgba($black, .1);
+      border-style: solid;
+      border-width: 1px;
+
+      .dark-background & {
+        border-color: rgba($white, .1);
+        border-style: solid;
+        border-width: 1px;
+      }
+    }
+
+    .contacts &,
+    .footer & {
+      width: auto;
+      border: none;
+
+      tr {
+        @extend %clearfix;
+
+        td {
+          background: none;
+
+          &:first-child {
+            padding-left: 0;
+            border-left: none;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    .contacts & {
+      font-size: 24px;
+      line-height: 1em;
+
+      tr {
+        td {
+          padding: 0 25px;
+          color: rgba($black, .7);
+          border-top: none;
+          border-left: 2px solid rgba($black, .2);
+          border-right: none;
+          border-bottom: none;
+        }
+      }
+
+      @media screen and (max-width: $tablet-1 - 40) {
+        font-size: 20px;
+      }
+
+      @media screen and (max-width: $tablet-2) {
+        font-size: 16px;
+      }
+    }
+
+    .footer & {
+      tr {
+        td {
+          padding: 0 12px;
+          border: none;
+
+          &:last-child {
+            padding-right: 0;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: $mobile-1 + 42) {
+      .contacts &,
+      .footer & {
+        &, tbody, tr {
+          display: block;
+        }
+
+        tr {
+          td {
+            width: 100%;
+            float: left;
+            padding: 0;
+            box-sizing: border-box;
+          }
+        }
+      }
+
+      .contacts & {
+        line-height: inherit;
+
+        tr {
+          td {
+            border-left: none;
+            border-bottom: 2px solid rgba($black, .2);
+          }
+        }
+      }
+    }
+  }
+}

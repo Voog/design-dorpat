@@ -1,0 +1,151 @@
+.site-sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  margin: 50px 0 50px 40px;
+
+  @media screen and (max-width: $tablet-1) {
+    display: none;
+  }
+  @media screen and (min-width: $wide-1) {
+    width: 20%;
+  }
+
+  .sidebar-title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2;
+    text-transform: uppercase;
+    margin: 0;
+
+    @media screen and (max-width: $tablet-1) {
+      display: none;
+    }
+
+    a {
+      color: rgba($black, 1);
+
+      .dark-background & {
+        color: rgba($white, 1);
+      }
+    }
+
+  }
+
+  .submenu {
+    margin-bottom: 0;
+    padding: 0;
+
+    ul, li {
+      list-style: none;
+    }
+
+    li {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 1.7;
+      margin: 15px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media screen and (max-width: $tablet-1) {
+        display: inline-block;
+        margin-right: $margin-low;
+      }
+    }
+
+    a {
+      color: rgba($black, 1);
+      opacity: .5;
+
+      .dark-background & {
+        color: rgba($white, 1);
+      }
+
+      &:hover {
+        opacity: 1;
+
+        .dark-background & {
+          color: rgba($white, .8);
+        }
+      }
+
+      &.untranslated {
+        color: rgba($red, .7);
+
+        &:hover {
+          color: rgba($red, 1);
+        }
+      }
+    }
+    .selected {
+      font-weight: 500;
+      opacity: 1;
+
+      .dark-background & {
+        color: rgba($white, 1);
+
+        &:hover {
+          color: rgba($white, 1);
+        }
+      }
+    }
+
+    .submenu-lvl2 {
+      padding-left: 25px;
+
+      @media screen and (max-width: $tablet-1) {
+        display: none;
+      }
+
+      li {
+        font-size: 16px;
+        line-height: 1.7;
+        font-weight: 300;
+      }
+
+      a {
+        color: rgba($black, 1);
+        opacity: 1;
+
+        .dark-background & {
+          color: rgba($white, 1);
+
+          &:hover {
+            color: rgba($white, .5);
+          }
+        }
+
+        &:hover {
+          opacity: .5;
+        }
+
+        &.untranslated {
+          color: rgba($red, .7);
+
+          &:hover {
+            color: rgba($red, 1);
+          }
+        }
+      }
+
+      .selected {
+        font-weight: 500;
+
+        .dark-background & {
+          color: rgba($white, 1);
+
+          a:hover {
+            color: rgba($white, 1);
+          }
+        }
+
+        a:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

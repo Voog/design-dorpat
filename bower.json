@@ -1,0 +1,13 @@
+{
+  "name": "voog-design-dorpat",
+  "homepage": "https://github.com/Voog/design-dorpat",
+  "authors": [
+    "Siim Häelm <siim@voog.com>"
+  ],
+  "description": "The Dorpat design template for Voog",
+  "license": "MIT",
+  "devDependencies": {
+    "bourbon": "^4.3.4",
+    "textarea-autosize": "^0.4.2"
+  }
+}

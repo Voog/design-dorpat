@@ -1,0 +1,76 @@
+// =============================================================================
+// COMMON PAGE LAYOUT
+// =============================================================================
+.common-page {
+  .sidebar-active {
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+
+    &:after {
+      @extend %clearfix;
+    }
+
+    .wrap {
+      margin: 0;
+
+      @media screen and (max-width: $tablet-1) {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    .inner {
+      width: auto;
+      margin: 0;
+    }
+
+    .page-content {
+      @media screen and (min-width: $tablet-1 + 1) {
+        display: inline-block;
+        vertical-align: top;
+        width: calc(100% - 265px);
+      }
+    }
+  }
+  .main-content {
+    .wrap {
+      max-width: 780px;
+    }
+
+    .content-half {
+      float: left;
+      width: 50%;
+      box-sizing: border-box;
+
+      &.has-padding {
+        padding-top: 50px;
+      }
+
+      @media screen and (max-width: $tablet-3) {
+        float: none;
+        width: 100%;
+      }
+    }
+
+    .content-left {
+      @media screen and (min-width: $tablet-2 + 1) {
+        padding: 0 20px 60px 40px;
+      }
+
+      @media screen and (max-width: $tablet-3) {
+        padding: 0 20px 20px;
+      }
+    }
+
+    .content-right {
+      @media screen and (min-width: $tablet-2 + 1) {
+        padding: 0 40px 60px 20px;
+      }
+
+      @media screen and (max-width: $tablet-3) {
+        padding: 0 20px 20px;
+      }
+    }
+  }
+}

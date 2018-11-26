@@ -1,0 +1,59 @@
+// VARIABLES
+// Global variables to use in every .scss files.
+// Comment out the "_variables.scss" partial in the "main.scss" file if not used.
+
+// Basic colors.
+$black: #000;
+$white: #fff;
+$grey: #222;
+$blue: #06b;
+$yellow: #f9ec5a;
+$red: #c70909;
+$science-blue: #06b;
+
+// Specific colors.
+$error-color: #f00;
+$success-color: #0ecb00;
+$disabled-color: #999;
+
+// Log out button
+$color-common-gray: rgb(27,33,36);
+$color-toolbar-bg: rgb(238,238,238);
+$color-silver-2: rgb(196,196,196);
+
+// Font family.
+$font-main: 'Roboto', sans-serif;
+$avenir: 'Avenir Next', 'AvenirX';
+
+// Media query breakpoints.
+$wide-1: 1500px;
+$tablet-1: 1024px;
+$tablet-2: 850px;
+$tablet-3: 640px;
+$mobile-1: 480px;
+$small: 380px;
+$tiny: 340px;
+$micro: 290px;
+$nano: 240px;
+
+// Reusable values
+// Define the reusable variables here.
+// For example the width of several different elements, that always have to be with the same height.
+$height-base: 100px;
+
+$padding-medium: 40px;
+$padding-general: 70px;
+
+$margin-base: 10px;
+$margin-low: 20px;
+$margin-medium: 30px;
+$margin-large: 40px;
+$margin-half: 50px;
+$margin-general: 100px;
+
+$button-square: 42px;
+
+$width-medium: 760px;
+$width-max: 1040px;
+
+$transition: 500ms;

@@ -1,0 +1,236 @@
+.site-header {
+  @extend %clearfix;
+  @media screen and (max-width: $tablet-2) {
+    .header-left,
+    .header-right {
+      float: none;
+
+      .no-flexbox & {
+        display: table-cell;
+        vertical-align: top;
+      }
+    }
+
+    .header-left {
+      flex: 1;
+    }
+  }
+  position: relative;
+  @media screen and (max-width: $tablet-3) {
+    .search-open & {
+      position: static;
+    }
+  }
+  .header-top {
+    .wrap {
+      $header-padding: 40px;
+      padding-top: $header-padding;
+      padding-right: 40px;
+      padding-left: 40px;
+
+      .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .header-top-with-bg & {
+        padding-bottom: 40px;
+
+        @media screen and (max-width: $tablet-3) {
+          padding-bottom: 14px;
+        }
+      }
+
+      @media screen and (max-width: $tablet-3) {
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
+
+    .site-options {
+      //position: relative;
+      //right: -4px;
+      display: inline-block;
+      vertical-align: top;
+      height: 27px;
+
+      @media screen and (max-width: $tablet-1) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .header-title {
+    @include hyphenate(true);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
+    position: relative;
+    min-width: 140px;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  .header-body {
+    .blog-article-page & {
+      text-align: center;
+    }
+  }
+
+  .header-left {
+    max-width: 100%;
+
+    .flexbox & {
+      flex: 1 0 auto;
+    }
+
+    .no-flexbox & {
+      float: left;
+      @media screen and (max-width: $tablet-3) {
+        float: none;
+      }
+    }
+  }
+
+  .header-right {
+    position: relative;
+    text-align: right;
+
+    @media screen and (max-width: $tablet-1) {
+      margin-top: 1px;
+    }
+
+    @media screen and (max-width: $tablet-3) {
+      .search-open & {
+        position: static;
+      }
+    }
+
+    .no-flexbox & {
+      float: right;
+    }
+  }
+
+  .header-bottom {
+    .header-bottom-inner {
+      display: table;
+      width: 100%;
+      max-width: $width-max;
+      margin: 0 auto;
+      table-layout: fixed;
+      border-collapse: collapse;
+
+      .common-page &,
+      .blog-news-page &,
+      .blog-article-page &,
+      .item-list-page & {
+        height: 253px;
+
+        @media screen and (max-width: $tablet-3) {
+          height: 130px;
+        }
+      }
+
+      .front-page & {
+        height: 606px;
+
+        @media screen and (max-width: $tablet-3) {
+          height: 400px;
+        }
+      }
+
+      &.header-bottom-only {
+        .wrap {
+          padding-top: 90px;
+        }
+      }
+
+      .wrap {
+        display: table-cell;
+        padding: 60px 40px 90px;
+        vertical-align: middle;
+
+        .header-top-with-bg & {
+          padding-top: 74px;
+          padding-bottom: 76px;
+        }
+
+        @media screen and (max-width: $tablet-3) {
+          padding: 40px 20px 60px;
+
+          .header-top-with-bg & {
+            padding-top: 49px;
+            padding-bottom: 51px;
+          }
+        }
+      }
+    }
+  }
+
+  &.photo-article {
+    .header-bottom {
+      .header-bottom-inner {
+        height: 606px;
+
+        @media screen and (max-width: $tablet-3) {
+          height: 400px;
+        }
+      }
+    }
+  }
+  .header-body {
+    .article-author,
+    .article-date {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 2;
+      display: inline;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      &.is-hidden {
+        display: none;
+      }
+    }
+
+    .article-title {
+      font-size: 60px;
+      font-weight: 300;
+      line-height: 1.2;
+      margin: 0 0 10px;
+      text-transform: none;
+
+      .publicmode & {
+        cursor: pointer;
+      }
+
+      @media screen and (max-width: $tablet-3) {
+        font-size: 32px;
+      }
+
+      a {
+        font-size: 1em;
+        text-decoration: none;
+      }
+    }
+
+    .blog-title {
+      font-weight: 700;
+      line-height: 1;
+      margin-top: 0;
+      text-transform: uppercase;
+
+      &.is-hidden {
+        display: none;
+      }
+    }
+  }
+}

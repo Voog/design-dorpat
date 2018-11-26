@@ -1,0 +1,158 @@
+.article-comments {
+  transition: 250ms;
+  position: absolute;
+  top: 0;
+  right: -486px;
+  z-index: 1;
+  width: 440px;
+  padding: 45px 40px;
+  background-color: rgba($white, 1);
+  box-shadow: -10px 19px 30px rgba(68, 68, 68, .31);
+  box-sizing: border-box;
+
+  @media screen and (max-width: $tablet-3) {
+    display: none;
+    right: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    transition: 0ms;
+  }
+
+  &.open {
+    transition: 250ms;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 20px rgba($black, .1);
+
+    @media screen and (max-width: $tablet-3) {
+      display: block;
+      transition: 0ms;
+      width: 100%;
+    }
+  }
+
+  .comments-body {
+    max-height: 100%;
+
+    @media screen and (max-width: $tablet-3) {
+      .comments-open & {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        box-sizing: border-box;
+        height: 100vh;
+        padding: 20px;
+        background-color: rgba($white, 1);
+      }
+    }
+
+    .comments-header {
+      .comments-title {
+        margin-top: 0;
+      }
+    }
+
+    .comments-title {
+      margin: 20px 0 $margin-low 0;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba($black, 1);
+      cursor: text;
+      text-transform: none;
+
+      .comments-count {
+        display: inline-block;
+        font-size: 14px;
+        color: rgba($black, 1);
+        opacity: .35;
+        vertical-align: middle;
+      }
+    }
+
+    .form_field_textfield,
+    .form_field_textarea {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: rgba($white, 1);
+    }
+  }
+
+  .comment {
+    margin: 20px 0 0;
+    color: rgba($black, .7);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .comment-body {
+      display: block;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .comment-author,
+    .comment-date {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 2;
+      color: rgba($black, 1);
+      opacity: .35;
+    }
+  }
+
+  .comments-close {
+    &.dark-background {
+      .btn-close {
+        background-color: rgba($white, 1);
+
+        .ico-close {
+          fill: rgba($black, 1);
+        }
+      }
+    }
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      left: -46px;
+      width: 46px;
+      height: 46px;
+      line-height: 1;
+      cursor: pointer;
+      background-color: rgba($black, 1);
+
+      @media screen and (max-width: $tablet-2) {
+        right: 0;
+        left: auto;
+        background-color: rgba($white, 1);
+      }
+
+      @media screen and (min-width: $tablet-2 + 1) {
+        &:hover {
+          transition: $transition;
+          opacity: .7;
+        }
+      }
+
+      .ico-close {
+        padding: 15px;
+        fill: rgba($white, 1);
+
+        @media screen and (max-width: $tablet-2) {
+          fill: rgba($black, .7);
+
+          &:hover {
+            transition: $transition;
+            fill: rgba($black, .7);
+          }
+        }
+      }
+    }
+  }
+}

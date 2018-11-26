@@ -1,0 +1,103 @@
+// CUSTOM MIXINS
+// Comment out the "_mixins.scss" partial in the "main.scss" file if not used.
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .aspect-ratio-inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@mixin hyphenate($boolean: true) {
+  @if $boolean == true {
+    hyphens: auto;
+    word-break: break-word;
+    word-wrap: break-word;
+  } @else {
+    hyphens: none;
+    word-break: normal;
+    word-wrap: normal;
+  }
+}
+
+// COLORS
+@mixin bg($color, $opacity: 1) {
+  @if $opacity == 1 {
+    background-color: rgba($color, $opacity);
+  } @else {
+    background-color: $color;
+    background-color: rgba($color, $opacity);
+  }
+}
+
+@mixin color($color, $opacity: 1) {
+  @if $opacity == 1 {
+    color: rgba($color, $opacity);
+  } @else {
+    color: $color;
+    color: rgba($color, $opacity);
+  }
+}
+
+@mixin fill($color, $opacity: 1) {
+  @if $opacity == 1 {
+    fill: rgba($color, $opacity);
+  } @else {
+    fill: $color;
+    fill: rgba($color, $opacity);
+  }
+}
+
+// BORDERS
+@mixin border($side, $width, $style, $color, $opacity: 1) {
+  @if $side == 'all' {
+    @if $opacity == 1 {
+      border: $width $style rgba($color, $opacity);
+    } @else {
+      border: $width $style $color;
+      border: $width $style rgba($color, $opacity);
+    }
+  } @else {
+    @if $opacity == 1 {
+      border-#{$side}: $width $style rgba($color, $opacity);
+    } @else {
+      border-#{$side}: $width $style $color;
+      border-#{$side}: $width $style rgba($color, $opacity);
+    }
+  }
+}
+
+// MEDIA QUERY
+@mixin query($value) {
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
+@mixin querymin($value) {
+  @media screen and (min-width: $value + 1px) {
+    @content;
+  }
+}
+@mixin queryminmax($minvalue, $maxvalue) {
+  @media screen and (min-width: $minvalue + 1px) and (max-width: $maxvalue) {
+    @content;
+  }
+}
+
+// MEDIA QUERY
+@mixin querysearch($value: $tablet-1, $screen: 'max-width') {
+  @media screen and ($screen: $value) {
+    @content;
+  }
+}
