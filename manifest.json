@@ -295,6 +295,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/footer-menu.tpl",
+      "layout_name": "footer-menu",
+      "title": "footer-menu"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/html-head.tpl",
       "layout_name": "html-head",
       "title": "html-head"
@@ -400,6 +407,12 @@
       "filename": "front-header-bg_huge.jpg"
     },
     {
+      "content_type": "image/png",
+      "file": "images/logo_blue_estonia.png",
+      "kind": "images",
+      "filename": "logo_blue_estonia.png"
+    },
+    {
       "content_type": "image/jpeg",
       "file": "images/front-header-bg_block.jpg",
       "kind": "images",
@@ -458,6 +471,12 @@
       "file": "images/feature-image-3_large.jpg",
       "kind": "images",
       "filename": "feature-image-3_large.jpg"
+    },
+    {
+      "content_type": "image/png",
+      "file": "images/eu-structural-fund-logo.png",
+      "kind": "images",
+      "filename": "eu-structural-fund-logo.png"
     },
     {
       "content_type": "image/png",

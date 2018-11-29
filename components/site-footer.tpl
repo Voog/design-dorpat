@@ -30,11 +30,26 @@
         </div>
       {% endif %}
 
-      <div class="footer-body content-area">
+      <div class="footer-body">
         {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
+        <div class="footer-social content-area">{% xcontent name="footer-social" %}</div>
+        <div class="footer-content-wrap">
+          <div class="footer-logo-wrap {% if editmode != true and feature_image_4 == nil %} empty-hidden{% endif %}">
+            <div class="footer-logo">
+            {% if editmode %}
+              <div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_4" data-image="{{ feature_image_4 }}"></div>
+            {% elsif feature_image_4 != "" %}
+              <div class="aspect-ratio-inner " style="background-image: url('{{ feature_image_4 }}')"></div>
+            {% endif %}
+            </div>
+          </div>
 
-        <div class="wrap">
-          <div class="inner content-area">{% xcontent name="footer" %}</div>
+          <div class="footer-menu-wrap">
+            {% include "footer-menu" %}
+          </div>
+          <div class="footer-contact-wrap">
+            <div class="footer-contact content-area">{% xcontent name="footer" %}</div>
+          </div>
         </div>
       </div>
 
@@ -52,4 +67,3 @@
 {% endif %}
 
 {% include "menu-language-popover" %}
-

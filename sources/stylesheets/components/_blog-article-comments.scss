@@ -109,7 +109,7 @@
   .comments-close {
     &.dark-background {
       .btn-close {
-        background-color: rgba($white, 1);
+        background-color: $blue;
 
         .ico-close {
           fill: rgba($black, 1);
@@ -125,12 +125,12 @@
       height: 46px;
       line-height: 1;
       cursor: pointer;
-      background-color: rgba($black, 1);
+      background-color: $blue;
 
       @media screen and (max-width: $tablet-2) {
         right: 0;
         left: auto;
-        background-color: rgba($white, 1);
+        background-color: $blue;
       }
 
       @media screen and (min-width: $tablet-2 + 1) {

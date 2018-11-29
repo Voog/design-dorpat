@@ -62,7 +62,17 @@
           <div class="wrap">
             <div class="header-body content-area" {{ edy_intro_edit_text }}>
               {% content name="header" %}
+              <div class="header-logo-wrap {% if editmode != true and feature_image_5 == nil %} empty-hidden{% endif %}">
+            <div class="header-logo">
+            {% if editmode %}
+              <div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_5" data-image="{{ feature_image_5 }}"></div>
+            {% elsif feature_image_5 != "" %}
+              <div class="aspect-ratio-inner " style="background-image: url('{{ feature_image_5 }}')"></div>
+            {% endif %}
             </div>
+          </div>
+            </div>
+
           </div>
         {% elsif blog_article_page %}
           <div class="wrap js-toggle-article-type{% if photo_article %} is-photoheader{% endif %}">

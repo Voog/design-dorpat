@@ -9,17 +9,6 @@
   --content-body-alignment: left;
   /* VoogStyle
     "pathI18n": ["content", "text"],
-    "titleI18n": "size",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 100,
-    "unit": "px",
-    "featured": true,
-    "scope": "global"
-  */
-  --content-body-font-size: 18px;
-  /* VoogStyle
-    "pathI18n": ["content", "text"],
     "titleI18n": "line_height",
     "editor": "rangePicker",
     "min": 1,

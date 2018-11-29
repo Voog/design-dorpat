@@ -158,6 +158,97 @@
   }
 
   .footer-body {
-    position: relative;
+    display: flex;
+
+    .footer-content-wrap {
+      width: 100%;
+      display: flex;
+
+      @media screen and (max-width: $tablet-3) {
+        flex-direction: column
+      }
+
+      .footer-contact-wrap {
+        width: 50%;
+        margin: 24px;
+        align-items: center;
+        display: flex;
+        border-left: dotted 1px $blue;
+
+        @media screen and (max-width: $tablet-3) {
+          width: 100%;
+          margin-top: 0;
+        }
+
+        .footer-contact {
+          padding: 0 24px;
+
+        }
+      }
+
+      .footer-menu-wrap {
+        width: 30%;
+        margin: 24px;
+        align-items: center;
+        display: flex;
+        border-left: dotted 1px $blue;
+
+        @media screen and (max-width: $tablet-1) {
+          width: 50%;
+        }
+
+        @media screen and (max-width: $tablet-3) {
+          width: 100%;
+        }
+      }
+
+      .footer-logo-wrap {
+        width: 20%;
+
+        @media screen and (max-width: $tablet-1) {
+          display: none;
+        }
+
+        &.empty-hidden {
+          display: none;
+        }
+
+        .footer-logo {
+          max-width: 250px;
+          margin: 24px;
+          margin-right: 0;
+          position: relative;
+          @include aspect-ratio(200, 100);
+
+          .aspect-ratio-inner {
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+
+    .footer-social {
+      width: 56px;
+      display: flex;
+      align-items: center;
+
+      .edy-content-social-buttons-list {
+        .edy-content-social-button {
+          display: block;
+          border-bottom: dotted 1px;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+
+        svg {
+          display: flex;
+        }
+      }
+    }
+
   }
 }

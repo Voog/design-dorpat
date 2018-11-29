@@ -276,7 +276,7 @@
       }
 
       @media screen and (min-width: $tablet-3 + 1) {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   }
@@ -338,13 +338,13 @@
     }
 
     @media screen and (min-width: $tablet-3 + 1) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 
   .content-item & {
     @media screen and (max-width: $tablet-3) {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @media screen and (min-width: $tablet-3 + 1) {

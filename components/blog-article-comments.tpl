@@ -15,7 +15,7 @@
         {% endunless %}
 
         <div class="form_area">
-          <div class="form_fields">
+          <div class="comment_form_fields">
             <div class="form_field">
               <label for="comment-name">{% if comment_name_error %}<span class="form_field_error">{{ "comment_author_blank" | lc }}</span>{% endif %}</label>
               <input id="comment-name" class="form_field_textfield form_field_size_large" name="comment[author]" placeholder="{{ "name" | lc }}" value="{{ comment.author }}">
