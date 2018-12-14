@@ -24,19 +24,19 @@
 
     var show_comments, show_dates, show_authors;
 
-    if (globalDataValues.show_comments != null && globalDataValues.show_comments !== '') {
+    if (globalDataValues.show_comments != null && globalDataValues.show_comments != '') {
       show_comments = Boolean(globalDataValues.show_comments)
     } else {
       show_comments = true;
     }
 
-    if (globalDataValues.show_dates != null && globalDataValues.show_dates !== '') {
+    if (globalDataValues.show_dates != null && globalDataValues.show_dates != '') {
       show_dates = Boolean(globalDataValues.show_dates)
     } else {
       show_dates = true;
     }
 
-    if (globalDataValues.show_authors != null && globalDataValues.show_authors !== '') {
+    if (globalDataValues.show_authors != null && globalDataValues.show_authors != '') {
       show_authors = Boolean(globalDataValues.show_authors)
     } else {
       show_authors = true;
@@ -93,8 +93,9 @@
       buttonTitleI18n: "blog_settings",
 
       preview: function(data) {
-       var $articleDate = $('.article-date')
-        $articleAuthor = $('.article-author');
+       var $articleDate = $('.article-date.site-data'),
+        $articleAuthor = $('.article-author.site-data');
+
         if (data.show_dates == true) {
           $articleDate.removeClass('hide-article-date');
           $articleDate.addClass('show-article-date');

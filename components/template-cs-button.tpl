@@ -1,41 +1,6 @@
 :root {
   /* VoogStyle
     "pathI18n": ["button"],
-    "titleI18n": "padding",
-    "editor": "rangePicker",
-    "min": 0,
-    "max": 200,
-    "step": 1,
-    "unit": "px",
-    "scope": "global"
-  */
-  --button-padding: 30px;
-  /* VoogStyle
-    "pathI18n": ["button"],
-    "titleI18n": "size",
-    "editor": "rangePicker",
-    "min": 8,
-    "max": 100,
-    "unit": "px",
-    "featured": true,
-    "scope": "global"
-  */
-  --button-font-size: 16px;
-  /* VoogStyle
-    "pathI18n": ["button"],
-    "titleI18n": "font_size",
-    "type": "button",
-    "editor": "toggleIcon",
-    "states": {
-      "on": "600",
-      "off": "400"
-    },
-    "icon": "bold",
-    "scope": "global"
-  */
-  --button-font-weight: 400;
-  /* VoogStyle
-    "pathI18n": ["button"],
     "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",

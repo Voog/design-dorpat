@@ -19,6 +19,9 @@ body {
 .dark-background .content-area table {
   color: var(--third-color);
 }
+.footer-menu .dark-background {
+  color: var(--third-color);
+}
 .site-footer .dark-background a,
 .site-footer .dark-background b {
   color: var(--third-color);
@@ -164,13 +167,13 @@ body {
   color: var(--secondary-color);
 }
 .article-comments .comments-close.dark-background .btn-close {
-  background-color: var(--third-color);
+  background-color: #0083ba;
 }
 .article-comments .comments-close.dark-background .btn-close .ico-close {
   fill: var(--secondary-color);
 }
 .article-comments .comments-close .btn-close {
-  background-color: var(--secondary-color);
+  background-color: #0083ba;
 }
 @media screen and (max-width: 850px) {
   .article-comments .comments-close .btn-close {
@@ -223,45 +226,54 @@ body {
     color: var(--third-color);
   }
 
-  #mobile-menu .search-open-btn svg {
+  #mobile-menu .search-open-btn svg,
+  #footer-menu .search-open-btn svg {
     fill: var(--secondary-color);
   }
-  #mobile-menu .navigation-menu > ul > li > a {
+  #mobile-menu .navigation-menu > ul > li > a,
+  #footer-menu .navigation-menu > ul > li > a {
     font-style: var(--menu-main-font-style);
     font-weight: var(--menu-main-font-weight);
     -webkit-text-decoration: var(--menu-main-text-decoration);
             text-decoration: var(--menu-main-text-decoration);
     text-transform: var(--menu-main-text-transform);
   }
-  #mobile-menu .navigation-menu > ul > li > a:hover {
+  #mobile-menu .navigation-menu > ul > li > a:hover,
+  #footer-menu .navigation-menu > ul > li > a:hover {
     font-style: var(--menu-main-hover-font-style);
     font-weight: var(--menu-main-hover-font-weight);
     -webkit-text-decoration: var(--menu-main-hover-text-decoration);
             text-decoration: var(--menu-main-hover-text-decoration);
     text-transform: var(--menu-main-hover-text-transform);
   }
-  #mobile-menu .navigation-menu > ul > li > a.selected, #mobile-menu .navigation-menu > ul > li > a.current {
+  #mobile-menu .navigation-menu > ul > li > a.selected, #mobile-menu .navigation-menu > ul > li > a.current,
+  #footer-menu .navigation-menu > ul > li > a.selected,
+  #footer-menu .navigation-menu > ul > li > a.current {
     font-style: var(--menu-main-active-font-style);
     font-weight: var(--menu-main-active-font-weight);
     -webkit-text-decoration: var(--menu-main-active-text-decoration);
             text-decoration: var(--menu-main-active-text-decoration);
     text-transform: var(--menu-main-active-text-transform);
   }
-  #mobile-menu .navigation-menu .sub-menu a {
+  #mobile-menu .navigation-menu .sub-menu a,
+  #footer-menu .navigation-menu .sub-menu a {
     font-style: var(--menu-sub-font-style);
     font-weight: var(--menu-sub-font-weight);
     -webkit-text-decoration: var(--menu-sub-text-decoration);
             text-decoration: var(--menu-sub-text-decoration);
     text-transform: var(--menu-sub-text-transform);
   }
-  #mobile-menu .navigation-menu .sub-menu a:hover {
+  #mobile-menu .navigation-menu .sub-menu a:hover,
+  #footer-menu .navigation-menu .sub-menu a:hover {
     font-style: var(--menu-sub-hover-font-style);
     font-weight: var(--menu-sub-hover-font-weight);
     -webkit-text-decoration: var(--menu-sub-hover-text-decoration);
             text-decoration: var(--menu-sub-hover-text-decoration);
     text-transform: var(--menu-sub-hover-text-transform);
   }
-  #mobile-menu .navigation-menu .sub-menu a.selected, #mobile-menu .navigation-menu .sub-menu a.current {
+  #mobile-menu .navigation-menu .sub-menu a.selected, #mobile-menu .navigation-menu .sub-menu a.current,
+  #footer-menu .navigation-menu .sub-menu a.selected,
+  #footer-menu .navigation-menu .sub-menu a.current {
     font-style: var(--menu-sub-active-font-style);
     font-weight: var(--menu-sub-active-font-weight);
     -webkit-text-decoration: var(--menu-sub-active-text-decoration);
@@ -367,8 +379,18 @@ body {
   background-color: var(--header-background-color);
 }
 
+.footer-menu {
+  font-size: 16px;
+  font-style: var(--footer-body-font-style);
+  font-weight: 300;
+  color: var(--primary-color);
+  -webkit-text-decoration: var(--footer-body-text-decoration);
+          text-decoration: var(--footer-body-text-decoration);
+  text-transform: var(--footer-body-text-transform);
+}
+
 .content-area {
-  font-size: var(--content-body-font-size);
+  font-size: 16px;
   line-height: var(--content-body-line-height);
   color: var(--primary-color);
 }
@@ -379,9 +401,9 @@ body {
   color: var(--third-color);
 }
 .site-footer .content-area {
-  font-size: var(--footer-body-font-size);
+  font-size: 16px;
   font-style: var(--footer-body-font-style);
-  font-weight: var(--footer-body-font-weight);
+  font-weight: 300;
   color: var(--primary-color);
   -webkit-text-decoration: var(--footer-body-text-decoration);
           text-decoration: var(--footer-body-text-decoration);
@@ -399,7 +421,6 @@ body {
   text-align: var(--content-body-alignment);
 }
 .dark-background .content-area h1,
-.dark-background .content-area h2,
 .dark-background .content-area h3,
 .dark-background .content-area h4,
 .dark-background .content-area h5,
@@ -411,6 +432,12 @@ body {
 .dark-background .content-area code,
 .dark-background .content-area table {
   color: var(--third-color);
+}
+.dark-background .content-area h2 {
+  color: #0083ba;
+}
+.light-background .content-area h2 {
+  color: #0083ba;
 }
 .content-area h1,
 .content-area h2,
@@ -429,7 +456,7 @@ body {
   color: var(--secondary-color);
 }
 .content-area p, .content-area ul, .content-area ol, .content-area dl {
-  font-size: var(--content-body-font-size);
+  font-size: 16px;
 }
 .site-footer .content-area p,
 .site-footer .content-area ul,
@@ -445,33 +472,52 @@ body {
 .content-area h1 a:hover {
   text-align: var(--headings-title-text-alignment);
   line-height: var(--headings-title-line-height);
-  font-size: var(--headings-title-font-size);
-  font-weight: var(--headings-title-font-weight);
+  font-size: 30px;
+  font-weight: 300;
   font-style: var(--headings-title-font-style);
   -webkit-text-decoration: var(--headings-title-text-decoration);
           text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
 .content-area h2 {
-  font-size: var(--headings-heading-font-size);
+  font-size: 24px;
   line-height: var(--headings-heading-line-height);
   text-transform: var(--headings-heading-text-transform);
+  color: #0083ba;
 }
 .content-area h2,
 .content-area h2 a,
 .content-area h2 a:hover {
   text-align: var(--headings-heading-text-alignment);
-  font-weight: var(--headings-heading-font-weight);
+  font-weight: 400;
   font-style: var(--headings-heading-font-style);
   -webkit-text-decoration: var(--headings-heading-text-decoration);
           text-decoration: var(--headings-heading-text-decoration);
 }
 .content-area h3,
 .content-area h3 a,
-.content-area h3 a:hover,
+.content-area h3 a:hover {
+  text-align: var(--headings-subheading-text-alignment);
+  line-height: var(--headings-subheading-line-height);
+  font-size: 20px;
+  font-weight: 400;
+  font-style: var(--headings-subheading-font-style);
+  -webkit-text-decoration: var(--headings-subheading-text-decoration);
+          text-decoration: var(--headings-subheading-text-decoration);
+  text-transform: var(--headings-subheading-text-transform);
+}
 .content-area h4,
 .content-area h4 a,
-.content-area h4 a:hover,
+.content-area h4 a:hover {
+  text-align: var(--headings-subheading-text-alignment);
+  line-height: var(--headings-subheading-line-height);
+  font-size: 16px;
+  font-weight: 700;
+  font-style: var(--headings-subheading-font-style);
+  -webkit-text-decoration: var(--headings-subheading-text-decoration);
+          text-decoration: var(--headings-subheading-text-decoration);
+  text-transform: var(--headings-subheading-text-transform);
+}
 .content-area h5,
 .content-area h5 a,
 .content-area h5 a:hover,
@@ -480,8 +526,8 @@ body {
 .content-area h6 a:hover {
   text-align: var(--headings-subheading-text-alignment);
   line-height: var(--headings-subheading-line-height);
-  font-size: var(--headings-subheading-font-size);
-  font-weight: var(--headings-subheading-font-weight);
+  font-size: 16px;
+  font-weight: 400;
   font-style: var(--headings-subheading-font-style);
   -webkit-text-decoration: var(--headings-subheading-text-decoration);
           text-decoration: var(--headings-subheading-text-decoration);
@@ -490,7 +536,7 @@ body {
 .content-area a {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
-  color: var(--secondary-color);
+  color: #0083ba;
   -webkit-text-decoration: var(--content-link-text-decoration);
           text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
@@ -501,36 +547,40 @@ body {
   -webkit-text-decoration: var(--content-link-hover-text-decoration);
           text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
+  color: #015477;
 }
 .dark-background .content-area a {
   color: var(--third-color);
 }
 .content-area a.custom-btn, .content-area div.custom-btn {
-  padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
-  font-size: var(--button-font-size);
+  padding: 6px 20px;
+  border-color: #015477;
+  font-size: 16px;
+  font-weight: 700;
   font-style: var(--button-font-style);
-  font-weight: var(--button-font-weight);
   -webkit-text-decoration: var(--button-text-decoration);
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
 .dark-background .content-area a.custom-btn:hover, .dark-background .content-area div.custom-btn:hover {
-  border-color: var(--third-color);
-  background-color: var(--third-color);
-  color: var(--primary-color);
+  border-color: #015477;
+  background-color: #015477;
+  color: #fff;
 }
 .light-background .content-area a.custom-btn:hover, .light-background .content-area div.custom-btn:hover {
-  border-color: var(--secondary-color);
-  background-color: var(--secondary-color);
-  color: var(--third-color);
+  border-color: #015477;
+  background-color: #015477;
+  color: #fff;
 }
 .dark-background .content-area a.custom-btn, .dark-background .content-area div.custom-btn {
-  border-color: var(--third-color);
-  color: var(--third-color);
+  border-color: #0083ba;
+  background-color: #0083ba;
+  color: #fff;
 }
 .light-background .content-area a.custom-btn, .light-background .content-area div.custom-btn {
-  border-color: var(--secondary-color);
-  color: var(--secondary-color);
+  border-color: #0083ba;
+  background-color: #0083ba;
+  color: #fff;
 }
 .content-area table th, .content-area table td {
   padding: calc(var(--table-padding) - 4px) var(--table-padding);
@@ -617,19 +667,31 @@ body {
   color: var(--primary-color);
 }
 .content-area .form_submit input {
-  padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
-  font-size: var(--button-font-size);
+  padding: 6px 20px;
+  font-size: 16px;
+  font-weight: 700;
   font-style: var(--button-font-style);
-  font-weight: var(--button-font-weight);
   -webkit-text-decoration: var(--button-text-decoration);
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
+.dark-background .content-area .form_submit input:hover {
+  border-color: #015477;
+  background-color: #015477;
+  color: #fff;
+}
+.light-background .content-area .form_submit input:hover {
+  border-color: #015477;
+  background-color: #015477;
+  color: #fff;
+}
 .dark-background .content-area .form_submit input {
-  color: var(--secondary-color);
-  background-color: var(--third-color);
+  border-color: #0083ba;
+  background-color: #0083ba;
+  color: #fff;
 }
 .light-background .content-area .form_submit input {
-  color: var(--third-color);
-  background-color: var(--secondary-color);
+  border-color: #0083ba;
+  background-color: #0083ba;
+  color: #fff;
 }

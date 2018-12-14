@@ -42,6 +42,9 @@ body {
       color: var(--third-color);
     }
   }
+  .footer-menu & {
+    color: var(--third-color);
+  }
 
   .site-footer & {
     a,
@@ -271,7 +274,7 @@ body {
   .comments-close {
     &.dark-background {
       .btn-close {
-        background-color: var(--third-color);
+        background-color: $blue;
 
         .ico-close {
           fill: var(--secondary-color);
@@ -280,7 +283,7 @@ body {
     }
 
     .btn-close {
-      background-color: var(--secondary-color);
+      background-color: $blue;
 
       @media screen and (max-width: $tablet-2) {
         background-color: var(--third-color);
@@ -353,7 +356,8 @@ body {
     }
   }
 
-  #mobile-menu {
+  #mobile-menu,
+  #footer-menu {
     .search-open-btn {
       svg {
         fill: var(--secondary-color);
@@ -576,8 +580,17 @@ body {
   background-color: var(--header-background-color);
 }
 
+.footer-menu {
+  font-size: 16px;
+  font-style: var(--footer-body-font-style);
+  font-weight: 300;
+  color: var(--primary-color);
+  text-decoration: var(--footer-body-text-decoration);
+  text-transform: var(--footer-body-text-transform);
+}
+
 .content-area {
-  font-size: var(--content-body-font-size);
+  font-size: 16px;
   line-height: var(--content-body-line-height);
   color: var(--primary-color);
 
@@ -590,9 +603,9 @@ body {
   }
 
   .site-footer & {
-    font-size: var(--footer-body-font-size);
+    font-size: 16px;
     font-style: var(--footer-body-font-style);
-    font-weight: var(--footer-body-font-weight);
+    font-weight: 300;
     color: var(--primary-color);
     text-decoration: var(--footer-body-text-decoration);
     text-transform: var(--footer-body-text-transform);
@@ -616,7 +629,6 @@ body {
 
   // Styling rules for the editable content area headings and paragraphs.
   h1,
-  h2,
   h3,
   h4,
   h5,
@@ -629,6 +641,14 @@ body {
   table {
     .dark-background & {
       color: var(--third-color);
+    }
+  }
+  h2 {
+    .dark-background & {
+      color: $blue;
+    }
+    .light-background & {
+      color: $blue;
     }
   }
 
@@ -651,7 +671,7 @@ body {
   ul,
   ol,
   dl {
-    font-size: var(--content-body-font-size);
+    font-size: 16px;
 
     .site-footer & {
       color: var(--primary-color);
@@ -670,8 +690,8 @@ body {
     a:hover {
       text-align: var(--headings-title-text-alignment);
       line-height: var(--headings-title-line-height);
-      font-size: var(--headings-title-font-size);
-      font-weight: var(--headings-title-font-weight);
+      font-size: 30px;
+      font-weight: 300;
       font-style: var(--headings-title-font-style);
       text-decoration: var(--headings-title-text-decoration);
       text-transform: var(--headings-title-text-transform);
@@ -679,22 +699,48 @@ body {
   }
 
   h2 {
-    font-size: var(--headings-heading-font-size);
+    font-size: 24px;
     line-height: var(--headings-heading-line-height);
     text-transform: var(--headings-heading-text-transform);
-
+    color: $blue;
     &,
     a,
     a:hover {
       text-align: var(--headings-heading-text-alignment);
-      font-weight: var(--headings-heading-font-weight);
+      font-weight: 400;
       font-style: var(--headings-heading-font-style);
       text-decoration: var(--headings-heading-text-decoration);
     }
   }
 
-  h3,
-  h4,
+  h3 {
+    &,
+    a,
+    a:hover {
+      text-align: var(--headings-subheading-text-alignment);
+      line-height: var(--headings-subheading-line-height);
+      font-size: 20px;
+      font-weight: 400;
+      font-style: var(--headings-subheading-font-style);
+      text-decoration: var(--headings-subheading-text-decoration);
+      text-transform: var(--headings-subheading-text-transform);
+    }
+  }
+
+  h4 {
+    &,
+    a,
+    a:hover {
+      text-align: var(--headings-subheading-text-alignment);
+      line-height: var(--headings-subheading-line-height);
+      font-size: 16px;
+      font-weight: 700;
+      font-style: var(--headings-subheading-font-style);
+      text-decoration: var(--headings-subheading-text-decoration);
+      text-transform: var(--headings-subheading-text-transform);
+    }
+  }
+
   h5,
   h6 {
     &,
@@ -702,8 +748,8 @@ body {
     a:hover {
       text-align: var(--headings-subheading-text-alignment);
       line-height: var(--headings-subheading-line-height);
-      font-size: var(--headings-subheading-font-size);
-      font-weight: var(--headings-subheading-font-weight);
+      font-size: 16px;
+      font-weight: 400;
       font-style: var(--headings-subheading-font-style);
       text-decoration: var(--headings-subheading-text-decoration);
       text-transform: var(--headings-subheading-text-transform);
@@ -713,7 +759,7 @@ body {
   a {
     font-style: var(--content-link-font-style);
     font-weight: var(--content-link-font-weight);
-    color: var(--secondary-color);
+    color: $blue;
     text-decoration: var(--content-link-text-decoration);
     text-transform: var(--content-link-text-transform);
 
@@ -722,6 +768,7 @@ body {
       font-weight: var(--content-link-hover-font-weight);
       text-decoration: var(--content-link-hover-text-decoration);
       text-transform: var(--content-link-hover-text-transform);
+      color: $dark-blue;
     }
 
     .dark-background & {
@@ -731,35 +778,38 @@ body {
 
   // Code blocks and preformatted content.
   a.custom-btn, div.custom-btn {
-    padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
-    font-size: var(--button-font-size);
+    padding: 6px 20px;
+    border-color: $dark-blue;
+    font-size: 16px;
+    font-weight: 700;
     font-style: var(--button-font-style);
-    font-weight: var(--button-font-weight);
     text-decoration: var(--button-text-decoration);
     text-transform: var(--button-text-transform);
 
     &:hover {
       .dark-background & {
-        border-color: var(--third-color);
-        background-color: var(--third-color);
-        color: var(--primary-color);
+        border-color: $dark-blue;
+        background-color: $dark-blue;
+        color: $white;
       }
 
       .light-background & {
-        border-color: var(--secondary-color);
-        background-color: var(--secondary-color);
-        color: var(--third-color);
+        border-color: $dark-blue;
+        background-color: $dark-blue;
+        color: $white;
       }
     }
 
     .dark-background & {
-      border-color: var(--third-color);
-      color: var(--third-color);
+      border-color: $blue;
+      background-color: $blue;
+      color: $white;
     }
 
     .light-background & {
-      border-color: var(--secondary-color);
-      color: var(--secondary-color);
+      border-color: $blue;
+      background-color: $blue;
+      color: $white;
     }
   }
 
@@ -842,21 +892,37 @@ body {
 
   .form_submit {
     input {
-      padding: calc(var(--button-padding) - 18px) var(--button-padding) calc(var(--button-padding) - 17px);
-      font-size: var(--button-font-size);
+      padding: 6px 20px;
+      font-size: 16px;
+      font-weight: 700;
       font-style: var(--button-font-style);
-      font-weight: var(--button-font-weight);
       text-decoration: var(--button-text-decoration);
       text-transform: var(--button-text-transform);
 
+      &:hover {
+        .dark-background & {
+          border-color: $dark-blue;
+          background-color: $dark-blue;
+          color: $white;
+        }
+
+        .light-background & {
+          border-color: $dark-blue;
+          background-color: $dark-blue;
+          color: $white;
+        }
+      }
+
       .dark-background & {
-        color: var(--secondary-color);
-        background-color: var(--third-color);
+        border-color: $blue;
+        background-color: $blue;
+        color: $white;
       }
 
       .light-background & {
-        color: var(--third-color);
-        background-color: var(--secondary-color);
+        border-color: $blue;
+        background-color: $blue;
+        color: $white;
       }
     }
   }

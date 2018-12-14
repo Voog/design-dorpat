@@ -5,7 +5,6 @@
   <head prefix="og: http://ogp.me/ns#">
     {% include "html-head" %}
     {% include "template-styles" %}
-    {% include "front-page-variables" %}
   </head>
 
   <body class="front-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">

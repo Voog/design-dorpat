@@ -41,6 +41,18 @@
     {% assign feature_3_has_content = true %}
   {% endunless %}
 
+  {% if page.data.feature_image_4 == nil %}
+    {% assign feature_image_4 = images_path | append: "/logo_blue_estonia.png" %}
+  {% else %}
+    {% assign feature_image_4 = page.data.feature_image_4.url %}
+  {% endif %}
+
+  {% if page.data.feature_image_5 == nil %}
+    {% assign feature_image_5 = images_path | append: "/eu-structural-fund-logo.png" %}
+  {% else %}
+    {% assign feature_image_5 = page.data.feature_image_5.url %}
+  {% endif %}
+
   {% capture bottom_html %}{% unless editmode %}{% content name="bottom" %}{% endunless %}{% endcapture %}
   {% capture bottom_size %}{{ bottom_html | size | minus : 1 }}{% endcapture %}
   {% unless bottom_size contains "-" %}

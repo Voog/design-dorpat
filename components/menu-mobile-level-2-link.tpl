@@ -1,4 +1,4 @@
-<li{% if level2.children? and level2.selected? %} class="with-children current-parent"{% elsif level2.children? %} class="with-children"{% elsif level2.selected? %} class="current-parent"{% endif %}>
+<li {% if level2.children? and level2.selected? %} class="with-children current-parent"{% elsif level2.children? %} class="with-children"{% elsif level2.selected? %} class="current-parent"{% endif %}>
   {% menulink level2 %}
 
   {% if level2.children? %}
@@ -15,7 +15,7 @@
         <li>{% menulink level3 %}</li>
       {% endfor %}
 
-      {% if editmode %}
+      {% if editmode and footer != true %}
         {% if level2.hidden_children.size > 0 %}
           <li class="edit-btn">{% menubtn level2.hidden_children %}</li>
         {% endif %}

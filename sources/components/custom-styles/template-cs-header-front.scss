@@ -113,36 +113,36 @@
   */
   #{--menu-main-font-weight}: 300;
 
-      /* VoogStyle
-        "pathI18n": ["header", "main_menu", "hover"],
-        "titleI18n": "font_size",
-        "type": "button",
-        "editor": "toggleIcon",
-        "states": {
-          "on": "500",
-          "off": "300"
-        },
-        "icon": "bold",
-        "scope": "global",
-        "boundVariables": [
-          "--menu-main-active-font-weight"
-        ]
-      */
-      #{--menu-main-hover-font-weight}: 300;
+  /* VoogStyle
+    "pathI18n": ["header", "main_menu", "hover"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "500",
+      "off": "300"
+    },
+    "icon": "bold",
+    "scope": "global",
+    "boundVariables": [
+      "--menu-main-active-font-weight"
+    ]
+  */
+  #{--menu-main-hover-font-weight}: 300;
 
-      /* VoogStyle
-        "pathI18n": ["header", "main_menu", "active"],
-        "titleI18n": "font_size",
-        "type": "button",
-        "editor": "toggleIcon",
-        "states": {
-          "on": "500",
-          "off": "300"
-        },
-        "icon": "bold",
-        "scope": "global"
-      */
-      #{--menu-main-active-font-weight}: 500;
+  /* VoogStyle
+    "pathI18n": ["header", "main_menu", "active"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "500",
+      "off": "300"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  #{--menu-main-active-font-weight}: 500;
 
   /* VoogStyle
     "pathI18n": ["header", "main_menu", "normal"],

@@ -121,18 +121,15 @@
   }
 
   h1 {
-    font-size: 32px;
-
-    @media screen and (max-width: $tablet-3) {
-      font-size: 28px;
-    }
+    font-size: 30px;
+    font-weight: 300;
 
     .site-header & {
       margin-top: .3em;
       margin-bottom: .3em;
       text-transform: uppercase;
       font-size: 70px;
-      font-weight: 700;
+      font-weight: 300;
       line-height: 1.1;
 
       &.blog-title {
@@ -142,7 +139,7 @@
           margin-bottom: .3em;
           font-size: 70px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 300;
           line-height: 1.1;
           text-align: center;
           text-decoration: none;
@@ -151,7 +148,7 @@
       }
 
       @media screen and (max-width: $tablet-3) {
-        font-size: 32px;
+        font-size: 30px;
       }
     }
 
@@ -168,7 +165,7 @@
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.4;
 
     @media screen and (max-width: $tablet-3) {
@@ -179,21 +176,15 @@
       margin-top: .2em;
       margin-bottom: .2em;
     }
-
-    .contacts & {
-      font-size: 28px;
-    }
   }
 
   h3,
   h4,
   h5,
   h6 {
-    font-size: 22px;
 
     .contacts & {
       font-weight: 400;
-      font-size: 24px;
     }
   }
 
@@ -202,10 +193,7 @@
   ul,
   ol,
   dl {
-    font-size: 18px;
-
     .site-footer & {
-      font-size: 14px;
       color: rgba($black, .7);
     }
 
@@ -332,16 +320,18 @@
 
   .custom-btn {
     display: inline-block;
-    background-color: transparent;
+    background-color: $blue;
+    border-color: $blue;
     box-sizing: border-box;
-    padding: 12px 30px 13px;
+    padding: 6px 20px;
     text-transform: uppercase;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.7;
     text-align: center;
     @include hyphenate(true);
     text-decoration: none;
+    border-radius: 6px;
 
     .publicmode & {
       cursor: pointer;
@@ -361,13 +351,15 @@
     }
 
     .dark-background & {
-      border: 2px solid rgba($white, 1);
-      color: rgba($white, 1);
+      border: 2px solid $blue;
+      background-color:  $blue;
+      color: $white;
     }
 
     .light-background & {
-      border: 2px solid rgba($grey, 1);
-      color: rgba($grey, 1);
+      border: 2px solid $blue;
+      background-color:  $blue;
+      color: $white;
     }
 
     .dark-background &,
@@ -375,6 +367,7 @@
       &-disabled {
         // scss-lint:disable NestingDepth
         .publicmode & {
+          background-color: transparent;
           &,
           &:hover {
             color: $disabled-color;
@@ -394,15 +387,15 @@
       transition: $transition;
 
       .dark-background & {
-        border: 2px solid rgba($white, 1);
-        background-color: rgba($white, 1);
-        color: rgba($black, .7);
+        border: 2px solid $dark-blue;
+        background-color:  $dark-blue;
+        color: $white;
       }
 
       .light-background & {
-        border: 2px solid rgba($grey, 1);
-        background-color: rgba($grey, 1);
-        color: rgba($white, 1);
+        border: 2px solid  $dark-blue;
+        background-color:  $dark-blue;
+        color: $white;
       }
     }
   }

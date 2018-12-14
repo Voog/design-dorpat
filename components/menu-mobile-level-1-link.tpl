@@ -2,7 +2,7 @@
   {% menulink item %}
 
   {% if item.children? or editmode %}
-    {% if editmode %}
+    {% if editmode and footer != true %}
       {% assign sub_menu_toggler = true %}
     {% elsif item.layout_title == product_list_layout %}
       {% assign item_content_children_size = 0 %}
@@ -37,10 +37,10 @@
   {% if editmode or item.children? %}
     <ul class="sub-menu menu-level-2">
       {% for level2 in item.visible_children %}
-        {% include "menu-mobile-level-2-link" %}
+        {% include "menu-mobile-level-2-link"  %}
       {% endfor %}
 
-      {% if editmode %}
+      {% if editmode and footer != true %}
         {% if item.hidden_children.size > 0 %}
           <li class="edit-btn">{% menubtn item.hidden_children %}</li>
         {% endif %}
