@@ -3535,7 +3535,7 @@ a img {
 }
 .site-footer .footer-body .footer-content-wrap .footer-logo-wrap .footer-logo {
   max-width: 250px;
-  margin: 24px;
+  margin: 24px 8px;
   margin-right: 0;
   position: relative;
   position: relative;
@@ -3559,7 +3559,7 @@ a img {
   background-repeat: no-repeat;
 }
 .site-footer .footer-body .footer-social {
-  width: 56px;
+  width: 86px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
