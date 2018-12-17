@@ -61,6 +61,64 @@
     return $('html').hasClass('editmode');
   };
 
+  //Accessibility
+  $( '.accessibility-btn-wrap' ).click(function() {
+    $('html').toggleClass('accessibility-open');
+  });
+
+  function storageAvailable(type) {
+    try {
+        var storage = window[type],
+            x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            storage.length !== 0;
+    }
+  }
+
+  if (storageAvailable('localStorage')) {
+    $(document).ready(function (){
+      var blind = JSON.parse(localStorage.getItem('blind'));
+      if(blind == true) {
+        $('html').addClass('accessibility-colors');
+        $('input#mc07').prop('checked', true);
+        console.log(blind)
+      } else {
+        $('html').removeClass('accessibility-colors');
+        $('input#mc07').prop('checked', false);
+        console.log(blind)
+      }
+    });
+  } else {
+    console.warn('Local storage full')
+  };
+
+  $('.accessibility-save').click(function(){
+    if ($('input#mc07').is(':checked')) {
+      $('html').addClass('accessibility-colors');
+      localStorage.setItem('blind', JSON.stringify(true));
+    } else {
+      $('html').removeClass('accessibility-colors');
+      localStorage.setItem('blind', JSON.stringify(false));
+      console.log(localStorage.getItem('blind'))
+    }
+  });
+
+
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {
     var timeout;
@@ -76,7 +134,6 @@
       if (callNow) func.apply(context, args);
     };
   };
-
 
   $('.mobile-menu-toggler').click(function(event) {
       event.preventDefault();

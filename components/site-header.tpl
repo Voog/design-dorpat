@@ -17,7 +17,10 @@
             <div class="site-options">
               <div class="visibility-lrg">
                 {% include "menu-language" %}
-
+                <div class="menu-btn-wrap menu-language-popover-btn accessibility-btn-wrap">
+                  <!-- Link to open the modal -->
+                  <a class="lang-menu-btn accessibility-btn">ACCESSIBILITY</a>
+                </div>
                 {% if site.search.enabled %}
                   <button class="search-btn search-open-btn js-search-toggle-btn js-prevent-sideclick">
                     <svg width="18px" height="18px" viewBox="0 0 18 18"  xmlns="http://www.w3.org/2000/svg">
