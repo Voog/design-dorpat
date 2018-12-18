@@ -1,70 +1,72 @@
-<div class="accessibilty-block-wrapper content-area">
-  <div class="accessibilty-block">
+<div class="accessibility-block-wrapper content-area">
+  <div class="accessibility-block">
     <div class="box18-a">
-      <h2>Teksti suurus</h2>
-      <ul class="accessibilty-input">
+      <h2>{{text_size}}</h2>
+      <ul class="accessibility-input">
         <li class="font2">
-          <input type="radio" name="set01" id="mc01">
-          <label for="mc01">Ülisuur</label>
+          <label for="size-huge">
+            <input type="radio" class="form_field_radio" name="accessibility-font-size" id="size-huge">
+            <span class="form_control_indicator"></span>
+            {{huge}}
+          </label>
         </li>
         <li class="font1">
-          <input type="radio" name="set01" id="mc02">
-          <label for="mc02">Suur</label>
+          <label for="size-large">
+            <input type="radio" class="form_field_radio" name="accessibility-font-size" id="size-large">
+            <span class="form_control_indicator"></span>
+            {{large}}
+          </label>
         </li>
         <li>
-          <input type="radio" checked="checked" name="set01" id="mc03">
-          <label for="mc03">Keskmine (vaikimisi)</label>
+          <label for="size-default">
+            <input type="radio" class="form_field_radio" checked="checked" name="accessibility-font-size" id="size-default">
+            <span class="form_control_indicator"></span>
+            {{default}}
+          </label>
         </li>
       </ul>
     </div>
     <div class="box18-b">
-      <h2>Reavahe</h2>
-      <ul class="accessibilty-input">
+      <h2>{{line_height}}</h2>
+      <ul class="accessibility-input">
         <li class="font2">
-          <input type="radio" name="set02" id="mc04">
-          <label for="mc04">4x</label>
+          <label for="line-height-huge">
+            <input type="radio" class="form_field_radio" name="accessibility-line-height" id="line-height-huge">
+            <span class="form_control_indicator"></span>
+            {{huge}}
+          </label>
         </li>
         <li class="font1">
-          <input type="radio" name="set02" id="mc05">
-          <label for="mc05">2x</label>
+          <label for="line-height-large">
+            <input type="radio" class="form_field_radio" name="accessibility-line-height" id="line-height-large">
+            <span class="form_control_indicator"></span>
+            {{large}}
+          </label>
         </li>
         <li>
-          <input type="radio" class="" checked="checked" name="set02" id="mc06">
-          <label for="mc06">Vaikimisi</label>
+          <label for="line-height-default">
+            <input type="radio" class="form_field_radio" checked="checked" name="accessibility-line-height" id="line-height-default">
+            <span class="form_control_indicator"></span>
+            {{default}}
+          </label>
         </li>
       </ul>
     </div>
     <div class="box18-c">
-      <h2>Kontrastsus</h2>
+      <h2>{{contrast}}</h2>
       <p class="v-impaired">
         <span class="clear">
-          <input type="checkbox" id="mc07" class="accessibilty-contrast-input">
-          <label for="mc07">Kõrge kontrastsusega</label>
+          <label for="accessibility-contrast">
+            <input type="checkbox" class="form_field_checkbox"  id="accessibility-contrast" class="accessibility-contrast-input">
+            <span class="form_control_indicator"></span>
+            {{high_contrast}}
+          </label>
         </span>
       </p>
     </div>
-    <div class="box18-d">
-      <h2>Seaded</h2>
-      <ul class="accessibilty-input">
-        <li>
-          <input type="radio" name="set03" id="mc08">
-          <label for="mc08">Taasta vaikimisi seaded</label>
-        </li>
-        <li>
-          <input type="radio" name="set03" id="mc09">
-          <label for="mc09">Kõik stiilid maha</label>
-
-        </li>
-        <li>
-          <input type="radio" name="set03" id="mc10">
-          <label for="mc10">Kõik menüü stiilid maha</label>
-        </li>
-      </ul>
-    </div>
   </div>
-  <div class="accessibilty-button-wrapper">
-
-      <a title="Vali" href="#" class="accessibility-save custom-btn">Vali</a>
-
+  <div class="accessibility-button-wrapper">
+    <a title="Taasta algseaded" href="#" class="accessibility-restore custom-btn">{{restore_defaults}}</a>
+    <a title="Vali" href="#" class="accessibility-save custom-btn">{{select}}</a>
   </div>
 </div>

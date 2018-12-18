@@ -1,20 +1,17 @@
-.accessibilty-block-wrapper {
-  height: 280px;
+.accessibility-block-wrapper {
   padding: 16px;
   background-color: $grey;
   display: none;
-  line-height: 1.7;
 
   .accessibility-open & {
     display: block;
   }
 
-  .accessibilty-block {
+  .accessibility-block {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     color: $white;
     flex-wrap: wrap;
-
 
     div:last-child {
       border-right: none;
@@ -22,10 +19,10 @@
 
     div {
       padding: 16px 16px 0;
-      width: 20%;
-      border-right: dotted 1px #0083ba;
+      width: 25%;
+      border-left: dotted 1px #0083ba;
 
-      .accessibilty-input {
+      .accessibility-input {
         display: block;
         padding: 0;
       }
@@ -36,9 +33,9 @@
     }
   }
 
-  .accessibilty-button-wrapper {
+  .accessibility-button-wrapper {
     color: $white;
-    margin: 16px;
+    margin: 32px 16px 0;
     text-align: center;
 
     .custom-btn {
@@ -48,36 +45,59 @@
         border-color: #015477;
         background-color: #015477;
       }
-    }
-  }
 
-  @media screen and (max-width: $tablet-2) {
-    .accessibilty-block {
-      div {
-        width: 40%;
-        border-right: none;
+      &.accessibility-save {
+        margin-left: 16px;
       }
     }
   }
 
   @media screen and (max-width: $mobile-1) {
-    .accessibilty-block {
+    .accessibility-block {
       div {
         width: 100%;
         border-right: none;
       }
     }
   }
+
+  .form_field_checkbox + .form_control_indicator,
+  .form_field_radio + .form_control_indicator {
+    background: $white;
+  }
+}
+
+// Accessibility mobile wrapper
+
+.accessibility-mobile-btn-wrapper {
+  margin-top: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.accessibility-btn-wrap {
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 // =============================================================================
-// High contrast
+// HIGH CONTRAST
 // =============================================================================
 .accessibility-colors {
   header,
   main,
   footer {
-    background-color: black;
+    background-color: rgba($black, 1);
     color: #ff0;
   }
 
@@ -95,7 +115,7 @@
   .dark-background,
   .light-background {
     color: #ff0;
-    background-color: black;
+    background-color: rgba($black, 1);
 
     .content-area {
       color: #ff0;
@@ -116,7 +136,12 @@
 
         &.custom-btn {
           color: #ff0;
-          border: #ff0;
+          border-color: #ff0;
+          background-color: rgba($black, 1);
+          &:hover {
+            background-color: $grey;
+            border-color: #ff0;
+          }
         }
       }
       .form_submit {
@@ -127,8 +152,47 @@
       }
     }
 
-    .form_field_textfield {
-      background-color: rgb(49, 49, 49);
+    .content-area {
+
+      table {
+        th, td {
+          border-color: #ff0;
+          color: #ff0;
+        }
+      }
+
+      .form_field {
+        .form_field_label,
+        .edy-fe-label {
+          border-color: #ff0;
+          color: #ff0;
+        }
+      }
+
+      .form_field_textfield,
+      .form_field_textarea,
+      label:not(.form_field_label) {
+        border-color: #ff0;
+        color: #ff0;
+      }
+
+
+      .form_submit {
+        input {
+        background-color: rgba($black, 1);
+        border: 2px solid #ff0;
+        color: #ff0;
+          &:hover {
+            background-color: $grey;
+            border: 2px solid #ff0;
+          }
+        }
+      }
+
+      .form_field_checkbox + .form_control_indicator,
+      .form_field_radio + .form_control_indicator {
+        background-color: #ff0;
+      }
     }
 
     .header-title a,
@@ -190,10 +254,10 @@
         &,
         &:before,
         &:after {
-          background-color: black;
+          background-color: rgba($black, 1);
 
           .dark-background & {
-            background-color: black;
+            background-color: rgba($black, 1);
           }
 
           .language-flags-disabled & {
@@ -209,7 +273,7 @@
 
     #mobile-menu {
       color: #ff0;
-      background-color: black;
+      background-color: rgba($black, 1);
       .search-open-btn {
         svg {
           fill: #ff0;
@@ -251,13 +315,9 @@
   }
 
   .lang-flag:before {
-    background-color: black;
+    background-color: rgba($black, 1);
   }
 }
-
-
-
-
 
 /* langmenu */
 .lang-menu {
@@ -280,7 +340,7 @@
   a {
     &.lang-flag {
       .dark-background & {
-        .accessability-colors & {
+        .accessibility-colors & {
           color: #ff0;
 
           &:hover {
@@ -298,7 +358,7 @@
       border-color: #ff0 transparent transparent transparent;
 
       .dark-background & {
-        .accessability-colors & {
+        .accessibility-colors & {
           border-color: #ff0 transparent transparent transparent;
         }
       }
@@ -306,14 +366,241 @@
   }
 }
 
-.accessability-line-height-2 {
+//==============================================================================
+// SIZE LARGE
+//==============================================================================
+
+.accessibility-size-large {
+  .footer-menu {
+    font-size: 19px;
+  }
+
   .content-area {
-    line-height: 2;
+    font-size: 19px;
+
+    .site-footer & {
+      font-size: 19px;
+    }
+
+    &.header-title {
+      &,
+      & a,
+      & a:hover {
+        font-size: var(--header-body-font-size);
+      }
+    }
+
+    p,
+    ul,
+    ol,
+    dl {
+      font-size: 19px;
+    }
+
+    h1 {
+      &,
+      a,
+      a:hover {
+        font-size: 33px;
+        font-weight: 300;
+      }
+    }
+
+    h2 {
+      font-size: 27px;
+    }
+
+    h3 {
+      font-size: 23px;
+    }
+
+    h4 {
+      font-size: 19px;
+    }
+
+    h5,
+    h6 {
+      font-size: 19px;
+    }
+
+    // Code blocks and preformatted content.
+    a.custom-btn, div.custom-btn {
+      font-size: 19px;
+    }
+
+    table {
+      th, td {
+        font-size: 19px;
+      }
+    }
+  }
+
+  .main-feature {
+    .feature-content {
+      font-size: 19px;
+    }
+  }
+
+  .content-area {
+
+    .form_field {
+      .form_field_label,
+      .edy-fe-label {
+        font-size: 19px;
+      }
+    }
+
+    .form_field_textfield,
+    .form_field_textarea,
+    label:not(.form_field_label) {
+      font-size: 19px;
+    }
+
+
+    .form_submit {
+      input {
+        font-size: 19px;
+
+      }
+    }
   }
 }
 
-.accessability-line-height-4 {
+//==============================================================================
+// SIZE HUGE
+//==============================================================================
+
+.accessibility-size-huge {
+  .footer-menu {
+    font-size: 22px;
+  }
+
   .content-area {
-    line-height: 4;
+    font-size: 22px;
+
+    .site-footer & {
+      font-size: 22px;
+    }
+
+    &.header-title {
+      &,
+      & a,
+      & a:hover {
+        font-size: var(--header-body-font-size);
+      }
+    }
+
+    p,
+    ul,
+    ol,
+    dl {
+      font-size: 22px;
+    }
+
+    h1 {
+      &,
+      a,
+      a:hover {
+        font-size: 36px;
+        font-weight: 300;
+      }
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 26px;
+    }
+
+    h4 {
+      font-size: 22px;
+    }
+
+    h5,
+    h6 {
+      font-size: 22px;
+    }
+
+    // Code blocks and preformatted content.
+    a.custom-btn, div.custom-btn {
+      font-size: 22px;
+    }
+
+    table {
+      th, td {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .main-feature {
+    .feature-content {
+      font-size: 23px;
+    }
+  }
+  .content-area {
+
+    .form_field {
+      .form_field_label,
+      .edy-fe-label {
+        font-size: 23px;
+      }
+    }
+
+    .form_field_textfield,
+    .form_field_textarea,
+    label:not(.form_field_label) {
+      font-size: 22px;
+    }
+
+
+    .form_submit {
+      input {
+        font-size: 22px;
+
+      }
+    }
+  }
+}
+
+//==============================================================================
+// LINE HEIGHT HUGE
+//==============================================================================
+
+.accessibility-line-height-large {
+  line-height: 2.5;
+
+  .content-area,
+  .site-header,
+  .site-footer {
+    line-height: 2.5;
+  }
+
+  .main-feature {
+    .feature-content {
+      line-height: 2.5;
+    }
+  }
+}
+
+//==============================================================================
+// SIZE HUGE
+//==============================================================================
+
+.accessibility-line-height-huge {
+  line-height: 3.5;
+
+  .content-area,
+  .site-header,
+  .site-footer {
+    line-height: 3.5;
+  }
+
+  .main-feature {
+    .feature-content {
+      line-height: 3.5;
+    }
   }
 }

@@ -7,8 +7,9 @@
   };
 
   //Accessibility
-  $( '.accessibility-btn-wrap' ).click(function() {
+  $('.accessibility-btn').click(function() {
     $('html').toggleClass('accessibility-open');
+    $('html').removeClass('mobilemenu-open');
   });
 
   function storageAvailable(type) {
@@ -37,29 +38,125 @@
 
   if (storageAvailable('localStorage')) {
     $(document).ready(function (){
-      var blind = JSON.parse(localStorage.getItem('blind'));
+      var blind = JSON.parse(localStorage.getItem('blind')),
+        restoreDefaults = JSON.parse(localStorage.getItem('restore-defaults')),
+        sizeLarge = JSON.parse(localStorage.getItem('size-large')),
+        sizeHuge = JSON.parse(localStorage.getItem('size-huge')),
+        lineHeightLarge = JSON.parse(localStorage.getItem('line-height-large')),
+        lineHeightHuge = JSON.parse(localStorage.getItem('line-height-huge'));
+
       if(blind == true) {
         $('html').addClass('accessibility-colors');
-        $('input#mc07').prop('checked', true);
-        console.log(blind)
+        $('input#accessibility-contrast').prop('checked', true);
       } else {
         $('html').removeClass('accessibility-colors');
-        $('input#mc07').prop('checked', false);
-        console.log(blind)
+        $('input#accessibility-contrast').prop('checked', false);
+      }
+
+      if(lineHeightLarge == true) {
+        $('html').addClass('accessibility-line-height-large');
+        $('input#line-height-large').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-line-height-large');
+        $('input#line-height-large').prop('checked', false);
+      }
+
+      if(lineHeightHuge == true) {
+        $('html').addClass('accessibility-line-height-huge');
+        $('input#line-height-huge').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-line-height-huge');
+        $('input#line-height-huge').prop('checked', false);
+      }
+
+      if(sizeLarge == true) {
+        $('html').addClass('accessibility-size-large');
+        $('input#size-large').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-size-large');
+        $('input#size-large').prop('checked', false);
+      }
+
+      if(sizeHuge == true) {
+        $('html').addClass('accessibility-size-huge');
+        $('input#size-huge').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-size-huge');
+        $('input#size-huge').prop('checked', false);
+      }
+
+      if(restoreDefaults == true) {
+        $('html').removeClass('accessibility-colors');
+        $('input#accessibility-contrast').prop('checked', false);
+        $('input#line-height-default').prop('checked', true);
+        $('input#font-size-default').prop('checked', true);
       }
     });
   } else {
     console.warn('Local storage full')
   };
 
+  $('.accessibility-restore').click(function(){
+    $('html').removeClass('accessibility-colors');
+    $('html').removeClass('accessibility-line-height-large');
+    $('html').removeClass('accessibility-line-height-huge');
+    $('html').removeClass('accessibility-size-large');
+    $('html').removeClass('accessibility-size-huge');
+    $('input#accessibility-contrast').prop('checked', false);
+    $('input#line-height-default').prop('checked', true);
+    $('input#size-default').prop('checked', true);
+    localStorage.setItem('line-height-large', JSON.stringify(false));
+    localStorage.setItem('line-height-huge', JSON.stringify(false));
+    localStorage.setItem('size-large', JSON.stringify(false));
+    localStorage.setItem('size-huge', JSON.stringify(false));
+    localStorage.setItem('blind', JSON.stringify(false));
+    localStorage.setItem('restore-defaults', JSON.stringify(true));
+  });
+
   $('.accessibility-save').click(function(){
-    if ($('input#mc07').is(':checked')) {
+    if ($('input#accessibility-contrast').is(':checked')) {
       $('html').addClass('accessibility-colors');
       localStorage.setItem('blind', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
     } else {
       $('html').removeClass('accessibility-colors');
       localStorage.setItem('blind', JSON.stringify(false));
-      console.log(localStorage.getItem('blind'))
+    }
+
+    if($('#line-height-large').is(':checked')) {
+      $('html').addClass('accessibility-line-height-large');
+      localStorage.setItem('line-height-large', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-line-height-large');
+      localStorage.setItem('line-height-large', JSON.stringify(false));
+    }
+
+    if($('#line-height-huge').is(':checked')) {
+      $('html').addClass('accessibility-line-height-huge');
+      localStorage.setItem('line-height-huge', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-line-height-huge');
+      localStorage.setItem('line-height-huge', JSON.stringify(false));
+    }
+
+    if($('#size-large').is(':checked')) {
+      $('html').addClass('accessibility-size-large');
+      localStorage.setItem('size-large', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-size-large');
+      localStorage.setItem('size-large', JSON.stringify(false));
+    }
+
+    if($('#size-huge').is(':checked')) {
+      $('html').addClass('accessibility-size-huge');
+      localStorage.setItem('size-huge', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-size-huge');
+      localStorage.setItem('size-huge', JSON.stringify(false));
     }
   });
 

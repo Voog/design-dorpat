@@ -17,10 +17,9 @@
             <div class="site-options">
               <div class="visibility-lrg">
                 {% include "menu-language" %}
-                <div class="menu-btn-wrap menu-language-popover-btn accessibility-btn-wrap">
-                  <!-- Link to open the modal -->
-                  <a class="lang-menu-btn accessibility-btn">ACCESSIBILITY</a>
-                </div>
+                  <div class="menu-btn-wrap accessibility-btn-wrap">
+                    <a class="accessibility-btn">{{visually_impaired}}</a>
+                  </div>
                 {% if site.search.enabled %}
                   <button class="search-btn search-open-btn js-search-toggle-btn js-prevent-sideclick">
                     <svg width="18px" height="18px" viewBox="0 0 18 18"  xmlns="http://www.w3.org/2000/svg">
@@ -65,6 +64,15 @@
           <div class="wrap">
             <div class="header-body content-area" {{ edy_intro_edit_text }}>
               {% content name="header" %}
+            </div>
+            <div class="header-logo-wrap {% if editmode != true and feature_image_5 == nil %} empty-hidden{% endif %}">
+              <div class="header-logo">
+                {% if editmode %}
+                  <div class="aspect-ratio-inner js-img-dropper-area" data-img-key="feature_image_5" data-image="{{ feature_image_5 }}"></div>
+                {% elsif feature_image_5 != "" %}
+                  <div class="aspect-ratio-inner " style="background-image: url('{{ feature_image_5 }}')"></div>
+                {% endif %}
+              </div>
             </div>
           </div>
         {% elsif blog_article_page %}

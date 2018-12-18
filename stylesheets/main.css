@@ -642,7 +642,7 @@ a img {
 }
 .front-page .main-feature .feature-content {
   margin: 0 30px 70px;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media screen and (max-width: 640px) {
   .front-page .main-feature .feature-content {
@@ -675,6 +675,41 @@ a img {
 }
 .front-page .content-full .content-full-inner {
   position: relative;
+}
+
+.header-logo-wrap {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 200px;
+  height: 100px;
+}
+@media screen and (max-width: 640px) {
+  .header-logo-wrap {
+    width: 150px;
+    height: 75px;
+  }
+}
+.header-logo-wrap .header-logo {
+  position: relative;
+}
+.header-logo-wrap .header-logo:before {
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: 50%;
+}
+.header-logo-wrap .header-logo > .aspect-ratio-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.header-logo-wrap .header-logo .aspect-ratio-inner {
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
 }
 
 .common-page .sidebar-active {
@@ -1046,65 +1081,83 @@ a img {
   display: none;
 }
 
-.accessibilty-block-wrapper {
-  height: 280px;
+.accessibility-block-wrapper {
   padding: 16px;
   background-color: #222;
   display: none;
-  line-height: 1.7;
 }
-.accessibility-open .accessibilty-block-wrapper {
+.accessibility-open .accessibility-block-wrapper {
   display: block;
 }
-.accessibilty-block-wrapper .accessibilty-block {
+.accessibility-block-wrapper .accessibility-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: #fff;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.accessibilty-block-wrapper .accessibilty-block div:last-child {
+.accessibility-block-wrapper .accessibility-block div:last-child {
   border-right: none;
 }
-.accessibilty-block-wrapper .accessibilty-block div {
+.accessibility-block-wrapper .accessibility-block div {
   padding: 16px 16px 0;
-  width: 20%;
-  border-right: dotted 1px #0083ba;
+  width: 25%;
+  border-left: dotted 1px #0083ba;
 }
-.accessibilty-block-wrapper .accessibilty-block div .accessibilty-input {
+.accessibility-block-wrapper .accessibility-block div .accessibility-input {
   display: block;
   padding: 0;
 }
-.accessibilty-block-wrapper .accessibilty-block li::before {
+.accessibility-block-wrapper .accessibility-block li::before {
   display: none;
 }
-.accessibilty-block-wrapper .accessibilty-button-wrapper {
+.accessibility-block-wrapper .accessibility-button-wrapper {
   color: #fff;
-  margin: 16px;
+  margin: 32px 16px 0;
   text-align: center;
 }
-.accessibilty-block-wrapper .accessibilty-button-wrapper .custom-btn {
+.accessibility-block-wrapper .accessibility-button-wrapper .custom-btn {
   color: #fff;
 }
-.accessibilty-block-wrapper .accessibilty-button-wrapper .custom-btn:hover {
+.accessibility-block-wrapper .accessibility-button-wrapper .custom-btn:hover {
   border-color: #015477;
   background-color: #015477;
 }
-@media screen and (max-width: 850px) {
-  .accessibilty-block-wrapper .accessibilty-block div {
-    width: 40%;
-    border-right: none;
-  }
+.accessibility-block-wrapper .accessibility-button-wrapper .custom-btn.accessibility-save {
+  margin-left: 16px;
 }
 @media screen and (max-width: 480px) {
-  .accessibilty-block-wrapper .accessibilty-block div {
+  .accessibility-block-wrapper .accessibility-block div {
     width: 100%;
     border-right: none;
   }
+}
+.accessibility-block-wrapper .form_field_checkbox + .form_control_indicator,
+.accessibility-block-wrapper .form_field_radio + .form_control_indicator {
+  background: #fff;
+}
+
+.accessibility-mobile-btn-wrapper {
+  margin-top: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.accessibility-mobile-btn-wrapper:hover {
+  opacity: 0.8;
+}
+
+.accessibility-btn-wrap {
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.accessibility-btn-wrap:hover {
+  opacity: 0.8;
 }
 
 .accessibility-colors header,
@@ -1184,7 +1237,37 @@ a img {
 .accessibility-colors .light-background .content-area pre.custom-btn,
 .accessibility-colors .light-background .content-area table.custom-btn {
   color: #ff0;
-  border: #ff0;
+  border-color: #ff0;
+  background-color: black;
+}
+.accessibility-colors .dark-background .content-area h1.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h2.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h3.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h4.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h5.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h6.custom-btn:hover,
+.accessibility-colors .dark-background .content-area p.custom-btn:hover,
+.accessibility-colors .dark-background .content-area a.custom-btn:hover,
+.accessibility-colors .dark-background .content-area ul.custom-btn:hover,
+.accessibility-colors .dark-background .content-area ol.custom-btn:hover,
+.accessibility-colors .dark-background .content-area dl.custom-btn:hover,
+.accessibility-colors .dark-background .content-area pre.custom-btn:hover,
+.accessibility-colors .dark-background .content-area table.custom-btn:hover,
+.accessibility-colors .light-background .content-area h1.custom-btn:hover,
+.accessibility-colors .light-background .content-area h2.custom-btn:hover,
+.accessibility-colors .light-background .content-area h3.custom-btn:hover,
+.accessibility-colors .light-background .content-area h4.custom-btn:hover,
+.accessibility-colors .light-background .content-area h5.custom-btn:hover,
+.accessibility-colors .light-background .content-area h6.custom-btn:hover,
+.accessibility-colors .light-background .content-area p.custom-btn:hover,
+.accessibility-colors .light-background .content-area a.custom-btn:hover,
+.accessibility-colors .light-background .content-area ul.custom-btn:hover,
+.accessibility-colors .light-background .content-area ol.custom-btn:hover,
+.accessibility-colors .light-background .content-area dl.custom-btn:hover,
+.accessibility-colors .light-background .content-area pre.custom-btn:hover,
+.accessibility-colors .light-background .content-area table.custom-btn:hover {
+  background-color: #222;
+  border-color: #ff0;
 }
 .accessibility-colors .dark-background .content-area .form_submit,
 .accessibility-colors .light-background .content-area .form_submit {
@@ -1194,9 +1277,44 @@ a img {
 .accessibility-colors .light-background .content-area .form_submit input {
   color: #ff0;
 }
-.accessibility-colors .dark-background .form_field_textfield,
-.accessibility-colors .light-background .form_field_textfield {
-  background-color: #313131;
+.accessibility-colors .dark-background .content-area table th, .accessibility-colors .dark-background .content-area table td,
+.accessibility-colors .light-background .content-area table th,
+.accessibility-colors .light-background .content-area table td {
+  border-color: #ff0;
+  color: #ff0;
+}
+.accessibility-colors .dark-background .content-area .form_field .form_field_label,
+.accessibility-colors .dark-background .content-area .form_field .edy-fe-label,
+.accessibility-colors .light-background .content-area .form_field .form_field_label,
+.accessibility-colors .light-background .content-area .form_field .edy-fe-label {
+  border-color: #ff0;
+  color: #ff0;
+}
+.accessibility-colors .dark-background .content-area .form_field_textfield,
+.accessibility-colors .dark-background .content-area .form_field_textarea,
+.accessibility-colors .dark-background .content-area label:not(.form_field_label),
+.accessibility-colors .light-background .content-area .form_field_textfield,
+.accessibility-colors .light-background .content-area .form_field_textarea,
+.accessibility-colors .light-background .content-area label:not(.form_field_label) {
+  border-color: #ff0;
+  color: #ff0;
+}
+.accessibility-colors .dark-background .content-area .form_submit input,
+.accessibility-colors .light-background .content-area .form_submit input {
+  background-color: black;
+  border: 2px solid #ff0;
+  color: #ff0;
+}
+.accessibility-colors .dark-background .content-area .form_submit input:hover,
+.accessibility-colors .light-background .content-area .form_submit input:hover {
+  background-color: #222;
+  border: 2px solid #ff0;
+}
+.accessibility-colors .dark-background .content-area .form_field_checkbox + .form_control_indicator,
+.accessibility-colors .dark-background .content-area .form_field_radio + .form_control_indicator,
+.accessibility-colors .light-background .content-area .form_field_checkbox + .form_control_indicator,
+.accessibility-colors .light-background .content-area .form_field_radio + .form_control_indicator {
+  background-color: #ff0;
 }
 .accessibility-colors .dark-background .header-title a,
 .accessibility-colors .dark-background .header-title a:hover,
@@ -1286,26 +1404,160 @@ a img {
 .lang-menu li a {
   color: #ff0;
 }
-.accessability-colors .dark-background .lang-menu a.lang-flag {
+.accessibility-colors .dark-background .lang-menu a.lang-flag {
   color: #ff0;
 }
-.accessability-colors .dark-background .lang-menu a.lang-flag:hover {
+.accessibility-colors .dark-background .lang-menu a.lang-flag:hover {
   color: #ff0;
 }
 
 .lang-menu-btn .lang-title-inner:after {
   border-color: #ff0 transparent transparent transparent;
 }
-.accessability-colors .dark-background .lang-menu-btn .lang-title-inner:after {
+.accessibility-colors .dark-background .lang-menu-btn .lang-title-inner:after {
   border-color: #ff0 transparent transparent transparent;
 }
 
-.accessability-line-height-2 .content-area {
-  line-height: 2;
+.accessibility-size-large .footer-menu {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area {
+  font-size: 19px;
+}
+.site-footer .accessibility-size-large .content-area {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area.header-title, .accessibility-size-large .content-area.header-title a, .accessibility-size-large .content-area.header-title a:hover {
+  font-size: var(--header-body-font-size);
+}
+.accessibility-size-large .content-area p,
+.accessibility-size-large .content-area ul,
+.accessibility-size-large .content-area ol,
+.accessibility-size-large .content-area dl {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area h1,
+.accessibility-size-large .content-area h1 a,
+.accessibility-size-large .content-area h1 a:hover {
+  font-size: 33px;
+  font-weight: 300;
+}
+.accessibility-size-large .content-area h2 {
+  font-size: 27px;
+}
+.accessibility-size-large .content-area h3 {
+  font-size: 23px;
+}
+.accessibility-size-large .content-area h4 {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area h5,
+.accessibility-size-large .content-area h6 {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area a.custom-btn, .accessibility-size-large .content-area div.custom-btn {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area table th, .accessibility-size-large .content-area table td {
+  font-size: 19px;
+}
+.accessibility-size-large .main-feature .feature-content {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area .form_field .form_field_label,
+.accessibility-size-large .content-area .form_field .edy-fe-label {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area .form_field_textfield,
+.accessibility-size-large .content-area .form_field_textarea,
+.accessibility-size-large .content-area label:not(.form_field_label) {
+  font-size: 19px;
+}
+.accessibility-size-large .content-area .form_submit input {
+  font-size: 19px;
 }
 
-.accessability-line-height-4 .content-area {
-  line-height: 4;
+.accessibility-size-huge .footer-menu {
+  font-size: 22px;
+}
+.accessibility-size-huge .content-area {
+  font-size: 22px;
+}
+.site-footer .accessibility-size-huge .content-area {
+  font-size: 22px;
+}
+.accessibility-size-huge .content-area.header-title, .accessibility-size-huge .content-area.header-title a, .accessibility-size-huge .content-area.header-title a:hover {
+  font-size: var(--header-body-font-size);
+}
+.accessibility-size-huge .content-area p,
+.accessibility-size-huge .content-area ul,
+.accessibility-size-huge .content-area ol,
+.accessibility-size-huge .content-area dl {
+  font-size: 22px;
+}
+.accessibility-size-huge .content-area h1,
+.accessibility-size-huge .content-area h1 a,
+.accessibility-size-huge .content-area h1 a:hover {
+  font-size: 36px;
+  font-weight: 300;
+}
+.accessibility-size-huge .content-area h2 {
+  font-size: 30px;
+}
+.accessibility-size-huge .content-area h3 {
+  font-size: 26px;
+}
+.accessibility-size-huge .content-area h4 {
+  font-size: 22px;
+}
+.accessibility-size-huge .content-area h5,
+.accessibility-size-huge .content-area h6 {
+  font-size: 22px;
+}
+.accessibility-size-huge .content-area a.custom-btn, .accessibility-size-huge .content-area div.custom-btn {
+  font-size: 22px;
+}
+.accessibility-size-huge .content-area table th, .accessibility-size-huge .content-area table td {
+  font-size: 22px;
+}
+.accessibility-size-huge .main-feature .feature-content {
+  font-size: 23px;
+}
+.accessibility-size-huge .content-area .form_field .form_field_label,
+.accessibility-size-huge .content-area .form_field .edy-fe-label {
+  font-size: 23px;
+}
+.accessibility-size-huge .content-area .form_field_textfield,
+.accessibility-size-huge .content-area .form_field_textarea,
+.accessibility-size-huge .content-area label:not(.form_field_label) {
+  font-size: 22px;
+}
+.accessibility-size-huge .content-area .form_submit input {
+  font-size: 22px;
+}
+
+.accessibility-line-height-large {
+  line-height: 2.5;
+}
+.accessibility-line-height-large .content-area,
+.accessibility-line-height-large .site-header,
+.accessibility-line-height-large .site-footer {
+  line-height: 2.5;
+}
+.accessibility-line-height-large .main-feature .feature-content {
+  line-height: 2.5;
+}
+
+.accessibility-line-height-huge {
+  line-height: 3.5;
+}
+.accessibility-line-height-huge .content-area,
+.accessibility-line-height-huge .site-header,
+.accessibility-line-height-huge .site-footer {
+  line-height: 3.5;
+}
+.accessibility-line-height-huge .main-feature .feature-content {
+  line-height: 3.5;
 }
 
 .article-comments {
