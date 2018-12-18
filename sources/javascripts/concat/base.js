@@ -12,6 +12,16 @@
     $('html').removeClass('mobilemenu-open');
   });
 
+  $(document).click( function(e) {
+    if ($(e.target).is(".accessibility-btn") === false) {
+      $('html').removeClass('accessibility-open');
+    }
+  });
+
+  $('.accessibility-block-wrapper').click(function (e) {
+    e.stopPropagation();
+  });
+
   function storageAvailable(type) {
     try {
         var storage = window[type],
