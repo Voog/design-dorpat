@@ -48,6 +48,11 @@
 
       &.accessibility-save {
         margin-left: 16px;
+
+        @media screen and (max-width: $mobile-1) {
+          margin-left: 0;
+          margin-top: 16px;
+        }
       }
     }
   }
