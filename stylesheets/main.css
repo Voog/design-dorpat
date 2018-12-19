@@ -1424,20 +1424,33 @@ a img {
 
 .accessibility-size-large .footer-menu,
 .accessibility-size-large .accessibility-menu-btn-wrap,
-.accessibility-size-large .lang-menu-btn,
-.accessibility-size-large .form_field_textfield,
-.accessibility-size-large .form_field_textarea,
-.accessibility-size-large label:not(.form_field_label),
-.accessibility-size-large p,
-.accessibility-size-large ul,
-.accessibility-size-large ol,
-.accessibility-size-large dl,
-.accessibility-size-large pre,
-.accessibility-size-large code,
-.accessibility-size-large h5,
-.accessibility-size-large h6,
-.accessibility-size-large a.custom-btn,
-.accessibility-size-large div.custom-btn {
+.accessibility-size-large .lang-menu-btn {
+  font-size: 20px;
+}
+.accessibility-size-large .content-item-box .item-title {
+  font-size: 24px;
+}
+.accessibility-size-large .site-sidebar .submenu li {
+  font-size: 26px;
+}
+.accessibility-size-large .site-sidebar .sidebar-title {
+  font-size: 26px;
+}
+.accessibility-size-large .site-footer .blog-article-nav .article-nav-direction {
+  font-size: 20px;
+}
+.accessibility-size-large .blog-tags .tags-title {
+  font-size: 24px;
+}
+.accessibility-size-large .blog-article-page .article-author,
+.accessibility-size-large .blog-article-page .article-date,
+.accessibility-size-large .blog-article-page .comments-title,
+.accessibility-size-large .blog-news-page .article-author,
+.accessibility-size-large .blog-news-page .article-date,
+.accessibility-size-large .blog-news-page .comments-title {
+  font-size: 22px;
+}
+.accessibility-size-large .blog-tags .menu .menu-link {
   font-size: 20px;
 }
 .accessibility-size-large .menu-main li {
@@ -1451,6 +1464,21 @@ a img {
   font-size: 20px;
 }
 .accessibility-size-large .content-area {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area .form_field_textfield,
+.accessibility-size-large .content-area .form_field_textarea,
+.accessibility-size-large .content-area label:not(.form_field_label),
+.accessibility-size-large .content-area p,
+.accessibility-size-large .content-area ul,
+.accessibility-size-large .content-area ol,
+.accessibility-size-large .content-area dl,
+.accessibility-size-large .content-area pre,
+.accessibility-size-large .content-area code,
+.accessibility-size-large .content-area h5,
+.accessibility-size-large .content-area h6,
+.accessibility-size-large .content-area a.custom-btn,
+.accessibility-size-large .content-area div.custom-btn {
   font-size: 20px;
 }
 .accessibility-size-large .content-area .form_field .form_field_label,
@@ -1505,20 +1533,7 @@ a img {
 
 .accessibility-size-huge .footer-menu,
 .accessibility-size-huge .accessibility-menu-btn-wrap,
-.accessibility-size-huge .lang-menu-btn,
-.accessibility-size-huge .form_field_textfield,
-.accessibility-size-huge .form_field_textarea,
-.accessibility-size-huge label:not(.form_field_label),
-.accessibility-size-huge p,
-.accessibility-size-huge ul,
-.accessibility-size-huge ol,
-.accessibility-size-huge dl,
-.accessibility-size-huge pre,
-.accessibility-size-huge code,
-.accessibility-size-huge h5,
-.accessibility-size-huge h6,
-.accessibility-size-huge a.custom-btn,
-.accessibility-size-huge div.custom-btn {
+.accessibility-size-huge .lang-menu-btn {
   font-size: 24px;
 }
 .accessibility-size-huge .menu-main li {
@@ -1527,7 +1542,48 @@ a img {
 .accessibility-size-huge #mobile-menu .navigation-menu {
   font-size: 24px;
 }
+.accessibility-size-huge .content-item-box .item-title {
+  font-size: 24px;
+}
+.accessibility-size-huge .site-sidebar .submenu li {
+  font-size: 26px;
+}
+.accessibility-size-huge .site-sidebar .sidebar-title {
+  font-size: 26px;
+}
+.accessibility-size-huge .site-footer .blog-article-nav .article-nav-direction {
+  font-size: 20px;
+}
+.accessibility-size-huge .blog-tags .tags-title {
+  font-size: 24px;
+}
+.accessibility-size-huge .blog-article-page .article-author,
+.accessibility-size-huge .blog-article-page .article-date,
+.accessibility-size-huge .blog-article-page .comments-title,
+.accessibility-size-huge .blog-news-page .article-author,
+.accessibility-size-huge .blog-news-page .article-date,
+.accessibility-size-huge .blog-news-page .comments-title {
+  font-size: 22px;
+}
+.accessibility-size-huge .blog-tags .menu .menu-link {
+  font-size: 20px;
+}
 .accessibility-size-huge .content-area {
+  font-size: 24px;
+}
+.accessibility-size-huge .content-area .form_field_textfield,
+.accessibility-size-huge .content-area .form_field_textarea,
+.accessibility-size-huge .content-area label:not(.form_field_label),
+.accessibility-size-huge .content-area p,
+.accessibility-size-huge .content-area ul,
+.accessibility-size-huge .content-area ol,
+.accessibility-size-huge .content-area dl,
+.accessibility-size-huge .content-area pre,
+.accessibility-size-huge .content-area code,
+.accessibility-size-huge .content-area h5,
+.accessibility-size-huge .content-area h6,
+.accessibility-size-huge .content-area a.custom-btn,
+.accessibility-size-huge .content-area div.custom-btn {
   font-size: 24px;
 }
 .accessibility-size-huge .content-area .form_field .form_field_label,
@@ -3337,7 +3393,7 @@ a img {
   }
 }
 .site-sidebar .sidebar-title {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   line-height: 2;
   text-transform: uppercase;
@@ -3362,7 +3418,7 @@ a img {
   list-style: none;
 }
 .site-sidebar .submenu li {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.7;
   margin: 15px 0;

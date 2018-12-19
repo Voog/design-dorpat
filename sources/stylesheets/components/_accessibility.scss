@@ -375,23 +375,59 @@
 
   .footer-menu,
   .accessibility-menu-btn-wrap,
-  .lang-menu-btn,
-  .form_field_textfield,
-  .form_field_textarea,
-  label:not(.form_field_label),
-  p,
-  ul,
-  ol,
-  dl,
-  pre,
-  code,
-  h5,
-  h6,
-  a.custom-btn,
-  div.custom-btn   {
+  .lang-menu-btn {
     font-size: 20px;
   }
 
+  .content-item-box {
+    .item-title {
+      font-size: 24px;
+    }
+  }
+
+  .site-sidebar {
+    .submenu {
+      li {
+        font-size: 26px;
+      }
+    }
+
+    .sidebar-title {
+      font-size: 26px;
+    }
+  }
+
+  .site-footer {
+    .blog-article-nav {
+      .article-nav-direction {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .blog-tags {
+    .tags-title {
+      font-size: 24px;
+    }
+  }
+
+
+  .blog-article-page,
+  .blog-news-page {
+    .article-author,
+    .article-date,
+    .comments-title {
+      font-size: 22px;
+    }
+  }
+
+  .blog-tags {
+    .menu {
+      .menu-link {
+        font-size: 20px;
+      }
+    }
+  }
   .menu-main {
     li {
       font-size: 20px;
@@ -411,6 +447,24 @@
 
   .content-area {
     font-size: 20px;
+
+    .form_field_textfield,
+    .form_field_textarea,
+    label:not(.form_field_label),
+    p,
+    ul,
+    ol,
+    dl,
+    pre,
+    code,
+    h5,
+    h6,
+    a.custom-btn,
+    div.custom-btn {
+      font-size: 20px;
+    }
+
+
 
     .form_field {
       .form_field_label,
@@ -498,20 +552,7 @@
 
   .footer-menu,
   .accessibility-menu-btn-wrap,
-  .lang-menu-btn,
-  .form_field_textfield,
-  .form_field_textarea,
-  label:not(.form_field_label),
-  p,
-  ul,
-  ol,
-  dl,
-  pre,
-  code,
-  h5,
-  h6,
-  a.custom-btn,
-  div.custom-btn   {
+  .lang-menu-btn {
     font-size: 24px;
   }
 
@@ -527,8 +568,76 @@
     }
   }
 
+  .content-item-box {
+    .item-title {
+      font-size: 24px;
+    }
+  }
+
+  .site-sidebar {
+    .submenu {
+      li {
+        font-size: 26px;
+      }
+    }
+
+    .sidebar-title {
+      font-size: 26px;
+    }
+  }
+
+  .site-footer {
+    .blog-article-nav {
+      .article-nav-direction {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .blog-tags {
+    .tags-title {
+      font-size: 24px;
+    }
+  }
+
+
+  .blog-article-page,
+  .blog-news-page {
+    .article-author,
+    .article-date,
+    .comments-title {
+      font-size: 22px;
+    }
+  }
+
+  .blog-tags {
+    .menu {
+      .menu-link {
+        font-size: 20px;
+      }
+    }
+  }
+
+
   .content-area {
     font-size: 24px;
+
+    .form_field_textfield,
+    .form_field_textarea,
+    label:not(.form_field_label),
+    p,
+    ul,
+    ol,
+    dl,
+    pre,
+    code,
+    h5,
+    h6,
+    a.custom-btn,
+    div.custom-btn {
+      font-size: 24px;
+    }
+
 
     .form_field {
       .form_field_label,
