@@ -61,6 +61,171 @@
     return $('html').hasClass('editmode');
   };
 
+  //Accessibility functionality
+  $('.accessibility-btn').click(function() {
+    $('html').toggleClass('accessibility-open');
+    $('html').removeClass('mobilemenu-open');
+  });
+
+  $(document).click( function(e) {
+    if ($(e.target).is(".accessibility-btn") === false) {
+      $('html').removeClass('accessibility-open');
+    }
+  });
+
+  $('.accessibility-block-wrap').click(function (e) {
+    e.stopPropagation();
+  });
+
+  function storageAvailable(type) {
+    try {
+        var storage = window[type],
+            x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            storage.length !== 0;
+    }
+  }
+
+  if (storageAvailable('localStorage')) {
+    $(document).ready(function (){
+      var blind = JSON.parse(localStorage.getItem('blind')),
+        restoreDefaults = JSON.parse(localStorage.getItem('restore-defaults')),
+        sizeLarge = JSON.parse(localStorage.getItem('size-large')),
+        sizeHuge = JSON.parse(localStorage.getItem('size-huge')),
+        lineHeightLarge = JSON.parse(localStorage.getItem('line-height-large')),
+        lineHeightHuge = JSON.parse(localStorage.getItem('line-height-huge'));
+
+      if(blind == true) {
+        $('html').addClass('accessibility-colors');
+        $('input#accessibility-contrast').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-colors');
+        $('input#accessibility-contrast').prop('checked', false);
+      }
+
+      if(lineHeightLarge == true) {
+        $('html').addClass('accessibility-line-height-large');
+        $('input#line-height-large').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-line-height-large');
+        $('input#line-height-large').prop('checked', false);
+      }
+
+      if(lineHeightHuge == true) {
+        $('html').addClass('accessibility-line-height-huge');
+        $('input#line-height-huge').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-line-height-huge');
+        $('input#line-height-huge').prop('checked', false);
+      }
+
+      if(sizeLarge == true) {
+        $('html').addClass('accessibility-size-large');
+        $('input#size-large').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-size-large');
+        $('input#size-large').prop('checked', false);
+      }
+
+      if(sizeHuge == true) {
+        $('html').addClass('accessibility-size-huge');
+        $('input#size-huge').prop('checked', true);
+      } else {
+        $('html').removeClass('accessibility-size-huge');
+        $('input#size-huge').prop('checked', false);
+      }
+
+      if(restoreDefaults == true) {
+        $('html').removeClass('accessibility-colors');
+        $('input#accessibility-contrast').prop('checked', false);
+        $('input#line-height-default').prop('checked', true);
+        $('input#font-size-default').prop('checked', true);
+      }
+    });
+  } else {
+    console.warn('Local storage full')
+  };
+
+  $('.accessibility-restore').click(function(){
+    $('html').removeClass('accessibility-colors');
+    $('html').removeClass('accessibility-line-height-large');
+    $('html').removeClass('accessibility-line-height-huge');
+    $('html').removeClass('accessibility-size-large');
+    $('html').removeClass('accessibility-size-huge');
+    $('input#accessibility-contrast').prop('checked', false);
+    $('input#line-height-default').prop('checked', true);
+    $('input#size-default').prop('checked', true);
+    localStorage.setItem('line-height-large', JSON.stringify(false));
+    localStorage.setItem('line-height-huge', JSON.stringify(false));
+    localStorage.setItem('size-large', JSON.stringify(false));
+    localStorage.setItem('size-huge', JSON.stringify(false));
+    localStorage.setItem('blind', JSON.stringify(false));
+    localStorage.setItem('restore-defaults', JSON.stringify(true));
+  });
+
+  $('.accessibility-save').click(function(){
+    if ($('input#accessibility-contrast').is(':checked')) {
+      $('html').addClass('accessibility-colors');
+      localStorage.setItem('blind', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-colors');
+      localStorage.setItem('blind', JSON.stringify(false));
+    }
+
+    if($('#line-height-large').is(':checked')) {
+      $('html').addClass('accessibility-line-height-large');
+      localStorage.setItem('line-height-large', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-line-height-large');
+      localStorage.setItem('line-height-large', JSON.stringify(false));
+    }
+
+    if($('#line-height-huge').is(':checked')) {
+      $('html').addClass('accessibility-line-height-huge');
+      localStorage.setItem('line-height-huge', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-line-height-huge');
+      localStorage.setItem('line-height-huge', JSON.stringify(false));
+    }
+
+    if($('#size-large').is(':checked')) {
+      $('html').addClass('accessibility-size-large');
+      localStorage.setItem('size-large', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-size-large');
+      localStorage.setItem('size-large', JSON.stringify(false));
+    }
+
+    if($('#size-huge').is(':checked')) {
+      $('html').addClass('accessibility-size-huge');
+      localStorage.setItem('size-huge', JSON.stringify(true));
+      localStorage.setItem('restore-defaults', JSON.stringify(false));
+    } else {
+      $('html').removeClass('accessibility-size-huge');
+      localStorage.setItem('size-huge', JSON.stringify(false));
+    }
+  });
+
+
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {
     var timeout;
@@ -76,7 +241,6 @@
       if (callNow) func.apply(context, args);
     };
   };
-
 
   $('.mobile-menu-toggler').click(function(event) {
       event.preventDefault();

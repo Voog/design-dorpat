@@ -1,0 +1,657 @@
+.accessibility-block-wrap {
+  padding: 16px;
+  background-color: $grey;
+  display: none;
+
+  .accessibility-open & {
+    display: block;
+  }
+
+  .accessibility-block {
+    display: flex;
+    justify-content: space-between;
+    color: $white;
+    flex-wrap: wrap;
+
+    div {
+      padding: 16px 16px 0;
+      width: 25%;
+      border-left: dotted 1px $blue;
+
+      .accessibility-input {
+        display: block;
+        padding: 0;
+      }
+    }
+
+    li::before {
+      display: none;
+    }
+  }
+
+  .accessibility-button-wrap {
+    color: $white;
+    margin: 32px 16px 16px;
+    text-align: center;
+
+    .custom-btn {
+      color: $white;
+
+      &:hover {
+        border-color: #015477;
+        background-color: #015477;
+      }
+
+      &.accessibility-save {
+        margin-left: 16px;
+
+        @media screen and (max-width: $mobile-1) {
+          margin-left: 0;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile-1) {
+    .accessibility-block {
+      div {
+        width: 100%;
+        border-right: none;
+      }
+    }
+  }
+
+  .form_field_checkbox + .form_control_indicator,
+  .form_field_radio + .form_control_indicator {
+    background: $white;
+  }
+}
+
+.accessibility-menu-btn-wrap {
+  .navigation-menu &{
+    margin-top: 20px;
+  }
+
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+
+// =============================================================================
+// HIGH CONTRAST
+// =============================================================================
+.accessibility-colors {
+  header,
+  main,
+  footer {
+    background-color: $black;
+    color: $yellow;
+  }
+
+  .header-top {
+    background-color: $black;
+  }
+
+  .site-footer {
+    .dark-background,
+    .light-background {
+      color: $yellow;
+    }
+
+    .footer-menu {
+      color: $yellow;
+    }
+  }
+
+  .dark-background,
+  .light-background {
+    color: $yellow;
+    background-color: $black;
+
+    .mobile-menu-toggler {
+      span,
+      span:before,
+      span:after {
+        background-color: $yellow;
+      }
+    }
+
+    .content-area {
+      color: $yellow;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      ul,
+      ol,
+      dl,
+      pre,
+      table {
+        color: $yellow;
+
+        &.custom-btn {
+          color: $yellow;
+          border-color: $yellow;
+          background-color: $black;
+          &:hover {
+            background-color: $grey;
+            border-color: $yellow;
+          }
+        }
+      }
+      .form_submit {
+        color: $yellow;
+        input {
+          color: $yellow;
+        }
+      }
+    }
+
+    .content-area {
+
+      table {
+        th, td {
+          border-color: $yellow;
+          color: $yellow;
+        }
+      }
+
+      .form_field {
+        .form_field_label,
+        .edy-fe-label {
+          border-color: $yellow;
+          color: $yellow;
+        }
+      }
+
+      .form_field_textfield,
+      .form_field_textarea,
+      label:not(.form_field_label) {
+        border-color: $yellow;
+        color: $yellow;
+      }
+
+
+      .form_submit {
+        input {
+        background-color: $black;
+        border: 2px solid $yellow;
+        color: $yellow;
+          &:hover {
+            background-color: $grey;
+            border: 2px solid $yellow;
+          }
+        }
+      }
+
+      .form_field_checkbox + .form_control_indicator,
+      .form_field_radio + .form_control_indicator {
+        background-color: $yellow;
+      }
+    }
+
+    .header-title a,
+    .header-title a:hover {
+      color: $yellow;
+    }
+
+    .menu li a:not(.untranslated) {
+      color: $yellow;
+    }
+
+    .menu li.selected a {
+      color: $yellow;
+    }
+
+    .lang-title {
+      color: $yellow;
+    }
+
+    .lang-menu {
+      &.menu-language-list {
+        .lang-title a {
+          color: $yellow;
+
+          &.is-active,
+          &:hover {
+            color: $yellow;
+          }
+        }
+
+        .lang-title a.selected {
+          color: $yellow;
+        }
+      }
+    }
+
+    .voog-reference svg path {
+      fill: $yellow;
+    }
+
+    .site-options .search-btn svg path {
+      fill: $yellow;
+
+      @media screen and (max-width: $tablet-3) {
+        .search-open & {
+          fill: $yellow;
+        }
+      }
+    }
+  }
+
+  .menu-main {
+    color: $yellow;
+  }
+
+  @media screen and (max-width: $tablet-1) {
+    .mobile-menu-toggler {
+      span {
+        &,
+        &:before,
+        &:after {
+          background-color: $black;
+
+          .dark-background & {
+            background-color: $black;
+          }
+
+          .language-flags-disabled & {
+            .lang-menu-btn {
+              .lang-title {
+                color: $yellow;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #mobile-menu {
+      color: $yellow;
+      background-color: $black;
+      .search-open-btn {
+        svg {
+          fill: $yellow;
+        }
+      }
+
+      ul {
+        li,
+        a {
+          color: $yellow;
+        }
+      }
+
+      .navigation-menu {
+        ul {
+          a {
+            &.selected {
+              color: $yellow;
+            }
+          }
+        }
+      }
+
+      .lang-menu {
+        ul {
+          li {
+            a {
+              &.is-active {
+                color: $yellow;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .lang-flag:before {
+    background-color: $black;
+  }
+}
+
+.lang-menu {
+  &.menu-language-list {
+    .lang-title {
+      a {
+        &.is-active {
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  li {
+    a {
+      color: $yellow;
+    }
+  }
+
+  a {
+    &.lang-flag {
+      .dark-background & {
+        .accessibility-colors & {
+          color: $yellow;
+
+          &:hover {
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+.lang-menu-btn {
+  .lang-title-inner {
+    &:after {
+      border-color: $yellow transparent transparent transparent;
+
+      .dark-background & {
+        .accessibility-colors & {
+          border-color: $yellow transparent transparent transparent;
+        }
+      }
+    }
+  }
+}
+
+//==============================================================================
+// SIZE LARGE
+//==============================================================================
+
+.accessibility-size-large {
+
+  .footer-menu,
+  .accessibility-menu-btn-wrap,
+  .lang-menu-btn,
+  .form_field_textfield,
+  .form_field_textarea,
+  label:not(.form_field_label),
+  p,
+  ul,
+  ol,
+  dl,
+  pre,
+  code,
+  h5,
+  h6,
+  a.custom-btn,
+  div.custom-btn   {
+    font-size: 20px;
+  }
+
+  .menu-main {
+    li {
+      font-size: 20px;
+    }
+  }
+
+  #mobile-menu {
+    .navigation-menu {
+      font-size: 20px;
+    }
+  }
+
+  .accessibility-menu-btn-wrap,
+  .lang-menu-btn {
+    font-size: 20px;
+  }
+
+  .content-area {
+    font-size: 20px;
+
+    .form_field {
+      .form_field_label,
+      .edy-fe-label {
+        font-size: 20px;
+      }
+    }
+
+    .form_field_textfield,
+    .form_field_textarea,
+    label:not(.form_field_label) {
+      font-size: 20px;
+    }
+
+
+    .form_submit {
+      input {
+        font-size: 20px;
+
+      }
+    }
+
+    &.accessibility-block-wrap {
+      font-size: 16px;
+      div {
+        label,
+        ul {
+          font-size: 16px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      a.custom-btn, div.custom-btn {
+        font-size: 16px;
+      }
+    }
+
+    .site-footer & {
+      font-size: 20px;
+    }
+
+    h1 {
+      &,
+      a,
+      a:hover {
+        font-size: 34px;
+        font-weight: 300;
+      }
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 20px;
+    }
+
+    table {
+      th, td {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .main-feature {
+    .feature-content {
+      font-size: 20px;
+    }
+  }
+}
+
+//==============================================================================
+// SIZE HUGE
+//==============================================================================
+
+.accessibility-size-huge {
+
+  .footer-menu,
+  .accessibility-menu-btn-wrap,
+  .lang-menu-btn,
+  .form_field_textfield,
+  .form_field_textarea,
+  label:not(.form_field_label),
+  p,
+  ul,
+  ol,
+  dl,
+  pre,
+  code,
+  h5,
+  h6,
+  a.custom-btn,
+  div.custom-btn   {
+    font-size: 24px;
+  }
+
+  .menu-main {
+    li {
+      font-size: 24px;
+    }
+  }
+
+  #mobile-menu {
+    .navigation-menu {
+      font-size: 24px;
+    }
+  }
+
+  .content-area {
+    font-size: 24px;
+
+    .form_field {
+      .form_field_label,
+      .edy-fe-label {
+        font-size: 24px;
+      }
+    }
+
+    .form_submit {
+      input {
+        font-size: 24px;
+
+      }
+    }
+
+    &.accessibility-block-wrap {
+      font-size: 16px;
+
+      div {
+        label,
+        ul {
+          font-size: 16px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      a.custom-btn, div.custom-btn {
+        font-size: 16px;
+      }
+    }
+
+    .site-footer & {
+      font-size: 24px;
+    }
+
+    h1 {
+      &,
+      a,
+      a:hover {
+        font-size: 38px;
+        font-weight: 300;
+      }
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+
+    h3 {
+      font-size: 28px;
+    }
+
+    h4 {
+      font-size: 26px;
+    }
+
+    table {
+      th, td {
+        font-size: 24px;
+      }
+    }
+  }
+
+  .main-feature {
+    .feature-content {
+      font-size: 24px;
+    }
+  }
+}
+
+//==============================================================================
+// LINE HEIGHT LARGE
+//==============================================================================
+
+.accessibility-line-height-large {
+  line-height: 2.5;
+
+  .content-area,
+  .site-header,
+  .site-footer {
+    line-height: 2.5;
+
+    &.accessibility-block-wrap {
+      line-height: 1.7;
+    }
+  }
+
+  .main-feature {
+    .feature-content {
+      line-height: 2.5;
+    }
+  }
+}
+
+//==============================================================================
+// LINE HEIGHT HUGE
+//==============================================================================
+
+.accessibility-line-height-huge {
+  line-height: 3.5;
+
+  .content-area,
+  .site-header,
+  .site-footer {
+    line-height: 3.5;
+
+    &.accessibility-block-wrap {
+      line-height: 1.7;
+    }
+  }
+
+  .main-feature {
+    .feature-content {
+      line-height: 3.5;
+    }
+  }
+}
+
+
+// Remove colorpicker from texteditor
+[data-behavior="pickcolor"] {
+  display: none;
+}

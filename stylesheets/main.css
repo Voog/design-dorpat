@@ -518,7 +518,7 @@ a img {
 }
 
 .front-page .page-content .content-slogan {
-  font-size: 25px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1;
 }
@@ -642,7 +642,7 @@ a img {
 }
 .front-page .main-feature .feature-content {
   margin: 0 30px 70px;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media screen and (max-width: 640px) {
   .front-page .main-feature .feature-content {
@@ -675,6 +675,41 @@ a img {
 }
 .front-page .content-full .content-full-inner {
   position: relative;
+}
+
+.header-logo-wrap {
+  position: absolute;
+  left: 10px;
+  bottom: 22px;
+  width: 200px;
+  height: 100px;
+}
+@media screen and (max-width: 640px) {
+  .header-logo-wrap {
+    width: 150px;
+    height: 75px;
+  }
+}
+.header-logo-wrap .header-logo {
+  position: relative;
+}
+.header-logo-wrap .header-logo:before {
+  display: block;
+  content: '';
+  width: 100%;
+  padding-top: 55.5555555556%;
+}
+.header-logo-wrap .header-logo > .aspect-ratio-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.header-logo-wrap .header-logo .aspect-ratio-inner {
+  background-size: contain;
+  background-position: left !important;
+  background-repeat: no-repeat;
 }
 
 .common-page .sidebar-active {
@@ -748,13 +783,13 @@ a img {
   padding-bottom: 50px;
 }
 .blog-news-page .article-title {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: 300;
   margin: 10px 0 0;
 }
 @media screen and (max-width: 850px) {
   .blog-news-page .article-title {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 .blog-news-page .article-title a {
@@ -918,7 +953,7 @@ a img {
   }
 }
 .blog-article-page .article-body, .blog-article-page .article-excerpt {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.7;
   margin: 30px 0 0;
@@ -1043,6 +1078,538 @@ a img {
 }
 
 .date-separator.hide-separator {
+  display: none;
+}
+
+.accessibility-block-wrap {
+  padding: 16px;
+  background-color: #222;
+  display: none;
+}
+.accessibility-open .accessibility-block-wrap {
+  display: block;
+}
+.accessibility-block-wrap .accessibility-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #fff;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.accessibility-block-wrap .accessibility-block div {
+  padding: 16px 16px 0;
+  width: 25%;
+  border-left: dotted 1px #0083ba;
+}
+.accessibility-block-wrap .accessibility-block div .accessibility-input {
+  display: block;
+  padding: 0;
+}
+.accessibility-block-wrap .accessibility-block li::before {
+  display: none;
+}
+.accessibility-block-wrap .accessibility-button-wrap {
+  color: #fff;
+  margin: 32px 16px 16px;
+  text-align: center;
+}
+.accessibility-block-wrap .accessibility-button-wrap .custom-btn {
+  color: #fff;
+}
+.accessibility-block-wrap .accessibility-button-wrap .custom-btn:hover {
+  border-color: #015477;
+  background-color: #015477;
+}
+.accessibility-block-wrap .accessibility-button-wrap .custom-btn.accessibility-save {
+  margin-left: 16px;
+}
+@media screen and (max-width: 480px) {
+  .accessibility-block-wrap .accessibility-button-wrap .custom-btn.accessibility-save {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .accessibility-block-wrap .accessibility-block div {
+    width: 100%;
+    border-right: none;
+  }
+}
+.accessibility-block-wrap .form_field_checkbox + .form_control_indicator,
+.accessibility-block-wrap .form_field_radio + .form_control_indicator {
+  background: #fff;
+}
+
+.accessibility-menu-btn-wrap {
+  font-weight: 400;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.navigation-menu .accessibility-menu-btn-wrap {
+  margin-top: 20px;
+}
+.accessibility-menu-btn-wrap:hover {
+  opacity: 0.8;
+}
+
+.accessibility-colors header,
+.accessibility-colors main,
+.accessibility-colors footer {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top {
+  background-color: #000;
+}
+.accessibility-colors .site-footer .dark-background,
+.accessibility-colors .site-footer .light-background {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-footer .footer-menu {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background,
+.accessibility-colors .light-background {
+  color: #f9ec5a;
+  background-color: #000;
+}
+.accessibility-colors .dark-background .mobile-menu-toggler span,
+.accessibility-colors .dark-background .mobile-menu-toggler span:before,
+.accessibility-colors .dark-background .mobile-menu-toggler span:after,
+.accessibility-colors .light-background .mobile-menu-toggler span,
+.accessibility-colors .light-background .mobile-menu-toggler span:before,
+.accessibility-colors .light-background .mobile-menu-toggler span:after {
+  background-color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area,
+.accessibility-colors .light-background .content-area {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area h1,
+.accessibility-colors .dark-background .content-area h2,
+.accessibility-colors .dark-background .content-area h3,
+.accessibility-colors .dark-background .content-area h4,
+.accessibility-colors .dark-background .content-area h5,
+.accessibility-colors .dark-background .content-area h6,
+.accessibility-colors .dark-background .content-area p,
+.accessibility-colors .dark-background .content-area a,
+.accessibility-colors .dark-background .content-area ul,
+.accessibility-colors .dark-background .content-area ol,
+.accessibility-colors .dark-background .content-area dl,
+.accessibility-colors .dark-background .content-area pre,
+.accessibility-colors .dark-background .content-area table,
+.accessibility-colors .light-background .content-area h1,
+.accessibility-colors .light-background .content-area h2,
+.accessibility-colors .light-background .content-area h3,
+.accessibility-colors .light-background .content-area h4,
+.accessibility-colors .light-background .content-area h5,
+.accessibility-colors .light-background .content-area h6,
+.accessibility-colors .light-background .content-area p,
+.accessibility-colors .light-background .content-area a,
+.accessibility-colors .light-background .content-area ul,
+.accessibility-colors .light-background .content-area ol,
+.accessibility-colors .light-background .content-area dl,
+.accessibility-colors .light-background .content-area pre,
+.accessibility-colors .light-background .content-area table {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area h1.custom-btn,
+.accessibility-colors .dark-background .content-area h2.custom-btn,
+.accessibility-colors .dark-background .content-area h3.custom-btn,
+.accessibility-colors .dark-background .content-area h4.custom-btn,
+.accessibility-colors .dark-background .content-area h5.custom-btn,
+.accessibility-colors .dark-background .content-area h6.custom-btn,
+.accessibility-colors .dark-background .content-area p.custom-btn,
+.accessibility-colors .dark-background .content-area a.custom-btn,
+.accessibility-colors .dark-background .content-area ul.custom-btn,
+.accessibility-colors .dark-background .content-area ol.custom-btn,
+.accessibility-colors .dark-background .content-area dl.custom-btn,
+.accessibility-colors .dark-background .content-area pre.custom-btn,
+.accessibility-colors .dark-background .content-area table.custom-btn,
+.accessibility-colors .light-background .content-area h1.custom-btn,
+.accessibility-colors .light-background .content-area h2.custom-btn,
+.accessibility-colors .light-background .content-area h3.custom-btn,
+.accessibility-colors .light-background .content-area h4.custom-btn,
+.accessibility-colors .light-background .content-area h5.custom-btn,
+.accessibility-colors .light-background .content-area h6.custom-btn,
+.accessibility-colors .light-background .content-area p.custom-btn,
+.accessibility-colors .light-background .content-area a.custom-btn,
+.accessibility-colors .light-background .content-area ul.custom-btn,
+.accessibility-colors .light-background .content-area ol.custom-btn,
+.accessibility-colors .light-background .content-area dl.custom-btn,
+.accessibility-colors .light-background .content-area pre.custom-btn,
+.accessibility-colors .light-background .content-area table.custom-btn {
+  color: #f9ec5a;
+  border-color: #f9ec5a;
+  background-color: #000;
+}
+.accessibility-colors .dark-background .content-area h1.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h2.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h3.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h4.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h5.custom-btn:hover,
+.accessibility-colors .dark-background .content-area h6.custom-btn:hover,
+.accessibility-colors .dark-background .content-area p.custom-btn:hover,
+.accessibility-colors .dark-background .content-area a.custom-btn:hover,
+.accessibility-colors .dark-background .content-area ul.custom-btn:hover,
+.accessibility-colors .dark-background .content-area ol.custom-btn:hover,
+.accessibility-colors .dark-background .content-area dl.custom-btn:hover,
+.accessibility-colors .dark-background .content-area pre.custom-btn:hover,
+.accessibility-colors .dark-background .content-area table.custom-btn:hover,
+.accessibility-colors .light-background .content-area h1.custom-btn:hover,
+.accessibility-colors .light-background .content-area h2.custom-btn:hover,
+.accessibility-colors .light-background .content-area h3.custom-btn:hover,
+.accessibility-colors .light-background .content-area h4.custom-btn:hover,
+.accessibility-colors .light-background .content-area h5.custom-btn:hover,
+.accessibility-colors .light-background .content-area h6.custom-btn:hover,
+.accessibility-colors .light-background .content-area p.custom-btn:hover,
+.accessibility-colors .light-background .content-area a.custom-btn:hover,
+.accessibility-colors .light-background .content-area ul.custom-btn:hover,
+.accessibility-colors .light-background .content-area ol.custom-btn:hover,
+.accessibility-colors .light-background .content-area dl.custom-btn:hover,
+.accessibility-colors .light-background .content-area pre.custom-btn:hover,
+.accessibility-colors .light-background .content-area table.custom-btn:hover {
+  background-color: #222;
+  border-color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area .form_submit,
+.accessibility-colors .light-background .content-area .form_submit {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area .form_submit input,
+.accessibility-colors .light-background .content-area .form_submit input {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area table th, .accessibility-colors .dark-background .content-area table td,
+.accessibility-colors .light-background .content-area table th,
+.accessibility-colors .light-background .content-area table td {
+  border-color: #f9ec5a;
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area .form_field .form_field_label,
+.accessibility-colors .dark-background .content-area .form_field .edy-fe-label,
+.accessibility-colors .light-background .content-area .form_field .form_field_label,
+.accessibility-colors .light-background .content-area .form_field .edy-fe-label {
+  border-color: #f9ec5a;
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area .form_field_textfield,
+.accessibility-colors .dark-background .content-area .form_field_textarea,
+.accessibility-colors .dark-background .content-area label:not(.form_field_label),
+.accessibility-colors .light-background .content-area .form_field_textfield,
+.accessibility-colors .light-background .content-area .form_field_textarea,
+.accessibility-colors .light-background .content-area label:not(.form_field_label) {
+  border-color: #f9ec5a;
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area .form_submit input,
+.accessibility-colors .light-background .content-area .form_submit input {
+  background-color: #000;
+  border: 2px solid #f9ec5a;
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area .form_submit input:hover,
+.accessibility-colors .light-background .content-area .form_submit input:hover {
+  background-color: #222;
+  border: 2px solid #f9ec5a;
+}
+.accessibility-colors .dark-background .content-area .form_field_checkbox + .form_control_indicator,
+.accessibility-colors .dark-background .content-area .form_field_radio + .form_control_indicator,
+.accessibility-colors .light-background .content-area .form_field_checkbox + .form_control_indicator,
+.accessibility-colors .light-background .content-area .form_field_radio + .form_control_indicator {
+  background-color: #f9ec5a;
+}
+.accessibility-colors .dark-background .header-title a,
+.accessibility-colors .dark-background .header-title a:hover,
+.accessibility-colors .light-background .header-title a,
+.accessibility-colors .light-background .header-title a:hover {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .menu li a:not(.untranslated),
+.accessibility-colors .light-background .menu li a:not(.untranslated) {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .menu li.selected a,
+.accessibility-colors .light-background .menu li.selected a {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .lang-title,
+.accessibility-colors .light-background .lang-title {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .lang-menu.menu-language-list .lang-title a,
+.accessibility-colors .light-background .lang-menu.menu-language-list .lang-title a {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .lang-menu.menu-language-list .lang-title a.is-active, .accessibility-colors .dark-background .lang-menu.menu-language-list .lang-title a:hover,
+.accessibility-colors .light-background .lang-menu.menu-language-list .lang-title a.is-active,
+.accessibility-colors .light-background .lang-menu.menu-language-list .lang-title a:hover {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .lang-menu.menu-language-list .lang-title a.selected,
+.accessibility-colors .light-background .lang-menu.menu-language-list .lang-title a.selected {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .voog-reference svg path,
+.accessibility-colors .light-background .voog-reference svg path {
+  fill: #f9ec5a;
+}
+.accessibility-colors .dark-background .site-options .search-btn svg path, .accessibility-colors .light-background .site-options .search-btn svg path {
+  fill: #f9ec5a;
+}
+@media screen and (max-width: 640px) {
+  .search-open .accessibility-colors .dark-background .site-options .search-btn svg path,
+  .search-open .accessibility-colors .light-background .site-options .search-btn svg path {
+    fill: #f9ec5a;
+  }
+}
+.accessibility-colors .menu-main {
+  color: #f9ec5a;
+}
+@media screen and (max-width: 1024px) {
+  .accessibility-colors .mobile-menu-toggler span, .accessibility-colors .mobile-menu-toggler span:before, .accessibility-colors .mobile-menu-toggler span:after {
+    background-color: #000;
+  }
+  .dark-background .accessibility-colors .mobile-menu-toggler span, .dark-background .accessibility-colors .mobile-menu-toggler span:before, .dark-background .accessibility-colors .mobile-menu-toggler span:after {
+    background-color: #000;
+  }
+  .language-flags-disabled .accessibility-colors .mobile-menu-toggler span .lang-menu-btn .lang-title, .language-flags-disabled .accessibility-colors .mobile-menu-toggler span:before .lang-menu-btn .lang-title, .language-flags-disabled .accessibility-colors .mobile-menu-toggler span:after .lang-menu-btn .lang-title {
+    color: #f9ec5a;
+  }
+  .accessibility-colors #mobile-menu {
+    color: #f9ec5a;
+    background-color: #000;
+  }
+  .accessibility-colors #mobile-menu .search-open-btn svg {
+    fill: #f9ec5a;
+  }
+  .accessibility-colors #mobile-menu ul li,
+  .accessibility-colors #mobile-menu ul a {
+    color: #f9ec5a;
+  }
+  .accessibility-colors #mobile-menu .navigation-menu ul a.selected {
+    color: #f9ec5a;
+  }
+  .accessibility-colors #mobile-menu .lang-menu ul li a.is-active {
+    color: #f9ec5a;
+  }
+}
+.accessibility-colors .lang-flag:before {
+  background-color: #000;
+}
+
+.lang-menu.menu-language-list .lang-title a.is-active {
+  color: #f9ec5a;
+}
+.lang-menu li a {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .lang-menu a.lang-flag {
+  color: #f9ec5a;
+}
+.accessibility-colors .dark-background .lang-menu a.lang-flag:hover {
+  color: #f9ec5a;
+}
+
+.lang-menu-btn .lang-title-inner:after {
+  border-color: #f9ec5a transparent transparent transparent;
+}
+.accessibility-colors .dark-background .lang-menu-btn .lang-title-inner:after {
+  border-color: #f9ec5a transparent transparent transparent;
+}
+
+.accessibility-size-large .footer-menu,
+.accessibility-size-large .accessibility-menu-btn-wrap,
+.accessibility-size-large .lang-menu-btn,
+.accessibility-size-large .form_field_textfield,
+.accessibility-size-large .form_field_textarea,
+.accessibility-size-large label:not(.form_field_label),
+.accessibility-size-large p,
+.accessibility-size-large ul,
+.accessibility-size-large ol,
+.accessibility-size-large dl,
+.accessibility-size-large pre,
+.accessibility-size-large code,
+.accessibility-size-large h5,
+.accessibility-size-large h6,
+.accessibility-size-large a.custom-btn,
+.accessibility-size-large div.custom-btn {
+  font-size: 20px;
+}
+.accessibility-size-large .menu-main li {
+  font-size: 20px;
+}
+.accessibility-size-large #mobile-menu .navigation-menu {
+  font-size: 20px;
+}
+.accessibility-size-large .accessibility-menu-btn-wrap,
+.accessibility-size-large .lang-menu-btn {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area .form_field .form_field_label,
+.accessibility-size-large .content-area .form_field .edy-fe-label {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area .form_field_textfield,
+.accessibility-size-large .content-area .form_field_textarea,
+.accessibility-size-large .content-area label:not(.form_field_label) {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area .form_submit input {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area.accessibility-block-wrap {
+  font-size: 16px;
+}
+.accessibility-size-large .content-area.accessibility-block-wrap div label,
+.accessibility-size-large .content-area.accessibility-block-wrap div ul {
+  font-size: 16px;
+}
+.accessibility-size-large .content-area.accessibility-block-wrap div h2 {
+  font-size: 24px;
+}
+.accessibility-size-large .content-area.accessibility-block-wrap a.custom-btn, .accessibility-size-large .content-area.accessibility-block-wrap div.custom-btn {
+  font-size: 16px;
+}
+.site-footer .accessibility-size-large .content-area {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area h1,
+.accessibility-size-large .content-area h1 a,
+.accessibility-size-large .content-area h1 a:hover {
+  font-size: 34px;
+  font-weight: 300;
+}
+.accessibility-size-large .content-area h2 {
+  font-size: 28px;
+}
+.accessibility-size-large .content-area h3 {
+  font-size: 24px;
+}
+.accessibility-size-large .content-area h4 {
+  font-size: 20px;
+}
+.accessibility-size-large .content-area table th, .accessibility-size-large .content-area table td {
+  font-size: 20px;
+}
+.accessibility-size-large .main-feature .feature-content {
+  font-size: 20px;
+}
+
+.accessibility-size-huge .footer-menu,
+.accessibility-size-huge .accessibility-menu-btn-wrap,
+.accessibility-size-huge .lang-menu-btn,
+.accessibility-size-huge .form_field_textfield,
+.accessibility-size-huge .form_field_textarea,
+.accessibility-size-huge label:not(.form_field_label),
+.accessibility-size-huge p,
+.accessibility-size-huge ul,
+.accessibility-size-huge ol,
+.accessibility-size-huge dl,
+.accessibility-size-huge pre,
+.accessibility-size-huge code,
+.accessibility-size-huge h5,
+.accessibility-size-huge h6,
+.accessibility-size-huge a.custom-btn,
+.accessibility-size-huge div.custom-btn {
+  font-size: 24px;
+}
+.accessibility-size-huge .menu-main li {
+  font-size: 24px;
+}
+.accessibility-size-huge #mobile-menu .navigation-menu {
+  font-size: 24px;
+}
+.accessibility-size-huge .content-area {
+  font-size: 24px;
+}
+.accessibility-size-huge .content-area .form_field .form_field_label,
+.accessibility-size-huge .content-area .form_field .edy-fe-label {
+  font-size: 24px;
+}
+.accessibility-size-huge .content-area .form_submit input {
+  font-size: 24px;
+}
+.accessibility-size-huge .content-area.accessibility-block-wrap {
+  font-size: 16px;
+}
+.accessibility-size-huge .content-area.accessibility-block-wrap div label,
+.accessibility-size-huge .content-area.accessibility-block-wrap div ul {
+  font-size: 16px;
+}
+.accessibility-size-huge .content-area.accessibility-block-wrap div h2 {
+  font-size: 24px;
+}
+.accessibility-size-huge .content-area.accessibility-block-wrap a.custom-btn, .accessibility-size-huge .content-area.accessibility-block-wrap div.custom-btn {
+  font-size: 16px;
+}
+.site-footer .accessibility-size-huge .content-area {
+  font-size: 24px;
+}
+.accessibility-size-huge .content-area h1,
+.accessibility-size-huge .content-area h1 a,
+.accessibility-size-huge .content-area h1 a:hover {
+  font-size: 38px;
+  font-weight: 300;
+}
+.accessibility-size-huge .content-area h2 {
+  font-size: 30px;
+}
+.accessibility-size-huge .content-area h3 {
+  font-size: 28px;
+}
+.accessibility-size-huge .content-area h4 {
+  font-size: 26px;
+}
+.accessibility-size-huge .content-area table th, .accessibility-size-huge .content-area table td {
+  font-size: 24px;
+}
+.accessibility-size-huge .main-feature .feature-content {
+  font-size: 24px;
+}
+
+.accessibility-line-height-large {
+  line-height: 2.5;
+}
+.accessibility-line-height-large .content-area,
+.accessibility-line-height-large .site-header,
+.accessibility-line-height-large .site-footer {
+  line-height: 2.5;
+}
+.accessibility-line-height-large .content-area.accessibility-block-wrap,
+.accessibility-line-height-large .site-header.accessibility-block-wrap,
+.accessibility-line-height-large .site-footer.accessibility-block-wrap {
+  line-height: 1.7;
+}
+.accessibility-line-height-large .main-feature .feature-content {
+  line-height: 2.5;
+}
+
+.accessibility-line-height-huge {
+  line-height: 3.5;
+}
+.accessibility-line-height-huge .content-area,
+.accessibility-line-height-huge .site-header,
+.accessibility-line-height-huge .site-footer {
+  line-height: 3.5;
+}
+.accessibility-line-height-huge .content-area.accessibility-block-wrap,
+.accessibility-line-height-huge .site-header.accessibility-block-wrap,
+.accessibility-line-height-huge .site-footer.accessibility-block-wrap {
+  line-height: 1.7;
+}
+.accessibility-line-height-huge .main-feature .feature-content {
+  line-height: 3.5;
+}
+
+[data-behavior="pickcolor"] {
   display: none;
 }
 
@@ -1357,7 +1924,7 @@ a img {
           hyphens: auto;
   word-break: break-word;
   word-wrap: break-word;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1;
   position: relative;
@@ -1498,42 +2065,6 @@ a img {
 }
 .site-header .header-body .blog-title.is-hidden {
   display: none;
-}
-.site-header .header-body .header-logo-wrap {
-  position: absolute;
-  left: -8px;
-  bottom: 3px;
-  width: 160px;
-}
-@media screen and (max-width: 640px) {
-  .site-header .header-body .header-logo-wrap {
-    width: 130px;
-  }
-}
-.site-header .header-body .header-logo-wrap.empty-hidden {
-  display: none;
-}
-.site-header .header-body .header-logo-wrap .header-logo {
-  position: relative;
-  position: relative;
-}
-.site-header .header-body .header-logo-wrap .header-logo:before {
-  display: block;
-  content: '';
-  width: 100%;
-  padding-top: 50%;
-}
-.site-header .header-body .header-logo-wrap .header-logo > .aspect-ratio-inner {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-.site-header .header-body .header-logo-wrap .header-logo .aspect-ratio-inner {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 /* NAVIGATION MENUS*/
@@ -2333,7 +2864,7 @@ a img {
 
 .lang-menu-btn {
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
   display: block;
   margin: 0;
@@ -2501,7 +3032,7 @@ a img {
 .site-search .search-input {
   width: 128px;
   padding: 4px 5px 3px;
-  font-size: 14px;
+  font-size: 16px;
   border-width: 1px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.53);
@@ -2770,7 +3301,7 @@ a img {
 }
 .voog-search-modal-results p {
   margin: 5px 0 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.7);
 }
@@ -2806,7 +3337,7 @@ a img {
   }
 }
 .site-sidebar .sidebar-title {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 2;
   text-transform: uppercase;
@@ -2831,7 +3362,7 @@ a img {
   list-style: none;
 }
 .site-sidebar .submenu li {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.7;
   margin: 15px 0;
@@ -3426,7 +3957,7 @@ a img {
   text-transform: uppercase;
 }
 .site-footer .blog-article-nav .article-nav-title {
-  font-size: 20px;
+  font-size: 24px;
   line-height: 30px;
   color: black;
   opacity: .7;
@@ -3555,7 +4086,7 @@ a img {
 }
 .site-footer .footer-body .footer-content-wrap .footer-logo-wrap .footer-logo .aspect-ratio-inner {
   background-size: contain;
-  background-position: center;
+  background-position: center !important;
   background-repeat: no-repeat;
 }
 .site-footer .footer-body .footer-social {
@@ -3605,7 +4136,7 @@ a img {
 .signout-btn-wrap .signout-name {
   display: inline-block;
   vertical-align: top;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
   line-height: 37px;
@@ -3645,11 +4176,11 @@ a img {
 }
 .site-footer .content-area {
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(0, 0, 0, 0.7);
 }
 .content-area.footer-left {
-  font-size: 20px;
+  font-size: 16px;
 }
 .content-area.footer-right {
   font-size: 16px;
@@ -3877,7 +4408,7 @@ a img {
 }
 .content-area pre,
 .content-area code {
-  font-size: 14px;
+  font-size: 16px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 .content-area pre {
@@ -4128,7 +4659,7 @@ a img {
 .content-area form,
 .content-area .form {
   clear: both;
-  font-size: 14px;
+  font-size: 16px;
 }
 .content-area .form_field {
   padding-top: 8px;
@@ -4357,7 +4888,7 @@ a img {
   -webkit-appearance: none;
   border-radius: 0;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 2;
   padding: 6px 20px;
@@ -4425,7 +4956,7 @@ a img {
   border: 1px solid red;
 }
 .content-area .form_field_error {
-  font-size: 14px;
+  font-size: 16px;
 }
 .content-area .form_notice {
   margin-bottom: 20px;

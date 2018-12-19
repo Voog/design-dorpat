@@ -50,4 +50,8 @@
       </ul>
     </div>
   {% endif %}
+
+  <div class="accessibility-menu-btn-wrap">
+    <a class="accessibility-btn">{{visually_impaired}}</a>
+  </div>
 </div>

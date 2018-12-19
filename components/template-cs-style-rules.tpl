@@ -391,7 +391,7 @@ body {
 
 .content-area {
   font-size: 16px;
-  line-height: var(--content-body-line-height);
+  line-height: 1.7;
   color: var(--primary-color);
 }
 .dark-background .content-area {
@@ -584,7 +584,7 @@ body {
 }
 .content-area table th, .content-area table td {
   padding: calc(var(--table-padding) - 4px) var(--table-padding);
-  font-size: var(--table-font-size);
+  font-size: 16px;
   border-style: var(--table-border-style);
 }
 .dark-background .content-area table th, .dark-background .content-area table td {
@@ -603,14 +603,15 @@ body {
 
 .content-area .form_field .form_field_label,
 .content-area .form_field .edy-fe-label {
-  font-size: var(--form-label-font-size);
+  font-size: 16px;
+  font-weight: 400;
 }
 .content-area .form_field_textfield,
 .content-area .form_field_textarea,
 .content-area label:not(.form_field_label) {
   font-style: var(--form-field-font-style);
   font-weight: var(--form-field-font-weight);
-  font-size: var(--form-field-font-size);
+  font-size: 16px;
   -webkit-text-decoration: var(--form-field-text-decoration);
           text-decoration: var(--form-field-text-decoration);
   text-transform: var(--form-field-text-transform);

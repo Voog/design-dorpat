@@ -46,6 +46,7 @@
 {% endcustomstyle %}
 
 {% include "front-page-variables" %}
+{% include "translations" %}
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr-custom.min.js"></script>

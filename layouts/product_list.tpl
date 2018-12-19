@@ -13,6 +13,7 @@
     {% include "template-svg-spritesheet" %}
 
     <div class="site-container">
+      {% include "accessibility" %}
       {% include "site-header" %}
 
       <div class="page-body js-bg-picker-area">

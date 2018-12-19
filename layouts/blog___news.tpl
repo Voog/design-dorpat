@@ -10,6 +10,7 @@
 
   <body class="blog-news-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
     <div class="site-container">
+      {% include "accessibility" %}
       {% include "site-header" %}
 
       <div class="page-body js-bg-picker-area">
