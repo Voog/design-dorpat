@@ -391,7 +391,7 @@ body {
 
 .content-area {
   font-size: 16px;
-  line-height: var(--content-body-line-height);
+  line-height: 1.7;
   color: var(--primary-color);
 }
 .dark-background .content-area {

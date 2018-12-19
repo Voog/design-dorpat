@@ -8,17 +8,6 @@
   */
   --content-body-alignment: left;
   /* VoogStyle
-    "pathI18n": ["content", "text"],
-    "titleI18n": "line_height",
-    "editor": "rangePicker",
-    "min": 1,
-    "max": 5,
-    "step": 0.1,
-    "unit": "",
-    "scope": "global"
-  */
-  --content-body-line-height: 1.7;
-  /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
     "titleI18n": "font_size",
     "type": "button",
