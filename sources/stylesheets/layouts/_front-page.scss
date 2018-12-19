@@ -205,7 +205,7 @@
 .header-logo-wrap {
   position: absolute;
   left: 10px;
-  bottom: 10px;
+  bottom: 22px;
   width: 200px;
   height: 100px;
 
@@ -215,11 +215,11 @@
   }
 
   .header-logo {
-    @include aspect-ratio(200, 100);
+    @include aspect-ratio(180, 100);
 
     .aspect-ratio-inner {
       background-size: contain;
-      background-position: left;
+      background-position: left !important;
       background-repeat: no-repeat;
     }
   }
