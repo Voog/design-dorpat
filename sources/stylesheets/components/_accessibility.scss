@@ -16,7 +16,7 @@
     div {
       padding: 16px 16px 0;
       width: 25%;
-      border-left: dotted 1px #0083ba;
+      border-left: dotted 1px $blue;
 
       .accessibility-input {
         display: block;
@@ -91,7 +91,7 @@
   main,
   footer {
     background-color: $black;
-    color: #ff0;
+    color: $yellow;
   }
 
   .header-top {
@@ -101,29 +101,29 @@
   .site-footer {
     .dark-background,
     .light-background {
-      color: #ff0;
+      color: $yellow;
     }
 
     .footer-menu {
-      color: #ff0;
+      color: $yellow;
     }
   }
 
   .dark-background,
   .light-background {
-    color: #ff0;
+    color: $yellow;
     background-color: $black;
 
     .mobile-menu-toggler {
       span,
       span:before,
       span:after {
-        background-color: #ff0;
+        background-color: $yellow;
       }
     }
 
     .content-area {
-      color: #ff0;
+      color: $yellow;
       h1,
       h2,
       h3,
@@ -137,22 +137,22 @@
       dl,
       pre,
       table {
-        color: #ff0;
+        color: $yellow;
 
         &.custom-btn {
-          color: #ff0;
-          border-color: #ff0;
+          color: $yellow;
+          border-color: $yellow;
           background-color: $black;
           &:hover {
             background-color: $grey;
-            border-color: #ff0;
+            border-color: $yellow;
           }
         }
       }
       .form_submit {
-        color: #ff0;
+        color: $yellow;
         input {
-          color: #ff0;
+          color: $yellow;
         }
       }
     }
@@ -161,96 +161,96 @@
 
       table {
         th, td {
-          border-color: #ff0;
-          color: #ff0;
+          border-color: $yellow;
+          color: $yellow;
         }
       }
 
       .form_field {
         .form_field_label,
         .edy-fe-label {
-          border-color: #ff0;
-          color: #ff0;
+          border-color: $yellow;
+          color: $yellow;
         }
       }
 
       .form_field_textfield,
       .form_field_textarea,
       label:not(.form_field_label) {
-        border-color: #ff0;
-        color: #ff0;
+        border-color: $yellow;
+        color: $yellow;
       }
 
 
       .form_submit {
         input {
         background-color: $black;
-        border: 2px solid #ff0;
-        color: #ff0;
+        border: 2px solid $yellow;
+        color: $yellow;
           &:hover {
             background-color: $grey;
-            border: 2px solid #ff0;
+            border: 2px solid $yellow;
           }
         }
       }
 
       .form_field_checkbox + .form_control_indicator,
       .form_field_radio + .form_control_indicator {
-        background-color: #ff0;
+        background-color: $yellow;
       }
     }
 
     .header-title a,
     .header-title a:hover {
-      color: #ff0;
+      color: $yellow;
     }
 
     .menu li a:not(.untranslated) {
-      color: #ff0;
+      color: $yellow;
     }
 
     .menu li.selected a {
-      color: #ff0;
+      color: $yellow;
     }
 
     .lang-title {
-      color: #ff0;
+      color: $yellow;
     }
 
     .lang-menu {
       &.menu-language-list {
         .lang-title a {
-          color: #ff0;
+          color: $yellow;
 
           &.is-active,
           &:hover {
-            color: #ff0;
+            color: $yellow;
           }
         }
 
         .lang-title a.selected {
-          color: #ff0;
+          color: $yellow;
         }
       }
     }
 
     .voog-reference svg path {
-      fill: #ff0;
+      fill: $yellow;
     }
 
     .site-options .search-btn svg path {
-      fill: #ff0;
+      fill: $yellow;
 
       @media screen and (max-width: $tablet-3) {
         .search-open & {
-          fill: #ff0;
+          fill: $yellow;
         }
       }
     }
   }
 
   .menu-main {
-    color: #ff0;
+    color: $yellow;
   }
 
   @media screen and (max-width: $tablet-1) {
@@ -268,7 +268,7 @@
           .language-flags-disabled & {
             .lang-menu-btn {
               .lang-title {
-                color: #ff0;
+                color: $yellow;
               }
             }
           }
@@ -277,21 +277,18 @@
     }
 
     #mobile-menu {
-      color: #ff0;
+      color: $yellow;
       background-color: $black;
       .search-open-btn {
         svg {
-          fill: #ff0;
+          fill: $yellow;
         }
       }
 
       ul {
-        li {
-          color: #ff0;
-        }
-
+        li,
         a {
-          color: #ff0;
+          color: $yellow;
         }
       }
 
@@ -299,7 +296,7 @@
         ul {
           a {
             &.selected {
-              color: #ff0;
+              color: $yellow;
             }
           }
         }
@@ -310,7 +307,7 @@
           li {
             a {
               &.is-active {
-                color: #ff0;
+                color: $yellow;
               }
             }
           }
@@ -329,7 +326,7 @@
     .lang-title {
       a {
         &.is-active {
-          color: #ff0;
+          color: $yellow;
         }
       }
     }
@@ -337,7 +334,7 @@
 
   li {
     a {
-      color: #ff0;
+      color: $yellow;
     }
   }
 
@@ -345,10 +342,10 @@
     &.lang-flag {
       .dark-background & {
         .accessibility-colors & {
-          color: #ff0;
+          color: $yellow;
 
           &:hover {
-            color: #ff0;
+            color: $yellow;
           }
         }
       }
@@ -359,11 +356,11 @@
 .lang-menu-btn {
   .lang-title-inner {
     &:after {
-      border-color: #ff0 transparent transparent transparent;
+      border-color: $yellow transparent transparent transparent;
 
       .dark-background & {
         .accessibility-colors & {
-          border-color: #ff0 transparent transparent transparent;
+          border-color: $yellow transparent transparent transparent;
         }
       }
     }
@@ -375,12 +372,66 @@
 //==============================================================================
 
 .accessibility-size-large {
-  .footer-menu {
-    font-size: 19px;
+
+  .footer-menu,
+  .accessibility-menu-btn-wrap,
+  .lang-menu-btn,
+  .form_field_textfield,
+  .form_field_textarea,
+  label:not(.form_field_label),
+  p,
+  ul,
+  ol,
+  dl,
+  pre,
+  code,
+  h5,
+  h6,
+  a.custom-btn,
+  div.custom-btn   {
+    font-size: 20px;
+  }
+
+  .menu-main {
+    li {
+      font-size: 20px;
+    }
+  }
+
+  #mobile-menu {
+    .navigation-menu {
+      font-size: 20px;
+    }
+  }
+
+  .accessibility-menu-btn-wrap,
+  .lang-menu-btn {
+    font-size: 20px;
   }
 
   .content-area {
-    font-size: 19px;
+    font-size: 20px;
+
+    .form_field {
+      .form_field_label,
+      .edy-fe-label {
+        font-size: 20px;
+      }
+    }
+
+    .form_field_textfield,
+    .form_field_textarea,
+    label:not(.form_field_label) {
+      font-size: 20px;
+    }
+
+
+    .form_submit {
+      input {
+        font-size: 20px;
+
+      }
+    }
 
     &.accessibility-block-wrap {
       font-size: 16px;
@@ -401,85 +452,40 @@
     }
 
     .site-footer & {
-      font-size: 19px;
-    }
-
-    pre,
-    code {
-      font-size: 19px;
-    }
-
-    p,
-    ul,
-    ol,
-    dl {
-      font-size: 19px;
+      font-size: 20px;
     }
 
     h1 {
       &,
       a,
       a:hover {
-        font-size: 33px;
+        font-size: 34px;
         font-weight: 300;
       }
     }
 
     h2 {
-      font-size: 27px;
+      font-size: 28px;
     }
 
     h3 {
-      font-size: 23px;
+      font-size: 24px;
     }
 
     h4 {
-      font-size: 19px;
-    }
-
-    h5,
-    h6 {
-      font-size: 19px;
-    }
-
-    a.custom-btn, div.custom-btn {
-      font-size: 19px;
+      font-size: 20px;
     }
 
     table {
       th, td {
-        font-size: 19px;
+        font-size: 20px;
       }
     }
   }
 
   .main-feature {
     .feature-content {
-      font-size: 19px;
-    }
-  }
-
-  .content-area {
-
-    .form_field {
-      .form_field_label,
-      .edy-fe-label {
-        font-size: 19px;
-      }
-    }
-
-    .form_field_textfield,
-    .form_field_textarea,
-    label:not(.form_field_label) {
-      font-size: 19px;
-    }
-
-
-    .form_submit {
-      input {
-        font-size: 19px;
-
-      }
+      font-size: 20px;
     }
   }
 }
@@ -489,12 +495,54 @@
 //==============================================================================
 
 .accessibility-size-huge {
-  .footer-menu {
-    font-size: 22px;
+
+  .footer-menu,
+  .accessibility-menu-btn-wrap,
+  .lang-menu-btn,
+  .form_field_textfield,
+  .form_field_textarea,
+  label:not(.form_field_label),
+  p,
+  ul,
+  ol,
+  dl,
+  pre,
+  code,
+  h5,
+  h6,
+  a.custom-btn,
+  div.custom-btn   {
+    font-size: 24px;
+  }
+
+  .menu-main {
+    li {
+      font-size: 24px;
+    }
+  }
+
+  #mobile-menu {
+    .navigation-menu {
+      font-size: 24px;
+    }
   }
 
   .content-area {
-    font-size: 22px;
+    font-size: 24px;
+
+    .form_field {
+      .form_field_label,
+      .edy-fe-label {
+        font-size: 24px;
+      }
+    }
+
+    .form_submit {
+      input {
+        font-size: 24px;
+
+      }
+    }
 
     &.accessibility-block-wrap {
       font-size: 16px;
@@ -516,26 +564,14 @@
     }
 
     .site-footer & {
-      font-size: 22px;
-    }
-
-    pre,
-    code {
-      font-size: 22px;
-    }
-
-    p,
-    ul,
-    ol,
-    dl {
-      font-size: 22px;
+      font-size: 24px;
     }
 
     h1 {
       &,
       a,
       a:hover {
-        font-size: 36px;
+        font-size: 38px;
         font-weight: 300;
       }
     }
@@ -545,55 +581,23 @@
     }
 
     h3 {
-      font-size: 26px;
+      font-size: 28px;
     }
 
     h4 {
-      font-size: 22px;
-    }
-
-    h5,
-    h6 {
-      font-size: 22px;
-    }
-
-    a.custom-btn, div.custom-btn {
-      font-size: 22px;
+      font-size: 26px;
     }
 
     table {
       th, td {
-        font-size: 22px;
+        font-size: 24px;
       }
     }
   }
 
   .main-feature {
     .feature-content {
-      font-size: 23px;
-    }
-  }
-  .content-area {
-
-    .form_field {
-      .form_field_label,
-      .edy-fe-label {
-        font-size: 23px;
-      }
-    }
-
-    .form_field_textfield,
-    .form_field_textarea,
-    label:not(.form_field_label) {
-      font-size: 22px;
-    }
-
-
-    .form_submit {
-      input {
-        font-size: 22px;
-
-      }
+      font-size: 24px;
     }
   }
 }
