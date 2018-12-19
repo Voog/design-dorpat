@@ -31,7 +31,7 @@
 
   .accessibility-button-wrap {
     color: $white;
-    margin: 32px 16px 0;
+    margin: 32px 16px 16px;
     text-align: center;
 
     .custom-btn {
@@ -113,6 +113,14 @@
   .light-background {
     color: #ff0;
     background-color: $black;
+
+    .mobile-menu-toggler {
+      span,
+      span:before,
+      span:after {
+        background-color: #ff0;
+      }
+    }
 
     .content-area {
       color: #ff0;
@@ -636,4 +644,10 @@
       line-height: 3.5;
     }
   }
+}
+
+
+// Remove colorpicker from texteditor
+[data-behavior="pickcolor"] {
+  display: none;
 }
