@@ -17,7 +17,7 @@
             <div class="site-options">
               <div class="visibility-lrg">
                 {% include "menu-language" %}
-                  <div class="menu-btn-wrap accessibility-btn-wrap">
+                  <div class="menu-btn-wrap accessibility-menu-btn-wrap">
                     <a class="accessibility-btn">{{visually_impaired}}</a>
                   </div>
                 {% if site.search.enabled %}

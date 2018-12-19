@@ -1,4 +1,4 @@
-.accessibility-block-wrapper {
+.accessibility-block-wrap {
   padding: 16px;
   background-color: $grey;
   display: none;
@@ -12,10 +12,6 @@
     justify-content: space-between;
     color: $white;
     flex-wrap: wrap;
-
-    div:last-child {
-      border-right: none;
-    }
 
     div {
       padding: 16px 16px 0;
@@ -33,7 +29,7 @@
     }
   }
 
-  .accessibility-button-wrapper {
+  .accessibility-button-wrap {
     color: $white;
     margin: 32px 16px 0;
     text-align: center;
@@ -72,10 +68,11 @@
   }
 }
 
-// Accessibility mobile wrapper
+.accessibility-menu-btn-wrap {
+  .navigation-menu &{
+    margin-top: 20px;
+  }
 
-.accessibility-mobile-btn-wrapper {
-  margin-top: 20px;
   font-weight: 400;
   cursor: pointer;
   text-transform: uppercase;
@@ -85,15 +82,6 @@
   }
 }
 
-.accessibility-btn-wrap {
-  font-weight: 400;
-  cursor: pointer;
-  text-transform: uppercase;
-
-  &:hover {
-    opacity: 0.8;
-  }
-}
 
 // =============================================================================
 // HIGH CONTRAST
@@ -102,8 +90,12 @@
   header,
   main,
   footer {
-    background-color: rgba($black, 1);
+    background-color: $black;
     color: #ff0;
+  }
+
+  .header-top {
+    background-color: $black;
   }
 
   .site-footer {
@@ -120,7 +112,7 @@
   .dark-background,
   .light-background {
     color: #ff0;
-    background-color: rgba($black, 1);
+    background-color: $black;
 
     .content-area {
       color: #ff0;
@@ -142,7 +134,7 @@
         &.custom-btn {
           color: #ff0;
           border-color: #ff0;
-          background-color: rgba($black, 1);
+          background-color: $black;
           &:hover {
             background-color: $grey;
             border-color: #ff0;
@@ -184,7 +176,7 @@
 
       .form_submit {
         input {
-        background-color: rgba($black, 1);
+        background-color: $black;
         border: 2px solid #ff0;
         color: #ff0;
           &:hover {
@@ -259,10 +251,10 @@
         &,
         &:before,
         &:after {
-          background-color: rgba($black, 1);
+          background-color: $black;
 
           .dark-background & {
-            background-color: rgba($black, 1);
+            background-color: $black;
           }
 
           .language-flags-disabled & {
@@ -278,7 +270,7 @@
 
     #mobile-menu {
       color: #ff0;
-      background-color: rgba($black, 1);
+      background-color: $black;
       .search-open-btn {
         svg {
           fill: #ff0;
@@ -320,11 +312,10 @@
   }
 
   .lang-flag:before {
-    background-color: rgba($black, 1);
+    background-color: $black;
   }
 }
 
-/* langmenu */
 .lang-menu {
   &.menu-language-list {
     .lang-title {
@@ -383,16 +374,31 @@
   .content-area {
     font-size: 19px;
 
+    &.accessibility-block-wrap {
+      font-size: 16px;
+      div {
+        label,
+        ul {
+          font-size: 16px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      a.custom-btn, div.custom-btn {
+        font-size: 16px;
+      }
+    }
+
     .site-footer & {
       font-size: 19px;
     }
 
-    &.header-title {
-      &,
-      & a,
-      & a:hover {
-        font-size: var(--header-body-font-size);
-      }
+    pre,
+    code {
+      font-size: 19px;
     }
 
     p,
@@ -428,7 +434,6 @@
       font-size: 19px;
     }
 
-    // Code blocks and preformatted content.
     a.custom-btn, div.custom-btn {
       font-size: 19px;
     }
@@ -483,16 +488,32 @@
   .content-area {
     font-size: 22px;
 
+    &.accessibility-block-wrap {
+      font-size: 16px;
+
+      div {
+        label,
+        ul {
+          font-size: 16px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+      }
+
+      a.custom-btn, div.custom-btn {
+        font-size: 16px;
+      }
+    }
+
     .site-footer & {
       font-size: 22px;
     }
 
-    &.header-title {
-      &,
-      & a,
-      & a:hover {
-        font-size: var(--header-body-font-size);
-      }
+    pre,
+    code {
+      font-size: 22px;
     }
 
     p,
@@ -528,7 +549,6 @@
       font-size: 22px;
     }
 
-    // Code blocks and preformatted content.
     a.custom-btn, div.custom-btn {
       font-size: 22px;
     }
@@ -571,7 +591,7 @@
 }
 
 //==============================================================================
-// LINE HEIGHT HUGE
+// LINE HEIGHT LARGE
 //==============================================================================
 
 .accessibility-line-height-large {
@@ -581,6 +601,10 @@
   .site-header,
   .site-footer {
     line-height: 2.5;
+
+    &.accessibility-block-wrap {
+      line-height: 1.7;
+    }
   }
 
   .main-feature {
@@ -591,7 +615,7 @@
 }
 
 //==============================================================================
-// SIZE HUGE
+// LINE HEIGHT HUGE
 //==============================================================================
 
 .accessibility-line-height-huge {
@@ -601,6 +625,10 @@
   .site-header,
   .site-footer {
     line-height: 3.5;
+
+    &.accessibility-block-wrap {
+      line-height: 1.7;
+    }
   }
 
   .main-feature {

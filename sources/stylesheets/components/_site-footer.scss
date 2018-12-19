@@ -112,7 +112,7 @@
     }
 
     .article-nav-title {
-      font-size: 20px;
+      font-size: 24px;
       line-height: 30px;
       color: rgba($black, 1);
       opacity: .7;
@@ -222,7 +222,7 @@
 
           .aspect-ratio-inner {
             background-size: contain;
-            background-position: center;
+            background-position: center !important;
             background-repeat: no-repeat;
           }
         }

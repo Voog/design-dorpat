@@ -6,7 +6,7 @@
     return $('html').hasClass('editmode');
   };
 
-  //Accessibility
+  //Accessibility functionality
   $('.accessibility-btn').click(function() {
     $('html').toggleClass('accessibility-open');
     $('html').removeClass('mobilemenu-open');
@@ -18,7 +18,7 @@
     }
   });
 
-  $('.accessibility-block-wrapper').click(function (e) {
+  $('.accessibility-block-wrap').click(function (e) {
     e.stopPropagation();
   });
 
