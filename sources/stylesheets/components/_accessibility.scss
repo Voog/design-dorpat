@@ -69,7 +69,7 @@
 }
 
 .accessibility-menu-btn-wrap {
-  .navigation-menu &{
+  #mobile-menu &{
     margin-top: 20px;
   }
 
@@ -106,6 +106,12 @@
 
     .footer-menu {
       color: $yellow;
+    }
+  }
+
+  .page-body {
+    .background-color {
+      background-color: $black;
     }
   }
 

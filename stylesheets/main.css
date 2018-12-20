@@ -1149,7 +1149,7 @@ a img {
   cursor: pointer;
   text-transform: uppercase;
 }
-.navigation-menu .accessibility-menu-btn-wrap {
+#mobile-menu .accessibility-menu-btn-wrap {
   margin-top: 20px;
 }
 .accessibility-menu-btn-wrap:hover {
@@ -1171,6 +1171,9 @@ a img {
 }
 .accessibility-colors .site-footer .footer-menu {
   color: #f9ec5a;
+}
+.accessibility-colors .page-body .background-color {
+  background-color: #000;
 }
 .accessibility-colors .dark-background,
 .accessibility-colors .light-background {
