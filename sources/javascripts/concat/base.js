@@ -60,7 +60,6 @@
         lineHeightHuge = JSON.parse(localStorage.getItem('line-height-huge'));
 
       if(blind == true) {
-        $('html').addClass('accessibility-colors');
         $('input#accessibility-contrast').prop('checked', true);
       } else {
         $('html').removeClass('accessibility-colors');
@@ -68,39 +67,30 @@
       }
 
       if(lineHeightLarge == true) {
-        $('html').addClass('accessibility-line-height-large');
         $('input#line-height-large').prop('checked', true);
       } else {
-        $('html').removeClass('accessibility-line-height-large');
         $('input#line-height-large').prop('checked', false);
       }
 
       if(lineHeightHuge == true) {
-        $('html').addClass('accessibility-line-height-huge');
         $('input#line-height-huge').prop('checked', true);
       } else {
-        $('html').removeClass('accessibility-line-height-huge');
         $('input#line-height-huge').prop('checked', false);
       }
 
       if(sizeLarge == true) {
-        $('html').addClass('accessibility-size-large');
         $('input#size-large').prop('checked', true);
       } else {
-        $('html').removeClass('accessibility-size-large');
         $('input#size-large').prop('checked', false);
       }
 
       if(sizeHuge == true) {
-        $('html').addClass('accessibility-size-huge');
         $('input#size-huge').prop('checked', true);
       } else {
-        $('html').removeClass('accessibility-size-huge');
         $('input#size-huge').prop('checked', false);
       }
 
       if(restoreDefaults == true) {
-        $('html').removeClass('accessibility-colors');
         $('input#accessibility-contrast').prop('checked', false);
         $('input#line-height-default').prop('checked', true);
         $('input#font-size-default').prop('checked', true);
@@ -173,7 +163,6 @@
       localStorage.setItem('size-huge', JSON.stringify(false));
     }
   });
-
 
   // Function to limit the rate at which a function can fire.
   var debounce = function(func, wait, immediate) {

@@ -47,6 +47,75 @@
 
 {% include "front-page-variables" %}
 {% include "translations" %}
+<script>
+function accessibilityStoprage(type) {
+  try {
+      var storage = window[type],
+          x = '__storage_test__';
+      storage.setItem(x, x);
+      storage.removeItem(x);
+      return true;
+  }
+  catch(e) {
+      return e instanceof DOMException && (
+          // everything except Firefox
+          e.code === 22 ||
+          // Firefox
+          e.code === 1014 ||
+          // test name field too, because code might not be present
+          // everything except Firefox
+          e.name === 'QuotaExceededError' ||
+          // Firefox
+          e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+          // acknowledge QuotaExceededError only if there's something already stored
+          storage.length !== 0;
+  }
+}
+
+if (accessibilityStoprage('localStorage')) {
+  var blind = JSON.parse(localStorage.getItem('blind')),
+    restoreDefaults = JSON.parse(localStorage.getItem('restore-defaults')),
+    sizeLarge = JSON.parse(localStorage.getItem('size-large')),
+    sizeHuge = JSON.parse(localStorage.getItem('size-huge')),
+    lineHeightLarge = JSON.parse(localStorage.getItem('line-height-large')),
+    lineHeightHuge = JSON.parse(localStorage.getItem('line-height-huge'));
+
+  if(blind == true) {
+    document.querySelector('html').classList.add('accessibility-colors');
+  } else {
+    document.querySelector('html').classList.remove('accessibility-colors');
+  }
+
+  if(lineHeightLarge == true) {
+    document.querySelector('html').classList.add('accessibility-line-height-large');
+  } else {
+    document.querySelector('html').classList.remove('accessibility-line-height-large');
+  }
+
+  if(lineHeightHuge == true) {
+    document.querySelector('html').classList.add('accessibility-line-height-huge');
+    document.querySelector('input#line-height-huge').checked = true;
+  } else {
+    document.querySelector('html').classList.remove('accessibility-line-height-huge');
+  }
+
+  if(sizeLarge == true) {
+    document.querySelector('html').classList.add('accessibility-size-large');
+  } else {
+    document.querySelector('html').classList.remove('accessibility-size-large');
+  }
+
+  if(sizeHuge == true) {
+    document.querySelector('html').classList.add('accessibility-size-huge');
+  } else {
+    document.querySelector('html').classList.remove('accessibility-size-huge');
+  }
+
+  if(restoreDefaults == true) {
+    document.querySelector('html').classList.remove('accessibility-colors');
+  }
+}
+</script>
 
 {% comment %}MODERNIZR - HTML5 SUPPORT FOR OLDER BROWSERS, SVG SUPPORT DETECTION ETC{% endcomment %}
 <script src="{{ javascripts_path }}/modernizr-custom.min.js"></script>
