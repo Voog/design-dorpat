@@ -1133,6 +1133,14 @@ a img {
     margin-top: 16px;
   }
 }
+.accessibility-block-wrap .accessibility-button-wrap .accessibility-close-button {
+  position: absolute;
+  right: 16px;
+  cursor: pointer;
+}
+.accessibility-block-wrap .accessibility-button-wrap .accessibility-close-button:hover {
+  opacity: 0.8;
+}
 @media screen and (max-width: 480px) {
   .accessibility-block-wrap .accessibility-block div {
     width: 100%;
@@ -1164,21 +1172,205 @@ a img {
 }
 .accessibility-colors .header-top {
   background-color: #000;
-}
-.accessibility-colors .site-footer .dark-background,
-.accessibility-colors .site-footer .light-background {
   color: #f9ec5a;
 }
-.accessibility-colors .site-footer .footer-menu {
+.accessibility-colors .site-footer .dark-background h1,
+.accessibility-colors .site-footer .dark-background h2,
+.accessibility-colors .site-footer .dark-background h3,
+.accessibility-colors .site-footer .dark-background h4,
+.accessibility-colors .site-footer .dark-background h5,
+.accessibility-colors .site-footer .dark-background h6,
+.accessibility-colors .site-footer .dark-background p,
+.accessibility-colors .site-footer .dark-background a,
+.accessibility-colors .site-footer .dark-background b,
+.accessibility-colors .site-footer .dark-background ul,
+.accessibility-colors .site-footer .dark-background ol,
+.accessibility-colors .site-footer .dark-background dl,
+.accessibility-colors .site-footer .dark-background pre,
+.accessibility-colors .site-footer .dark-background table,
+.accessibility-colors .site-footer .light-background h1,
+.accessibility-colors .site-footer .light-background h2,
+.accessibility-colors .site-footer .light-background h3,
+.accessibility-colors .site-footer .light-background h4,
+.accessibility-colors .site-footer .light-background h5,
+.accessibility-colors .site-footer .light-background h6,
+.accessibility-colors .site-footer .light-background p,
+.accessibility-colors .site-footer .light-background a,
+.accessibility-colors .site-footer .light-background b,
+.accessibility-colors .site-footer .light-background ul,
+.accessibility-colors .site-footer .light-background ol,
+.accessibility-colors .site-footer .light-background dl,
+.accessibility-colors .site-footer .light-background pre,
+.accessibility-colors .site-footer .light-background table,
+.accessibility-colors .site-header .dark-background h1,
+.accessibility-colors .site-header .dark-background h2,
+.accessibility-colors .site-header .dark-background h3,
+.accessibility-colors .site-header .dark-background h4,
+.accessibility-colors .site-header .dark-background h5,
+.accessibility-colors .site-header .dark-background h6,
+.accessibility-colors .site-header .dark-background p,
+.accessibility-colors .site-header .dark-background a,
+.accessibility-colors .site-header .dark-background b,
+.accessibility-colors .site-header .dark-background ul,
+.accessibility-colors .site-header .dark-background ol,
+.accessibility-colors .site-header .dark-background dl,
+.accessibility-colors .site-header .dark-background pre,
+.accessibility-colors .site-header .dark-background table,
+.accessibility-colors .site-header .light-background h1,
+.accessibility-colors .site-header .light-background h2,
+.accessibility-colors .site-header .light-background h3,
+.accessibility-colors .site-header .light-background h4,
+.accessibility-colors .site-header .light-background h5,
+.accessibility-colors .site-header .light-background h6,
+.accessibility-colors .site-header .light-background p,
+.accessibility-colors .site-header .light-background a,
+.accessibility-colors .site-header .light-background b,
+.accessibility-colors .site-header .light-background ul,
+.accessibility-colors .site-header .light-background ol,
+.accessibility-colors .site-header .light-background dl,
+.accessibility-colors .site-header .light-background pre,
+.accessibility-colors .site-header .light-background table {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .site-footer .dark-background .header-title a,
+.accessibility-colors .site-footer .dark-background .header-title a:hover,
+.accessibility-colors .site-footer .light-background .header-title a,
+.accessibility-colors .site-footer .light-background .header-title a:hover,
+.accessibility-colors .site-header .dark-background .header-title a,
+.accessibility-colors .site-header .dark-background .header-title a:hover,
+.accessibility-colors .site-header .light-background .header-title a,
+.accessibility-colors .site-header .light-background .header-title a:hover {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .site-footer .dark-background .menu li a,
+.accessibility-colors .site-footer .light-background .menu li a,
+.accessibility-colors .site-header .dark-background .menu li a,
+.accessibility-colors .site-header .light-background .menu li a {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .site-footer .dark-background .menu li a:hover,
+.accessibility-colors .site-footer .light-background .menu li a:hover,
+.accessibility-colors .site-header .dark-background .menu li a:hover,
+.accessibility-colors .site-header .light-background .menu li a:hover {
+  color: #f9ec5a;
+  opacity: 0.6;
+}
+.accessibility-colors .site-footer .dark-background .menu li.selected a,
+.accessibility-colors .site-footer .light-background .menu li.selected a,
+.accessibility-colors .site-header .dark-background .menu li.selected a,
+.accessibility-colors .site-header .light-background .menu li.selected a {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-footer .footer-menu,
+.accessibility-colors .site-header .footer-menu {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .site-footer .blog-article-nav,
+.accessibility-colors .site-header .blog-article-nav {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .site-footer .blog-article-nav .article-nav-direction,
+.accessibility-colors .site-header .blog-article-nav .article-nav-direction {
+  background-color: #000;
   color: #f9ec5a;
 }
 .accessibility-colors .page-body .background-color {
   background-color: #000;
 }
+.accessibility-colors .blog-article-page,
+.accessibility-colors .blog-news-page,
+.accessibility-colors .article-comments,
+.accessibility-colors .blog-tags {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .tags-title,
+.accessibility-colors .blog-news-page .tags-title,
+.accessibility-colors .article-comments .tags-title,
+.accessibility-colors .blog-tags .tags-title {
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .comments-close .btn-close,
+.accessibility-colors .blog-news-page .comments-close .btn-close,
+.accessibility-colors .article-comments .comments-close .btn-close,
+.accessibility-colors .blog-tags .comments-close .btn-close {
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .comments-close .btn-close .ico-close,
+.accessibility-colors .blog-news-page .comments-close .btn-close .ico-close,
+.accessibility-colors .article-comments .comments-close .btn-close .ico-close,
+.accessibility-colors .blog-tags .comments-close .btn-close .ico-close {
+  fill: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .dark-background .article-author,
+.accessibility-colors .blog-article-page .dark-background .article-date,
+.accessibility-colors .blog-article-page .dark-background .comments-title,
+.accessibility-colors .blog-article-page .light-background .article-author,
+.accessibility-colors .blog-article-page .light-background .article-date,
+.accessibility-colors .blog-article-page .light-background .comments-title,
+.accessibility-colors .blog-news-page .dark-background .article-author,
+.accessibility-colors .blog-news-page .dark-background .article-date,
+.accessibility-colors .blog-news-page .dark-background .comments-title,
+.accessibility-colors .blog-news-page .light-background .article-author,
+.accessibility-colors .blog-news-page .light-background .article-date,
+.accessibility-colors .blog-news-page .light-background .comments-title,
+.accessibility-colors .article-comments .dark-background .article-author,
+.accessibility-colors .article-comments .dark-background .article-date,
+.accessibility-colors .article-comments .dark-background .comments-title,
+.accessibility-colors .article-comments .light-background .article-author,
+.accessibility-colors .article-comments .light-background .article-date,
+.accessibility-colors .article-comments .light-background .comments-title,
+.accessibility-colors .blog-tags .dark-background .article-author,
+.accessibility-colors .blog-tags .dark-background .article-date,
+.accessibility-colors .blog-tags .dark-background .comments-title,
+.accessibility-colors .blog-tags .light-background .article-author,
+.accessibility-colors .blog-tags .light-background .article-date,
+.accessibility-colors .blog-tags .light-background .comments-title {
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-tags .menu .menu-link {
+  color: #f9ec5a;
+}
 .accessibility-colors .dark-background,
 .accessibility-colors .light-background {
   color: #f9ec5a;
   background-color: #000;
+}
+.accessibility-colors .dark-background h1,
+.accessibility-colors .dark-background h2,
+.accessibility-colors .dark-background h3,
+.accessibility-colors .dark-background h4,
+.accessibility-colors .dark-background h5,
+.accessibility-colors .dark-background h6,
+.accessibility-colors .dark-background p,
+.accessibility-colors .dark-background a,
+.accessibility-colors .dark-background b,
+.accessibility-colors .dark-background ul,
+.accessibility-colors .dark-background ol,
+.accessibility-colors .dark-background dl,
+.accessibility-colors .dark-background pre,
+.accessibility-colors .dark-background table,
+.accessibility-colors .light-background h1,
+.accessibility-colors .light-background h2,
+.accessibility-colors .light-background h3,
+.accessibility-colors .light-background h4,
+.accessibility-colors .light-background h5,
+.accessibility-colors .light-background h6,
+.accessibility-colors .light-background p,
+.accessibility-colors .light-background a,
+.accessibility-colors .light-background b,
+.accessibility-colors .light-background ul,
+.accessibility-colors .light-background ol,
+.accessibility-colors .light-background dl,
+.accessibility-colors .light-background pre,
+.accessibility-colors .light-background table {
+  color: #f9ec5a;
 }
 .accessibility-colors .dark-background .mobile-menu-toggler span,
 .accessibility-colors .dark-background .mobile-menu-toggler span:before,
@@ -1200,11 +1392,13 @@ a img {
 .accessibility-colors .dark-background .content-area h6,
 .accessibility-colors .dark-background .content-area p,
 .accessibility-colors .dark-background .content-area a,
+.accessibility-colors .dark-background .content-area b,
 .accessibility-colors .dark-background .content-area ul,
 .accessibility-colors .dark-background .content-area ol,
 .accessibility-colors .dark-background .content-area dl,
 .accessibility-colors .dark-background .content-area pre,
 .accessibility-colors .dark-background .content-area table,
+.accessibility-colors .dark-background .content-area strong,
 .accessibility-colors .light-background .content-area h1,
 .accessibility-colors .light-background .content-area h2,
 .accessibility-colors .light-background .content-area h3,
@@ -1213,11 +1407,13 @@ a img {
 .accessibility-colors .light-background .content-area h6,
 .accessibility-colors .light-background .content-area p,
 .accessibility-colors .light-background .content-area a,
+.accessibility-colors .light-background .content-area b,
 .accessibility-colors .light-background .content-area ul,
 .accessibility-colors .light-background .content-area ol,
 .accessibility-colors .light-background .content-area dl,
 .accessibility-colors .light-background .content-area pre,
-.accessibility-colors .light-background .content-area table {
+.accessibility-colors .light-background .content-area table,
+.accessibility-colors .light-background .content-area strong {
   color: #f9ec5a;
 }
 .accessibility-colors .dark-background .content-area h1.custom-btn,
@@ -1228,11 +1424,13 @@ a img {
 .accessibility-colors .dark-background .content-area h6.custom-btn,
 .accessibility-colors .dark-background .content-area p.custom-btn,
 .accessibility-colors .dark-background .content-area a.custom-btn,
+.accessibility-colors .dark-background .content-area b.custom-btn,
 .accessibility-colors .dark-background .content-area ul.custom-btn,
 .accessibility-colors .dark-background .content-area ol.custom-btn,
 .accessibility-colors .dark-background .content-area dl.custom-btn,
 .accessibility-colors .dark-background .content-area pre.custom-btn,
 .accessibility-colors .dark-background .content-area table.custom-btn,
+.accessibility-colors .dark-background .content-area strong.custom-btn,
 .accessibility-colors .light-background .content-area h1.custom-btn,
 .accessibility-colors .light-background .content-area h2.custom-btn,
 .accessibility-colors .light-background .content-area h3.custom-btn,
@@ -1241,11 +1439,13 @@ a img {
 .accessibility-colors .light-background .content-area h6.custom-btn,
 .accessibility-colors .light-background .content-area p.custom-btn,
 .accessibility-colors .light-background .content-area a.custom-btn,
+.accessibility-colors .light-background .content-area b.custom-btn,
 .accessibility-colors .light-background .content-area ul.custom-btn,
 .accessibility-colors .light-background .content-area ol.custom-btn,
 .accessibility-colors .light-background .content-area dl.custom-btn,
 .accessibility-colors .light-background .content-area pre.custom-btn,
-.accessibility-colors .light-background .content-area table.custom-btn {
+.accessibility-colors .light-background .content-area table.custom-btn,
+.accessibility-colors .light-background .content-area strong.custom-btn {
   color: #f9ec5a;
   border-color: #f9ec5a;
   background-color: #000;
@@ -1258,11 +1458,13 @@ a img {
 .accessibility-colors .dark-background .content-area h6.custom-btn:hover,
 .accessibility-colors .dark-background .content-area p.custom-btn:hover,
 .accessibility-colors .dark-background .content-area a.custom-btn:hover,
+.accessibility-colors .dark-background .content-area b.custom-btn:hover,
 .accessibility-colors .dark-background .content-area ul.custom-btn:hover,
 .accessibility-colors .dark-background .content-area ol.custom-btn:hover,
 .accessibility-colors .dark-background .content-area dl.custom-btn:hover,
 .accessibility-colors .dark-background .content-area pre.custom-btn:hover,
 .accessibility-colors .dark-background .content-area table.custom-btn:hover,
+.accessibility-colors .dark-background .content-area strong.custom-btn:hover,
 .accessibility-colors .light-background .content-area h1.custom-btn:hover,
 .accessibility-colors .light-background .content-area h2.custom-btn:hover,
 .accessibility-colors .light-background .content-area h3.custom-btn:hover,
@@ -1271,11 +1473,13 @@ a img {
 .accessibility-colors .light-background .content-area h6.custom-btn:hover,
 .accessibility-colors .light-background .content-area p.custom-btn:hover,
 .accessibility-colors .light-background .content-area a.custom-btn:hover,
+.accessibility-colors .light-background .content-area b.custom-btn:hover,
 .accessibility-colors .light-background .content-area ul.custom-btn:hover,
 .accessibility-colors .light-background .content-area ol.custom-btn:hover,
 .accessibility-colors .light-background .content-area dl.custom-btn:hover,
 .accessibility-colors .light-background .content-area pre.custom-btn:hover,
-.accessibility-colors .light-background .content-area table.custom-btn:hover {
+.accessibility-colors .light-background .content-area table.custom-btn:hover,
+.accessibility-colors .light-background .content-area strong.custom-btn:hover {
   background-color: #222;
   border-color: #f9ec5a;
 }
@@ -2220,7 +2424,7 @@ a img {
 .menu-main li {
   display: inline-block;
   margin-left: 20px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .menu-sub li {
@@ -4057,8 +4261,36 @@ a img {
   display: -ms-flexbox;
   display: flex;
 }
+.site-footer .footer-body .voog-bg-picker-btn {
+  top: -8px;
+  left: 34px;
+}
+.site-footer .footer-body .footer-social-wrap {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.site-footer .footer-body .footer-social-wrap .footer-social {
+  width: 54px;
+}
+.site-footer .footer-body .footer-social-wrap .footer-social .edy-content-social-buttons-list .edy-content-social-button {
+  display: block;
+  border-bottom: dotted 1px;
+}
+.site-footer .footer-body .footer-social-wrap .footer-social .edy-content-social-buttons-list .edy-content-social-button:last-child {
+  border-bottom: none;
+}
+.site-footer .footer-body .footer-social-wrap .footer-social .edy-content-social-buttons-list svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .site-footer .footer-body .footer-content-wrap {
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4084,7 +4316,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .site-footer .footer-body .footer-content-wrap .footer-contact-wrap {
-    width: 100%;
+    width: 90%;
     margin-top: 0;
   }
 }
@@ -4109,7 +4341,7 @@ a img {
 }
 @media screen and (max-width: 640px) {
   .site-footer .footer-body .footer-content-wrap .footer-menu-wrap {
-    width: 100%;
+    width: 90%;
   }
 }
 .site-footer .footer-body .footer-content-wrap .footer-logo-wrap {
@@ -4147,27 +4379,6 @@ a img {
   background-size: contain;
   background-position: center !important;
   background-repeat: no-repeat;
-}
-.site-footer .footer-body .footer-social {
-  width: 86px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.site-footer .footer-body .footer-social .edy-content-social-buttons-list .edy-content-social-button {
-  display: block;
-  border-bottom: dotted 1px;
-}
-.site-footer .footer-body .footer-social .edy-content-social-buttons-list .edy-content-social-button:last-child {
-  border-bottom: none;
-}
-.site-footer .footer-body .footer-social .edy-content-social-buttons-list svg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .signout-btn-wrap {
