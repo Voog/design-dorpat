@@ -67,6 +67,10 @@
     $('html').removeClass('mobilemenu-open');
   });
 
+  $('.accessibility-close-button').click( function () {
+    $('html').removeClass('accessibility-open');
+  });
+
   $(document).click( function(e) {
     if ($(e.target).is(".accessibility-btn") === false) {
       $('html').removeClass('accessibility-open');
