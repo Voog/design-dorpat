@@ -4,22 +4,22 @@
       <h2>{{text_size}}</h2>
       <ul class="accessibility-input">
         <li>
-          <label for="size-huge">
-            <input type="radio" class="form_field_radio" name="accessibility-font-size" id="size-huge">
+          <label for="accessibility-size-huge">
+            <input type="radio" class="form_field_radio" name="accessibility-font-size" id="accessibility-size-huge">
             <span class="form_control_indicator"></span>
             {{huge}}
           </label>
         </li>
         <li>
-          <label for="size-large">
-            <input type="radio" class="form_field_radio" name="accessibility-font-size" id="size-large">
+          <label for="accessibility-size-large">
+            <input type="radio" class="form_field_radio" name="accessibility-font-size" id="accessibility-size-large">
             <span class="form_control_indicator"></span>
             {{large}}
           </label>
         </li>
         <li>
-          <label for="size-default">
-            <input type="radio" class="form_field_radio" checked="checked" name="accessibility-font-size" id="size-default">
+          <label for="accessibility-size-default">
+            <input type="radio" class="form_field_radio" checked="checked" name="accessibility-font-size" id="accessibility-size-default">
             <span class="form_control_indicator"></span>
             {{default}}
           </label>
@@ -30,33 +30,33 @@
       <h2>{{line_height}}</h2>
       <ul class="accessibility-input">
         <li>
-          <label for="line-height-huge">
-            <input type="radio" class="form_field_radio" name="accessibility-line-height" id="line-height-huge">
+          <label for="accessibility-line-height-huge">
+            <input type="radio" class="form_field_radio" name="accessibility-line-height" id="accessibility-line-height-huge">
             <span class="form_control_indicator"></span>
             {{huge}}
           </label>
         </li>
         <li>
-          <label for="line-height-large">
-            <input type="radio" class="form_field_radio" name="accessibility-line-height" id="line-height-large">
+          <label for="accessibility-line-height-large">
+            <input type="radio" class="form_field_radio" name="accessibility-line-height" id="accessibility-line-height-large">
             <span class="form_control_indicator"></span>
             {{large}}
           </label>
         </li>
         <li>
-          <label for="line-height-default">
-            <input type="radio" class="form_field_radio" checked="checked" name="accessibility-line-height" id="line-height-default">
+          <label for="accessibility-line-height-default">
+            <input type="radio" class="form_field_radio" checked="checked" name="accessibility-line-height" id="accessibility-line-height-default">
             <span class="form_control_indicator"></span>
             {{default}}
           </label>
         </li>
       </ul>
     </div>
-    <div class="accessibility-contrast">
+    <div class="accessibility-colors">
       <h2>{{contrast}}</h2>
       <span>
-        <label for="accessibility-contrast">
-          <input type="checkbox" class="form_field_checkbox"  id="accessibility-contrast" class="accessibility-contrast-input">
+        <label for="accessibility-colors">
+          <input type="checkbox" class="form_field_checkbox"  id="accessibility-colors" class="accessibility-colors-input">
           <span class="form_control_indicator"></span>
           {{high_contrast}}
         </label>

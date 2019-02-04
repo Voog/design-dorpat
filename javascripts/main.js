@@ -81,142 +81,65 @@
     e.stopPropagation();
   });
 
+  //Check if localStorage is both supported and available https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
   function storageAvailable(type) {
     try {
-        var storage = window[type],
-            x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            storage.length !== 0;
-    }
+      var storage = window[type],
+        x = '__storage_test__';
+      storage.setItem(x, x);
+      storage.removeItem(x);
+      return true;
   }
+    catch(e) {
+      return e instanceof DOMException && (
+        e.code === 22 ||
+        e.code === 1014 ||
+        e.name === 'QuotaExceededError' ||
+        e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+        storage.length !== 0;
+    }
+  };
 
   if (storageAvailable('localStorage')) {
     $(document).ready(function (){
-      var blind = JSON.parse(localStorage.getItem('blind')),
-        restoreDefaults = JSON.parse(localStorage.getItem('restore-defaults')),
-        sizeLarge = JSON.parse(localStorage.getItem('size-large')),
-        sizeHuge = JSON.parse(localStorage.getItem('size-huge')),
-        lineHeightLarge = JSON.parse(localStorage.getItem('line-height-large')),
-        lineHeightHuge = JSON.parse(localStorage.getItem('line-height-huge'));
-
-      if(blind == true) {
-        $('input#accessibility-contrast').prop('checked', true);
-      } else {
-        $('html').removeClass('accessibility-colors');
-        $('input#accessibility-contrast').prop('checked', false);
-      }
-
-      if(lineHeightLarge == true) {
-        $('input#line-height-large').prop('checked', true);
-      } else {
-        $('input#line-height-large').prop('checked', false);
-      }
-
-      if(lineHeightHuge == true) {
-        $('input#line-height-huge').prop('checked', true);
-      } else {
-        $('input#line-height-huge').prop('checked', false);
-      }
-
-      if(sizeLarge == true) {
-        $('input#size-large').prop('checked', true);
-      } else {
-        $('input#size-large').prop('checked', false);
-      }
-
-      if(sizeHuge == true) {
-        $('input#size-huge').prop('checked', true);
-      } else {
-        $('input#size-huge').prop('checked', false);
-      }
-
-      if(restoreDefaults == true) {
-        $('input#accessibility-contrast').prop('checked', false);
-        $('input#line-height-default').prop('checked', true);
-        $('input#font-size-default').prop('checked', true);
-      }
+      var keys = ['colors', 'line-height-large', 'line-height-huge', 'size-large', 'size-huge'];
+      keys.forEach(function(key) {
+        if (JSON.parse(localStorage.getItem('accessibility-' + key)) === true) {
+          $('#accessibility-' + key).prop('checked', true);
+        } else {
+          $('#accessibility-' + key).prop('checked', false);
+        }
+      });
     });
   } else {
     console.warn('Local storage full')
   };
 
   $('.accessibility-restore').click(function(){
-    $('html').removeClass('accessibility-colors');
-    $('html').removeClass('accessibility-line-height-large');
-    $('html').removeClass('accessibility-line-height-huge');
-    $('html').removeClass('accessibility-size-large');
-    $('html').removeClass('accessibility-size-huge');
-    $('input#accessibility-contrast').prop('checked', false);
-    $('input#line-height-default').prop('checked', true);
-    $('input#size-default').prop('checked', true);
-    localStorage.setItem('line-height-large', JSON.stringify(false));
-    localStorage.setItem('line-height-huge', JSON.stringify(false));
-    localStorage.setItem('size-large', JSON.stringify(false));
-    localStorage.setItem('size-huge', JSON.stringify(false));
-    localStorage.setItem('blind', JSON.stringify(false));
-    localStorage.setItem('restore-defaults', JSON.stringify(true));
+    var keys = ['colors', 'line-height-large', 'line-height-huge', 'size-large', 'size-huge'];
+
+    keys.forEach(function(key) {
+      $('html').removeClass('accessibility-' + key);
+      localStorage.setItem('accessibility-' + key, JSON.stringify(false));
+    });
+
+    $('#accessibility-colors').prop('checked', false);
+    $('#accessibility-line-height-default').prop('checked', true);
+    $('#accessibility-size-default').prop('checked', true);
   });
 
   $('.accessibility-save').click(function(){
-    if ($('input#accessibility-contrast').is(':checked')) {
-      $('html').addClass('accessibility-colors');
-      localStorage.setItem('blind', JSON.stringify(true));
-      localStorage.setItem('restore-defaults', JSON.stringify(false));
-    } else {
-      $('html').removeClass('accessibility-colors');
-      localStorage.setItem('blind', JSON.stringify(false));
-    }
+    var keys = ['colors', 'line-height-large', 'line-height-huge', 'size-large', 'size-huge'];
 
-    if($('#line-height-large').is(':checked')) {
-      $('html').addClass('accessibility-line-height-large');
-      localStorage.setItem('line-height-large', JSON.stringify(true));
-      localStorage.setItem('restore-defaults', JSON.stringify(false));
-    } else {
-      $('html').removeClass('accessibility-line-height-large');
-      localStorage.setItem('line-height-large', JSON.stringify(false));
-    }
-
-    if($('#line-height-huge').is(':checked')) {
-      $('html').addClass('accessibility-line-height-huge');
-      localStorage.setItem('line-height-huge', JSON.stringify(true));
-      localStorage.setItem('restore-defaults', JSON.stringify(false));
-    } else {
-      $('html').removeClass('accessibility-line-height-huge');
-      localStorage.setItem('line-height-huge', JSON.stringify(false));
-    }
-
-    if($('#size-large').is(':checked')) {
-      $('html').addClass('accessibility-size-large');
-      localStorage.setItem('size-large', JSON.stringify(true));
-      localStorage.setItem('restore-defaults', JSON.stringify(false));
-    } else {
-      $('html').removeClass('accessibility-size-large');
-      localStorage.setItem('size-large', JSON.stringify(false));
-    }
-
-    if($('#size-huge').is(':checked')) {
-      $('html').addClass('accessibility-size-huge');
-      localStorage.setItem('size-huge', JSON.stringify(true));
-      localStorage.setItem('restore-defaults', JSON.stringify(false));
-    } else {
-      $('html').removeClass('accessibility-size-huge');
-      localStorage.setItem('size-huge', JSON.stringify(false));
-    }
+    keys.forEach(function(key) {
+      if ($('#accessibility-' + key).is(':checked')) {
+        $('html').addClass('accessibility-' + key);
+        localStorage.setItem('accessibility-' + key, JSON.stringify(true));
+      } else {
+        $('html').removeClass('accessibility-' + key);
+        localStorage.setItem('accessibility-' + key, JSON.stringify(false));
+      }
+    });
   });
 
   // Function to limit the rate at which a function can fire.

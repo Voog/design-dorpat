@@ -102,11 +102,20 @@
   footer {
     background-color: $black;
     color: $yellow;
+    .toggle-sub-menu {
+      fill: $yellow;
+    }
   }
 
   .header-top {
     background-color: $black;
     color: $yellow;
+  }
+
+  .toggle-sub-menu {
+    svg {
+      fill: $yellow;
+    }
   }
 
   .site-footer,
@@ -320,6 +329,16 @@
       .form_field_checkbox + .form_control_indicator,
       .form_field_radio + .form_control_indicator {
         background-color: $yellow;
+      }
+
+      .custom-btn {
+        color: $yellow;
+        border-color: $yellow;
+        background-color: $black;
+        &:hover {
+          background-color: $grey;
+          border-color: $yellow;
+        }
       }
     }
 
@@ -665,6 +684,14 @@
       font-size: 20px;
     }
   }
+
+  .front-page {
+    .main-feature {
+      .content-area {
+        font-size: 20px;
+      }
+    }
+  }
 }
 
 //==============================================================================
@@ -832,6 +859,14 @@
       font-size: 24px;
     }
   }
+
+  .front-page {
+    .main-feature {
+      .content-area {
+        font-size: 24px;
+      }
+    }
+  }
 }
 
 //==============================================================================
@@ -849,11 +884,38 @@
     &.accessibility-block-wrap {
       line-height: 1.7;
     }
+
+    .header-bottom-inner {
+      .content-area {
+        h1 {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  .front-page {
+    .main-feature {
+      .content-area {
+        line-height: 2.5;
+      }
+    }
   }
 
   .main-feature {
     .feature-content {
       line-height: 2.5;
+    }
+  }
+
+  .header-right  {
+    line-height: initial;
+  }
+
+  #footer-menu {
+    .toggle-sub-menu {
+      top: 10px;
+      left: -25px;
     }
   }
 }
@@ -873,11 +935,38 @@
     &.accessibility-block-wrap {
       line-height: 1.7;
     }
+
+    .header-bottom-inner {
+      .content-area {
+        h1 {
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  .front-page {
+    .main-feature {
+      .content-area {
+        line-height: 3.5;
+      }
+    }
   }
 
   .main-feature {
     .feature-content {
       line-height: 3.5;
+    }
+  }
+
+  .header-right  {
+    line-height: initial;
+  }
+
+  #footer-menu {
+    .toggle-sub-menu {
+      top: 18px;
+      left: -25px;
     }
   }
 }
