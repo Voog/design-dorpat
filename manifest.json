@@ -211,13 +211,6 @@
     {
       "content_type": "component",
       "component": true,
-      "file": "components/translations.tpl",
-      "layout_name": "translations",
-      "title": "translations"
-    },
-    {
-      "content_type": "component",
-      "component": true,
       "file": "components/menu-sub.tpl",
       "layout_name": "menu-sub",
       "title": "menu-sub"

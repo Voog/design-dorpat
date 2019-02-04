@@ -19,7 +19,7 @@
               <div class="visibility-lrg">
                 {% include "menu-language" %}
                   <div class="menu-btn-wrap accessibility-menu-btn-wrap">
-                    <a class="accessibility-btn">{{visually_impaired}}</a>
+                    <a class="accessibility-btn">{{ "visually_impaired" | lc }}</a>
                   </div>
                 {% if site.search.enabled %}
                   <button class="search-btn search-open-btn js-search-toggle-btn js-prevent-sideclick">

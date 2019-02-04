@@ -52,6 +52,6 @@
   {% endif %}
 
   <div class="accessibility-menu-btn-wrap">
-    <a class="accessibility-btn">{{visually_impaired}}</a>
+    <a class="accessibility-btn">{{ "visually_impaired" | lc }}</a>
   </div>
 </div>
