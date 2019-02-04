@@ -11,6 +11,7 @@
 @import 'modules/variables';
 
 // GENERAL
+@import 'components/accessibility';
 @import 'general/base';
 @import 'general/framework';
 @import 'general/cms-overrides';
@@ -22,7 +23,6 @@
 @import 'layouts/blog-article';
 
 // COMPONENTS
-@import 'components/accessibility';
 @import 'components/blog-article-comments';
 @import 'components/blog-tags';
 @import 'components/site-header';

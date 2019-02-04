@@ -51,6 +51,16 @@
         }
       }
     }
+
+    .accessibility-close-button {
+      position: absolute;
+      right: 16px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 
   @media screen and (max-width: $mobile-1) {
@@ -96,16 +106,62 @@
 
   .header-top {
     background-color: $black;
+    color: $yellow;
   }
 
-  .site-footer {
+  .site-footer,
+  .site-header {
     .dark-background,
     .light-background {
-      color: $yellow;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      b,
+      ul,
+      ol,
+      dl,
+      pre,
+      table {
+        color: $yellow;
+      }
+
+      .header-title a,
+      .header-title a:hover {
+        color: $yellow;
+      }
+
+      .menu li a {
+        color: $yellow;
+
+        &:hover {
+          color: $yellow;
+          opacity: 0.6;
+        }
+      }
+
+      .menu li.selected a {
+        color: $yellow;
+      }
     }
 
     .footer-menu {
+      background-color: $black;
       color: $yellow;
+    }
+
+    .blog-article-nav {
+      background-color: $black;
+      color: $yellow;
+
+      .article-nav-direction {
+        background-color: $black;
+        color: $yellow;
+      }
     }
   }
 
@@ -115,10 +171,70 @@
     }
   }
 
+
+
+
+  .blog-article-page,
+  .blog-news-page,
+  .article-comments,
+  .blog-tags {
+    background-color: $black;
+    color: $yellow;
+
+    .tags-title {
+      color: $yellow;
+    }
+
+    .comments-close {
+      .btn-close {
+        background-color: $black;
+        color: $yellow;
+
+        .ico-close {
+          fill: $yellow;
+        }
+      }
+    }
+
+    .dark-background,
+    .light-background {
+      .article-author,
+      .article-date,
+      .comments-title {
+        color: $yellow;
+      }
+    }
+  }
+
+  .blog-tags {
+    .menu {
+      .menu-link {
+        color: $yellow;
+      }
+    }
+  }
+
   .dark-background,
   .light-background {
     color: $yellow;
     background-color: $black;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    b,
+    ul,
+    ol,
+    dl,
+    pre,
+    table {
+      color: $yellow;
+    }
 
     .mobile-menu-toggler {
       span,
@@ -138,11 +254,13 @@
       h6,
       p,
       a,
+      b,
       ul,
       ol,
       dl,
       pre,
-      table {
+      table,
+      strong {
         color: $yellow;
 
         &.custom-btn {
@@ -164,7 +282,6 @@
     }
 
     .content-area {
-
       table {
         th, td {
           border-color: $yellow;

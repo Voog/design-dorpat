@@ -33,12 +33,30 @@ module.exports = function(grunt) {
           'sources/javascripts/concat/*.js'
         ],
         dest: 'javascripts/main.js'
+      },
+      localstorage: {
+        src: [
+          'sources/javascripts/localstorage/*.js'
+        ],
+        dest: 'javascripts/localstorage.js'
       }
     },
 
     // Minifies the javascript files.
     uglify: {
       build: {
+        files: [{
+          expand: true,
+          cwd: 'javascripts/',
+          src: [
+            '*.js',
+            '!*.min.js'
+          ],
+          dest: 'javascripts/',
+          ext: '.min.js'
+        }]
+      },
+      localstorage: {
         files: [{
           expand: true,
           cwd: 'javascripts/',

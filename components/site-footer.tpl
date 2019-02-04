@@ -32,7 +32,11 @@
 
       <div class="footer-body">
         {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
-        <div class="footer-social content-area">{% xcontent name="footer-social" %}</div>
+        <div class="footer-social-wrap">
+          <div class="footer-social content-area">
+          {% xcontent name="footer-social" %}
+          </div>
+        </div>
         <div class="footer-content-wrap">
           <div class="footer-logo-wrap {% if editmode != true and feature_image_4 == nil %} empty-hidden{% endif %}">
             <div class="footer-logo">

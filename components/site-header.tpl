@@ -1,3 +1,4 @@
+{% include "accessibility" %}
 <header class="site-header content-full js-site-header js-bg-picker-area{% if photo_article %} photo-article{% endif %}">
   <div class="js-background-type {% if photo_article %}{{ article_header_bg_type }}{% else %}{{ header_bg_type }}{% endif %}" data-blog-bg-type="{{ header_bg_type }}" data-article-bg-type="{{ article_header_bg_type }}">
     <div class="background-image js-background-image"></div>
