@@ -802,8 +802,8 @@
 .accessibility-line-height-large .main-feature .feature-content {
   line-height: 2.5;
 }
-.accessibility-line-height-large .header-right {
-  line-height: initial;
+.accessibility-line-height-large .site-options {
+  line-height: 1.5;
 }
 .accessibility-line-height-large #footer-menu .toggle-sub-menu {
   top: 10px;
@@ -834,8 +834,8 @@
 .accessibility-line-height-huge .main-feature .feature-content {
   line-height: 3.5;
 }
-.accessibility-line-height-huge .header-right {
-  line-height: initial;
+.accessibility-line-height-huge .site-options {
+  line-height: 2;
 }
 .accessibility-line-height-huge #footer-menu .toggle-sub-menu {
   top: 18px;
