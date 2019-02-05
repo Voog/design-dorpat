@@ -48,13 +48,13 @@
   if (storageAvailable('localStorage')) {
     $(document).ready(function (){
       var keys = ['colors', 'line-height-large', 'line-height-huge', 'size-large', 'size-huge'];
-      keys.forEach(function(key) {
-        if (JSON.parse(localStorage.getItem('accessibility-' + key)) === true) {
-          $('#accessibility-' + key).prop('checked', true);
+      for (i = 0; i < keys.length; ++i) {
+        if (JSON.parse(localStorage.getItem('accessibility-' + keys[i])) === true) {
+          $('#accessibility-' + keys[i]).prop('checked', true);
         } else {
-          $('#accessibility-' + key).prop('checked', false);
+          $('#accessibility-' + keys[i]).prop('checked', false);
         }
-      });
+      };
     });
   } else {
     console.warn('Local storage full')
@@ -63,10 +63,10 @@
   $('.accessibility-restore').click(function(){
     var keys = ['colors', 'line-height-large', 'line-height-huge', 'size-large', 'size-huge'];
 
-    keys.forEach(function(key) {
-      $('html').removeClass('accessibility-' + key);
-      localStorage.setItem('accessibility-' + key, JSON.stringify(false));
-    });
+    for (i = 0; i < keys.length; ++i) {
+      $('html').removeClass('accessibility-' + keys[i]);
+      localStorage.setItem('accessibility-' + keys[i], JSON.stringify(false));
+    };
 
     $('#accessibility-colors').prop('checked', false);
     $('#accessibility-line-height-default').prop('checked', true);
@@ -76,15 +76,15 @@
   $('.accessibility-save').click(function(){
     var keys = ['colors', 'line-height-large', 'line-height-huge', 'size-large', 'size-huge'];
 
-    keys.forEach(function(key) {
-      if ($('#accessibility-' + key).is(':checked')) {
-        $('html').addClass('accessibility-' + key);
-        localStorage.setItem('accessibility-' + key, JSON.stringify(true));
+    for (i = 0; i < keys.length; ++i) {
+      if ($('#accessibility-' + keys[i]).is(':checked')) {
+        $('html').addClass('accessibility-' + keys[i]);
+        localStorage.setItem('accessibility-' + keys[i], JSON.stringify(true));
       } else {
-        $('html').removeClass('accessibility-' + key);
-        localStorage.setItem('accessibility-' + key, JSON.stringify(false));
+        $('html').removeClass('accessibility-' + keys[i]);
+        localStorage.setItem('accessibility-' + keys[i], JSON.stringify(false));
       }
-    });
+    };
   });
 
   // Function to limit the rate at which a function can fire.

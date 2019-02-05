@@ -52,14 +52,13 @@
 <script>
 if (accessibilityStorage('localStorage')) {
   var keys = ['colors', 'line-height-large', 'line-height-huge', 'size-large', 'size-huge'];
-
-  keys.forEach(function(key) {
-    if (JSON.parse(localStorage.getItem('accessibility-' + key)) === true) {
-      document.querySelector('html').classList.add('accessibility-' + key);
+  for (i = 0; i < keys.length; ++i) {
+    if (JSON.parse(localStorage.getItem('accessibility-' + keys[i])) === true) {
+      document.querySelector('html').classList.add('accessibility-' + keys[i]);
     } else {
-      document.querySelector('html').classList.remove('accessibility-' + key);
+      document.querySelector('html').classList.remove('accessibility-' + keys[i]);
     }
-  });
+  };
 };
 </script>
 
