@@ -46,7 +46,6 @@
 {% endcustomstyle %}
 
 {% include "front-page-variables" %}
-{% include "translations" %}
 {% comment %}//Check if localStorage is both supported and available https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API{% endcomment %}
 <script>function accessibilityStorage(e){try{var t=window[e],r="__storage_test__";return t.setItem(r,r),t.removeItem(r),!0}catch(e){return e instanceof DOMException&&(22===e.code||1014===e.code||"QuotaExceededError"===e.name||"NS_ERROR_DOM_QUOTA_REACHED"===e.name)&&0!==t.length}}</script>
 <script>
