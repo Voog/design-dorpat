@@ -78,6 +78,7 @@
   }
 }
 
+
 .accessibility-menu-btn-wrap {
   #mobile-menu &{
     margin-top: 20px;
@@ -89,6 +90,12 @@
 
   &:hover {
     opacity: 0.8;
+  }
+
+  .accessibility-btn {
+    display: flex;
+    align-items: center;
+    height: 27px;
   }
 }
 

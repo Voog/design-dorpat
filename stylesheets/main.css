@@ -81,6 +81,15 @@
 .accessibility-menu-btn-wrap:hover {
   opacity: 0.8;
 }
+.accessibility-menu-btn-wrap .accessibility-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 27px;
+}
 
 .accessibility-colors header,
 .accessibility-colors main,
@@ -4353,7 +4362,6 @@ a img {
   left: 34px;
 }
 .site-footer .footer-body .footer-social-wrap {
-  width: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4362,7 +4370,7 @@ a img {
           align-items: center;
 }
 .site-footer .footer-body .footer-social-wrap .footer-social {
-  width: 54px;
+  max-width: 84px;
 }
 .site-footer .footer-body .footer-social-wrap .footer-social .edy-content-social-buttons-list .edy-content-social-button {
   display: block;
@@ -4444,7 +4452,7 @@ a img {
 }
 .site-footer .footer-body .footer-content-wrap .footer-logo-wrap .footer-logo {
   max-width: 250px;
-  margin: 24px 8px;
+  margin: 24px 0 24px 24px;
   margin-right: 0;
   position: relative;
   position: relative;

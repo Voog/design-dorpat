@@ -166,12 +166,11 @@
     }
 
     .footer-social-wrap {
-      width: 10%;
       display: flex;
       align-items: center;
 
       .footer-social {
-        width: 54px;
+        max-width: 84px;
         .edy-content-social-buttons-list {
           .edy-content-social-button {
             display: block;
@@ -244,7 +243,7 @@
 
         .footer-logo {
           max-width: 250px;
-          margin: 24px 8px;
+          margin: 24px 0 24px 24px;
           margin-right: 0;
           position: relative;
           @include aspect-ratio(200, 100);
