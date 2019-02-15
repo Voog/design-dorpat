@@ -2,7 +2,7 @@
   {% if editmode or site.has_many_languages? %}
     <ul class="menu js-menu-language-popover-setting-parent">
       {% for language in site.languages %}
-        <li class="lang-title"><a class="lang-flag lang-flag-{{ language_code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.locale }}">{{ language.title }}</a></li>
+        <li class="lang-title"><a class="lang-flag lang-flag-{{ language.code }}{% if language.selected? %} active{% endif %}" href="{{ language.url }}" data-lang-code="{{ language.locale }}">{{ language.title }}</a></li>
       {% endfor %}
 
       {% if editmode %}
