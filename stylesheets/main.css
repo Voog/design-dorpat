@@ -577,6 +577,10 @@
 .accessibility-size-large .lang-menu-btn {
   font-size: 20px;
 }
+.accessibility-size-large #footer-menu .toggle-sub-menu,
+.accessibility-size-large #mobile-menu .toggle-sub-menu {
+  top: 16px;
+}
 .accessibility-size-large .content-item-box .item-title {
   font-size: 24px;
 }
@@ -691,6 +695,10 @@
 }
 .accessibility-size-huge .menu-main li {
   font-size: 24px;
+}
+.accessibility-size-huge #footer-menu .toggle-sub-menu,
+.accessibility-size-huge #mobile-menu .toggle-sub-menu {
+  top: 18px;
 }
 .accessibility-size-huge #mobile-menu .navigation-menu {
   font-size: 24px;
@@ -811,12 +819,8 @@
 .accessibility-line-height-large .main-feature .feature-content {
   line-height: 2.5;
 }
-.accessibility-line-height-large .site-options {
-  line-height: 1.5;
-}
-.accessibility-line-height-large #footer-menu .toggle-sub-menu {
-  top: 10px;
-  left: -25px;
+.accessibility-line-height-large .header-top {
+  line-height: 1;
 }
 
 .accessibility-line-height-huge {
@@ -843,12 +847,8 @@
 .accessibility-line-height-huge .main-feature .feature-content {
   line-height: 3.5;
 }
-.accessibility-line-height-huge .site-options {
-  line-height: 2;
-}
-.accessibility-line-height-huge #footer-menu .toggle-sub-menu {
-  top: 18px;
-  left: -25px;
+.accessibility-line-height-huge .header-top {
+  line-height: 1;
 }
 
 [data-behavior="pickcolor"] {
@@ -2408,11 +2408,9 @@ a img {
 
 .toggle-sub-menu {
   position: absolute;
-  top: 12px;
-  left: -25px;
+  top: 14px;
+  left: -12px;
   display: block;
-  padding: 9px 11px 8px;
-  margin-top: -6px;
 }
 .no-svg .toggle-sub-menu:before {
   display: block;
@@ -3306,8 +3304,8 @@ a img {
   }
 }
 #footer-menu .toggle-sub-menu {
-  top: 1px;
-  left: -25px;
+  top: 14px;
+  left: -14px;
 }
 #footer-menu ul {
   margin: 0;

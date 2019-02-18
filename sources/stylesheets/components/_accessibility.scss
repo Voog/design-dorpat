@@ -528,6 +528,13 @@
     font-size: 20px;
   }
 
+  #footer-menu,
+  #mobile-menu {
+    .toggle-sub-menu {
+      top: 16px;
+    }
+  }
+
   .content-item-box {
     .item-title {
       font-size: 24px;
@@ -716,6 +723,13 @@
   .menu-main {
     li {
       font-size: 24px;
+    }
+  }
+
+  #footer-menu,
+  #mobile-menu {
+    .toggle-sub-menu {
+      top: 18px;
     }
   }
 
@@ -915,15 +929,8 @@
     }
   }
 
-  .site-options  {
-    line-height: 1.5;
-  }
-
-  #footer-menu {
-    .toggle-sub-menu {
-      top: 10px;
-      left: -25px;
-    }
+  .header-top  {
+    line-height: 1;
   }
 }
 
@@ -966,15 +973,8 @@
     }
   }
 
-  .site-options  {
-    line-height: 2;
-  }
-
-  #footer-menu {
-    .toggle-sub-menu {
-      top: 18px;
-      left: -25px;
-    }
+  .header-top  {
+    line-height: 1;
   }
 }
 

@@ -1,6 +1,4 @@
 <li class="menu-item {% if item.children? and item.selected? %} with-children current-parent{% elsif item.children? %} with-children{% elsif item.selected? %} current-parent{% endif %}{% if render_hidden_categories == true and item.layout_title == product_list_layout or item.layout_title == product_layout %}{% unless show_product_related_pages_in_main_menu %} is-hidden{% endunless %} js-menu-item-products{% endif %}">
-  {% menulink item %}
-
   {% if item.children? or editmode %}
     {% if editmode and footer != true %}
       {% assign sub_menu_toggler = true %}
@@ -33,6 +31,7 @@
 
     {% assign sub_menu_toggler = false %}
   {% endif %}
+  {% menulink item %}
 
   {% if editmode or item.children? %}
     <ul class="sub-menu menu-level-2">

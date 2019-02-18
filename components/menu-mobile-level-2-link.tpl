@@ -1,6 +1,4 @@
 <li {% if level2.children? and level2.selected? %} class="with-children current-parent"{% elsif level2.children? %} class="with-children"{% elsif level2.selected? %} class="current-parent"{% endif %}>
-  {% menulink level2 %}
-
   {% if level2.children? %}
     <button class="toggle-sub-menu js-toggle-sub-menu{% if level2.selected? %} active highlighted{% endif %}">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 10" width="8px" height="10px">
@@ -23,4 +21,6 @@
       {% endif %}
     </ul>
   {% endif %}
+
+  {% menulink level2 %}
 </li>
