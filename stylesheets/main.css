@@ -201,6 +201,12 @@
   background-color: #000;
   color: #f9ec5a;
 }
+.accessibility-colors .site-footer .footer-body .footer-content-wrap .footer-contact-wrap,
+.accessibility-colors .site-footer .footer-body .footer-content-wrap .footer-menu-wrap,
+.accessibility-colors .site-header .footer-body .footer-content-wrap .footer-contact-wrap,
+.accessibility-colors .site-header .footer-body .footer-content-wrap .footer-menu-wrap {
+  border-left-color: #f9ec5a;
+}
 .accessibility-colors .site-footer .blog-article-nav,
 .accessibility-colors .site-header .blog-article-nav {
   background-color: #000;
@@ -213,6 +219,25 @@
 }
 .accessibility-colors .page-body .background-color {
   background-color: #000;
+}
+.accessibility-colors .search .search-inner {
+  border: 1px solid #f9ec5a;
+}
+.accessibility-colors .search .search-inner input,
+.accessibility-colors .search .search-inner .voog-search-modal {
+  border: 1px solid #f9ec5a;
+  background-color: #000;
+  color: #f9ec5a;
+}
+.accessibility-colors .search .search-inner input .voog-search-modal-result,
+.accessibility-colors .search .search-inner .voog-search-modal .voog-search-modal-result {
+  border-top: #f9ec5a;
+}
+.accessibility-colors .search .search-inner .search-btn {
+  border-color: #f9ec5a;
+}
+.accessibility-colors .search .search-inner svg path {
+  fill: #f9ec5a;
 }
 .accessibility-colors .blog-article-page,
 .accessibility-colors .blog-news-page,
@@ -265,6 +290,115 @@
 .accessibility-colors .blog-tags .light-background .article-date,
 .accessibility-colors .blog-tags .light-background .comments-title {
   color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .dark-background .comment .comment-body,
+.accessibility-colors .blog-article-page .dark-background .comment .comment-author,
+.accessibility-colors .blog-article-page .dark-background .comment .comment-date,
+.accessibility-colors .blog-article-page .light-background .comment .comment-body,
+.accessibility-colors .blog-article-page .light-background .comment .comment-author,
+.accessibility-colors .blog-article-page .light-background .comment .comment-date,
+.accessibility-colors .blog-news-page .dark-background .comment .comment-body,
+.accessibility-colors .blog-news-page .dark-background .comment .comment-author,
+.accessibility-colors .blog-news-page .dark-background .comment .comment-date,
+.accessibility-colors .blog-news-page .light-background .comment .comment-body,
+.accessibility-colors .blog-news-page .light-background .comment .comment-author,
+.accessibility-colors .blog-news-page .light-background .comment .comment-date,
+.accessibility-colors .article-comments .dark-background .comment .comment-body,
+.accessibility-colors .article-comments .dark-background .comment .comment-author,
+.accessibility-colors .article-comments .dark-background .comment .comment-date,
+.accessibility-colors .article-comments .light-background .comment .comment-body,
+.accessibility-colors .article-comments .light-background .comment .comment-author,
+.accessibility-colors .article-comments .light-background .comment .comment-date,
+.accessibility-colors .blog-tags .dark-background .comment .comment-body,
+.accessibility-colors .blog-tags .dark-background .comment .comment-author,
+.accessibility-colors .blog-tags .dark-background .comment .comment-date,
+.accessibility-colors .blog-tags .light-background .comment .comment-body,
+.accessibility-colors .blog-tags .light-background .comment .comment-author,
+.accessibility-colors .blog-tags .light-background .comment .comment-date {
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .dark-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .blog-article-page .dark-background .comment-form textarea::-webkit-input-placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form textarea::-webkit-input-placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form textarea::-webkit-input-placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form textarea::-webkit-input-placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form textarea::-webkit-input-placeholder,
+.accessibility-colors .article-comments .light-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .article-comments .light-background .comment-form textarea::-webkit-input-placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form textarea::-webkit-input-placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form input::-webkit-input-placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form textarea::-webkit-input-placeholder {
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .dark-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .blog-article-page .dark-background .comment-form textarea:-ms-input-placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form textarea:-ms-input-placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form textarea:-ms-input-placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form textarea:-ms-input-placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form textarea:-ms-input-placeholder,
+.accessibility-colors .article-comments .light-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .article-comments .light-background .comment-form textarea:-ms-input-placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form textarea:-ms-input-placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form input:-ms-input-placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form textarea:-ms-input-placeholder {
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .dark-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .blog-article-page .dark-background .comment-form textarea::-ms-input-placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form textarea::-ms-input-placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form textarea::-ms-input-placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form textarea::-ms-input-placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form textarea::-ms-input-placeholder,
+.accessibility-colors .article-comments .light-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .article-comments .light-background .comment-form textarea::-ms-input-placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form textarea::-ms-input-placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form input::-ms-input-placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form textarea::-ms-input-placeholder {
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .dark-background .comment-form input::placeholder,
+.accessibility-colors .blog-article-page .dark-background .comment-form textarea::placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form input::placeholder,
+.accessibility-colors .blog-article-page .light-background .comment-form textarea::placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form input::placeholder,
+.accessibility-colors .blog-news-page .dark-background .comment-form textarea::placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form input::placeholder,
+.accessibility-colors .blog-news-page .light-background .comment-form textarea::placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form input::placeholder,
+.accessibility-colors .article-comments .dark-background .comment-form textarea::placeholder,
+.accessibility-colors .article-comments .light-background .comment-form input::placeholder,
+.accessibility-colors .article-comments .light-background .comment-form textarea::placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form input::placeholder,
+.accessibility-colors .blog-tags .dark-background .comment-form textarea::placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form input::placeholder,
+.accessibility-colors .blog-tags .light-background .comment-form textarea::placeholder {
+  color: #f9ec5a;
+}
+.accessibility-colors .blog-article-page .edy-tag-holder,
+.accessibility-colors .blog-news-page .edy-tag-holder,
+.accessibility-colors .article-comments .edy-tag-holder,
+.accessibility-colors .blog-tags .edy-tag-holder {
+  color: #f9ec5a;
+  background-color: #000;
+  border: 1px solid #f9ec5a;
+}
+.accessibility-colors .edy-cbtn-content {
+  color: #f9ec5a !important;
 }
 .accessibility-colors .blog-tags .menu .menu-link {
   color: #f9ec5a;

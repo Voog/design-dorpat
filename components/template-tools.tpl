@@ -62,9 +62,8 @@
     //==========================================================================
     // Binds bg-pickers.
     //==========================================================================
-    $('.js-bg-picker-area').each(function(index, bgPickerArea) {
-      var bgPickerButton = $(bgPickerArea).find('.js-background-settings'),
-          dataBgKey = $(bgPickerButton).data('bg-key'),
+    $('.js-bg-picker-area .js-background-settings').each(function(index, bgPickerButton) {
+      var dataBgKey = $(bgPickerButton).data('bg-key'),
           defaultImageColor = $(bgPickerButton).data('bg-default-image-color'),
           pictureBoolean = $(bgPickerButton).data('bg-picture-boolean'),
           targetWidth = $(bgPickerButton).data('target-width');
