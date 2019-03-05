@@ -985,10 +985,6 @@
   line-height: 1;
 }
 
-[data-behavior="pickcolor"] {
-  display: none;
-}
-
 @media screen and (max-width: 640px) {
   html.search-open, html.comments-open {
     height: 100%;
