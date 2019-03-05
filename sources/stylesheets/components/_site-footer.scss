@@ -189,7 +189,7 @@
     }
 
     .footer-content-wrap {
-      width: 90%;
+      width: 100%;
       display: flex;
 
       @media screen and (max-width: $tablet-3) {
@@ -198,35 +198,43 @@
 
       .footer-contact-wrap {
         width: 50%;
-        margin: 24px;
-        align-items: center;
-        display: flex;
-        border-left: dotted 1px $blue;
-
-        @media screen and (max-width: $tablet-3) {
-          width: 90%;
-          margin-top: 0;
-        }
-
-        .footer-contact {
-          padding: 0 24px;
-
-        }
-      }
-
-      .footer-menu-wrap {
-        width: 30%;
-        margin: 24px;
+        margin: 24px 0;
         align-items: center;
         display: flex;
         border-left: dotted 1px $blue;
 
         @media screen and (max-width: $tablet-1) {
-          width: 50%;
+          width: 60%;
         }
 
         @media screen and (max-width: $tablet-3) {
-          width: 90%;
+          width: calc(100% - 24px);
+          margin: 0 0 24px 24px;
+        }
+
+        .footer-contact {
+          padding: 0 24px;
+
+          @media screen and (max-width: $tablet-3) {
+            padding-right: 32px;
+          }
+        }
+      }
+
+      .footer-menu-wrap {
+        width: 30%;
+        margin: 24px 0;
+        align-items: center;
+        display: flex;
+        border-left: dotted 1px $blue;
+
+        @media screen and (max-width: $tablet-1) {
+          width: calc(40% - 24px);
+          margin: 24px 0 24px 24px ;
+        }
+
+        @media screen and (max-width: $tablet-3) {
+          width: calc(100% - 24px);
         }
       }
 
