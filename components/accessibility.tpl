@@ -56,7 +56,7 @@
       <h2>{{ "contrast" | lc }}</h2>
       <span>
         <label for="accessibility-colors">
-          <input type="checkbox" class="form_field_checkbox"  id="accessibility-colors" class="accessibility-colors-input">
+          <input type="checkbox" class="form_field_checkbox accessibility-colors-input"  id="accessibility-colors">
           <span class="form_control_indicator"></span>
           {{ "high_contrast" | lc }}
         </label>

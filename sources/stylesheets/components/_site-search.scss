@@ -25,6 +25,10 @@
   @extend %clearfix;
 }
 
+.search-label {
+  display:  none;
+}
+
 .search {
   display: none;
   position: absolute;

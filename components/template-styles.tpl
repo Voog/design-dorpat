@@ -48,9 +48,11 @@
   {% endif %}
 
   {% comment %}/* Site header background color style. */{% endcomment %}
+  {% if header_bg_color %}
   .site-header .background-color {
     background-color: {{ header_bg_color }};
   }
+  {% endif %}
   {% comment %}/* PHOTO ARTICLE BACKGROUND */{% endcomment %}
   {% comment %}/* Photo article background image styles. */{% endcomment %}
   {% if article_header_bg.imageSizes != nil %}
@@ -85,15 +87,19 @@
   {% endif %}
 
   {% comment %}/* Photo article background color style. */{% endcomment %}
+  {% if article_header_bg_color %}
   .site-header.photo-article .background-color {
     background-color: {{ article_header_bg_color }};
   }
+  {% endif %}
 
   {% comment %}/* FRONT PAGE CONTENT AREA 1 BACKGROUND */{% endcomment %}
   {% comment %}/* Front page content area 1 background color style. */{% endcomment %}
+  {% if content_bg_1_color %}
   .content-full-inner .background-color {
     background-color: {{ content_bg_1_color }};
   }
+  {% endif %}
 
   {% comment %}/* FRONT PAGE CONTENT AREA 2 BACKGROUND */{% endcomment %}
   {% comment %}/* Front content area 2 background image styles. */{% endcomment %}
@@ -141,29 +147,37 @@
   {% endif %}
 
   {% comment %}/* Front page content area 2 background color style. */{% endcomment %}
+  {% if content_bg_2_color %}
   .front-page-content-bottom .background-color {
     background-color: {{ content_bg_2_color }};
   }
+  {% endif %}
 
   {% comment %}/* SITE MAIN CONTENT AREA BACKGROUND */{% endcomment %}
   {% comment %}/* Site main content area background color style. */{% endcomment %}
+  {% if blog_body_bg_color %}
   .blog-news-page .page-body .background-color,
   .blog-article-page .page-body .background-color,
   .site-footer .blog-article-nav {
     background-color: {{ blog_body_bg_color }};
   }
+  {% endif %}
 
   {% comment %}/* SITE BLOG PAGE CONTENT AREA BACKGROUND */{% endcomment %}
   {% comment %}/* Site main content area background color style. */{% endcomment %}
+  {% if body_bg_color %}
   .common-page .page-body .background-color,
   .item-list-page .page-body .background-color,
   .item-page .page-body .background-color {
     background-color: {{ body_bg_color }};
   }
+  {% endif %}
 
   {% comment %}/* FOOTER BACKGROUND */{% endcomment %}
   {% comment %}/* Front page content area 1 background color style. */{% endcomment %}
+  {% if footer_bg_color %}
   .site-footer .background-color {
     background-color: {{ footer_bg_color }};
   }
+  {% endif %}
 </style>

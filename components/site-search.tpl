@@ -3,6 +3,7 @@
     <div class="search-middle">
       <div class="search-inner js-search-inner">
         <form id="search" class="search-form js-search-form" method="get" action="#">
+          <label class="search-label" for="onpage_search">{{ "search_this_site" | lc }}</label>
           <input id="onpage_search" class="search-input js-search-input" type="text" placeholder="{{ "search_this_site" | lc }}">
         </form>
 

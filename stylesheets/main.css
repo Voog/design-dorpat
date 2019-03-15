@@ -3532,6 +3532,10 @@ a img {
 }
 
 /* SEARCH */
+.search-label {
+  display: none;
+}
+
 .search {
   display: none;
   position: absolute;
