@@ -4883,6 +4883,7 @@ a img {
 .content-area a {
   color: black;
   text-decoration: underline;
+  cursor: pointer;
 }
 .content-area a:hover {
   text-decoration: none;
@@ -5406,15 +5407,8 @@ a img {
   border: none;
   border-radius: 6px;
 }
-.dark-background .content-area .form_submit input:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
-}
-.light-background .content-area .form_submit input:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
+.content-area .form_submit input:hover {
+  opacity: .7;
 }
 .dark-background .content-area .form_submit input {
   border-color: #0083ba;

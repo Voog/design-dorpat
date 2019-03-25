@@ -275,17 +275,7 @@
       border-radius: 6px;
 
       &:hover {
-        .dark-background & {
-          border-color: $dark-blue;
-          background-color: $dark-blue;
-          color: $white;
-        }
-
-        .light-background & {
-          border-color: $dark-blue;
-          background-color: $dark-blue;
-          color: $white;
-        }
+        opacity: .7;
       }
 
       .dark-background & {
