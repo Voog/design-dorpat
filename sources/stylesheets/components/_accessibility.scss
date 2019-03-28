@@ -117,6 +117,78 @@
   .header-top {
     background-color: $black;
     color: $yellow;
+
+    &.dark-background {
+      color: $yellow;
+      a,
+      .header-title.content-area,
+      .lang-menu.menu-language-list .lang-title a {
+        color: $yellow;
+      }
+
+      .header-title a,
+      .header-title a:hover {
+        color: $yellow;
+      }
+
+      .menu li a {
+        color: $yellow;
+
+        &:hover {
+          color: $yellow;
+        }
+      }
+
+      .menu li.selected a {
+        color: $yellow;
+      }
+
+      .mobile-menu-toggler {
+        span {
+          &,
+          &:before,
+          &:after {
+            background-color: $yellow;
+          }
+        }
+      }
+    }
+
+    &.light-background {
+      color:  $yellow;
+      a,
+      .header-title.content-area,
+      .lang-menu.menu-language-list .lang-title a {
+        color:  $yellow;
+      }
+
+      .header-title a,
+      .header-title a:hover {
+        color:  $yellow;
+      }
+
+      .menu li a {
+        color:  $yellow;
+
+        &:hover {
+          color:  $yellow;
+        }
+      }
+
+      .menu li.selected a {
+        color:  $yellow;
+      }
+
+      .mobile-menu-toggler {
+        span {
+          &,
+          &:before,
+          &:after {
+            background-color:  $yellow;
+          }
+        }
+      }
+    }
   }
 
   .toggle-sub-menu {
