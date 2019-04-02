@@ -8,6 +8,53 @@
   */
   --content-body-alignment: left;
   /* VoogStyle
+    "pathI18n": ["content", "H2"],
+    "titleI18n": "color",
+    "editor": "colorPicker",
+    "type": "button",
+    "featured": true,
+    "scope": "global"
+  */
+  --content-h2-color: #0083ba;
+  /* VoogStyle
+    "pathI18n": ["content", "text"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "featured": true,
+    "scope": "global"
+  */
+  --content-body-font-size: 16px;
+  /* VoogStyle
+    "pathI18n": ["content", "text"],
+    "titleI18n": "line_height",
+    "editor": "rangePicker",
+    "min": 1,
+    "max": 5,
+    "step": 0.1,
+    "unit": "",
+    "scope": "global"
+  */
+  --content-body-line-height: 1.7;
+  /* VoogStyle
+    "pathI18n": ["content", "link", "normal"],
+    "titleI18n": "color",
+    "editor": "colorPicker",
+    "type": "button",
+    "scope": "global"
+  */
+  --content-link-color: #0083ba;
+  /* VoogStyle
+    "pathI18n": ["content", "link", "hover"],
+    "titleI18n": "color",
+    "editor": "colorPicker",
+    "type": "button",
+    "scope": "global"
+  */
+  --content-link-hover-color: #0083ba;
+  /* VoogStyle
     "pathI18n": ["content", "link", "normal"],
     "titleI18n": "font_size",
     "type": "button",

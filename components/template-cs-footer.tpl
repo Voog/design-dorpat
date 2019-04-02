@@ -1,6 +1,30 @@
 :root {
   /* VoogStyle
     "pathI18n": ["footer"],
+    "titleI18n": "size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "featured": true,
+    "scope": "global"
+  */
+  --footer-body-font-size: 16px;
+  /* VoogStyle
+    "pathI18n": ["footer"],
+    "titleI18n": "font_size",
+    "type": "button",
+    "editor": "toggleIcon",
+    "states": {
+      "on": "600",
+      "off": "400"
+    },
+    "icon": "bold",
+    "scope": "global"
+  */
+  --footer-body-font-weight: 300;
+  /* VoogStyle
+    "pathI18n": ["footer"],
     "titleI18n": "font_style",
     "type": "button",
     "editor": "toggleIcon",

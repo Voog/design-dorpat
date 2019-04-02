@@ -438,8 +438,8 @@ body {
 }
 
 .content-area {
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: var(--content-body-font-size);
+  line-height: var(--content-body-line-height);
   color: var(--primary-color);
 }
 .dark-background .content-area {
@@ -449,9 +449,9 @@ body {
   color: var(--third-color);
 }
 .site-footer .content-area {
-  font-size: 16px;
+  font-size: var(--footer-body-font-size);
   font-style: var(--footer-body-font-style);
-  font-weight: 300;
+  font-weight: var(--footer-body-font-weight);
   color: var(--primary-color);
   -webkit-text-decoration: var(--footer-body-text-decoration);
           text-decoration: var(--footer-body-text-decoration);
@@ -482,10 +482,10 @@ body {
   color: var(--third-color);
 }
 .dark-background .content-area h2 {
-  color: #0083ba;
+  color: var(--content-h2-color);
 }
 .light-background .content-area h2 {
-  color: #0083ba;
+  color: var(--content-h2-color);
 }
 .content-area h1,
 .content-area h2,
@@ -504,7 +504,7 @@ body {
   color: var(--secondary-color);
 }
 .content-area p, .content-area ul, .content-area ol, .content-area dl {
-  font-size: 16px;
+  font-size: var(--content-body-font-size);
 }
 .site-footer .content-area p,
 .site-footer .content-area ul,
@@ -520,52 +520,31 @@ body {
 .content-area h1 a:hover {
   text-align: var(--headings-title-text-alignment);
   line-height: var(--headings-title-line-height);
-  font-size: 30px;
-  font-weight: 300;
+  font-size: var(--headings-title-font-size);
+  font-weight: var(--headings-title-font-weight);
   font-style: var(--headings-title-font-style);
   -webkit-text-decoration: var(--headings-title-text-decoration);
           text-decoration: var(--headings-title-text-decoration);
   text-transform: var(--headings-title-text-transform);
 }
 .content-area h2 {
-  font-size: 24px;
+  font-size: var(--headings-heading-font-size);
   line-height: var(--headings-heading-line-height);
   text-transform: var(--headings-heading-text-transform);
-  color: #0083ba;
+  color: var(--content-h2-color);
 }
 .content-area h2,
 .content-area h2 a,
 .content-area h2 a:hover {
   text-align: var(--headings-heading-text-alignment);
-  font-weight: 400;
+  font-weight: var(--headings-heading-font-weight);
   font-style: var(--headings-heading-font-style);
   -webkit-text-decoration: var(--headings-heading-text-decoration);
           text-decoration: var(--headings-heading-text-decoration);
 }
 .content-area h3,
 .content-area h3 a,
-.content-area h3 a:hover {
-  text-align: var(--headings-subheading-text-alignment);
-  line-height: var(--headings-subheading-line-height);
-  font-size: 20px;
-  font-weight: 400;
-  font-style: var(--headings-subheading-font-style);
-  -webkit-text-decoration: var(--headings-subheading-text-decoration);
-          text-decoration: var(--headings-subheading-text-decoration);
-  text-transform: var(--headings-subheading-text-transform);
-}
-.content-area h4,
-.content-area h4 a,
-.content-area h4 a:hover {
-  text-align: var(--headings-subheading-text-alignment);
-  line-height: var(--headings-subheading-line-height);
-  font-size: 16px;
-  font-weight: 700;
-  font-style: var(--headings-subheading-font-style);
-  -webkit-text-decoration: var(--headings-subheading-text-decoration);
-          text-decoration: var(--headings-subheading-text-decoration);
-  text-transform: var(--headings-subheading-text-transform);
-}
+.content-area h3 a:hover,
 .content-area h5,
 .content-area h5 a,
 .content-area h5 a:hover,
@@ -574,8 +553,8 @@ body {
 .content-area h6 a:hover {
   text-align: var(--headings-subheading-text-alignment);
   line-height: var(--headings-subheading-line-height);
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--headings-subheading-font-size);
+  font-weight: var(--headings-subheading-font-weight);
   font-style: var(--headings-subheading-font-style);
   -webkit-text-decoration: var(--headings-subheading-text-decoration);
           text-decoration: var(--headings-subheading-text-decoration);
@@ -584,7 +563,7 @@ body {
 .content-area a {
   font-style: var(--content-link-font-style);
   font-weight: var(--content-link-font-weight);
-  color: #0083ba;
+  color: var(--content-link-color);
   -webkit-text-decoration: var(--content-link-text-decoration);
           text-decoration: var(--content-link-text-decoration);
   text-transform: var(--content-link-text-transform);
@@ -595,44 +574,38 @@ body {
   -webkit-text-decoration: var(--content-link-hover-text-decoration);
           text-decoration: var(--content-link-hover-text-decoration);
   text-transform: var(--content-link-hover-text-transform);
-  color: #015477;
+  color: var(content-link-hover-color);
 }
 .dark-background .content-area a {
   color: var(--third-color);
 }
 .content-area a.custom-btn, .content-area div.custom-btn {
-  padding: 6px 20px;
-  border-color: #015477;
-  font-size: 16px;
-  font-weight: 700;
+  padding: calc(var(--button-padding) - 22px) calc(var(--button-padding) - 10px);
+  font-size: var(--button-font-size);
+  border-color: var(--button-background-color);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   font-style: var(--button-font-style);
   -webkit-text-decoration: var(--button-text-decoration);
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
-.dark-background .content-area a.custom-btn:hover, .dark-background .content-area div.custom-btn:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
-}
-.light-background .content-area a.custom-btn:hover, .light-background .content-area div.custom-btn:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
+.content-area a.custom-btn:hover, .content-area div.custom-btn:hover {
+  opacity: .7;
 }
 .dark-background .content-area a.custom-btn, .dark-background .content-area div.custom-btn {
-  border-color: #0083ba;
-  background-color: #0083ba;
-  color: #fff;
+  border-color: var(--button-background-color);
+  background-color: var(--button-background-color);
+  color: var(--third-color);
 }
 .light-background .content-area a.custom-btn, .light-background .content-area div.custom-btn {
-  border-color: #0083ba;
-  background-color: #0083ba;
-  color: #fff;
+  border-color: var(--button-background-color);
+  background-color: var(--button-background-color);
+  color: var(--third-color);
 }
 .content-area table th, .content-area table td {
   padding: calc(var(--table-padding) - 4px) var(--table-padding);
-  font-size: 16px;
+  font-size: var(--table-font-size);
   border-style: var(--table-border-style);
 }
 .dark-background .content-area table th, .dark-background .content-area table td {
@@ -651,15 +624,14 @@ body {
 
 .content-area .form_field .form_field_label,
 .content-area .form_field .edy-fe-label {
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--form-label-font-size);
 }
 .content-area .form_field_textfield,
 .content-area .form_field_textarea,
 .content-area label:not(.form_field_label) {
   font-style: var(--form-field-font-style);
   font-weight: var(--form-field-font-weight);
-  font-size: 16px;
+  font-size: var(--form-field-font-size);
   -webkit-text-decoration: var(--form-field-text-decoration);
           text-decoration: var(--form-field-text-decoration);
   text-transform: var(--form-field-text-transform);
@@ -716,31 +688,26 @@ body {
   color: var(--primary-color);
 }
 .content-area .form_submit input {
-  padding: 6px 20px;
-  font-size: 16px;
-  font-weight: 700;
+  padding: calc(var(--button-padding) - 22px) calc(var(--button-padding) - 10px);
+  font-size: var(--button-font-size);
+  border-color: var(--button-background-color);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   font-style: var(--button-font-style);
   -webkit-text-decoration: var(--button-text-decoration);
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
-.dark-background .content-area .form_submit input:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
-}
-.light-background .content-area .form_submit input:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
+.content-area .form_submit input:hover {
+  opacity: .7;
 }
 .dark-background .content-area .form_submit input {
-  border-color: #0083ba;
-  background-color: #0083ba;
-  color: #fff;
+  border-color: var(--button-background-color);
+  background-color: var(--button-background-color);
+  color: var(--third-color);
 }
 .light-background .content-area .form_submit input {
-  border-color: #0083ba;
-  background-color: #0083ba;
-  color: #fff;
+  border-color: var(--button-background-color);
+  background-color: var(--button-background-color);
+  color: var(--third-color);
 }

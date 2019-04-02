@@ -106,8 +106,83 @@
   background-color: #000;
   color: #f9ec5a;
 }
+.accessibility-colors .header-top.dark-background {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.dark-background a,
+.accessibility-colors .header-top.dark-background .header-title.content-area,
+.accessibility-colors .header-top.dark-background .lang-menu.menu-language-list .lang-title a {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.dark-background .header-title a,
+.accessibility-colors .header-top.dark-background .header-title a:hover {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.dark-background .menu li a {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.dark-background .menu li a:hover {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.dark-background .menu li.selected a {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.dark-background .mobile-menu-toggler span, .accessibility-colors .header-top.dark-background .mobile-menu-toggler span:before, .accessibility-colors .header-top.dark-background .mobile-menu-toggler span:after {
+  background-color: #f9ec5a;
+}
+.accessibility-colors .header-top.light-background {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.light-background a,
+.accessibility-colors .header-top.light-background .header-title.content-area,
+.accessibility-colors .header-top.light-background .lang-menu.menu-language-list .lang-title a {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.light-background .header-title a,
+.accessibility-colors .header-top.light-background .header-title a:hover {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.light-background .menu li a {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.light-background .menu li a:hover {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.light-background .menu li.selected a {
+  color: #f9ec5a;
+}
+.accessibility-colors .header-top.light-background .mobile-menu-toggler span, .accessibility-colors .header-top.light-background .mobile-menu-toggler span:before, .accessibility-colors .header-top.light-background .mobile-menu-toggler span:after {
+  background-color: #f9ec5a;
+}
 .accessibility-colors .toggle-sub-menu svg {
   fill: #f9ec5a;
+}
+.accessibility-colors .site-sidebar .sidebar-title a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .sidebar-title a {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-sidebar .submenu a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu a {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-sidebar .submenu .selected {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu .selected {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-sidebar .submenu .submenu-lvl2 a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu .submenu-lvl2 a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu .submenu-lvl2 .selected {
+  color: #f9ec5a;
 }
 .accessibility-colors .site-footer .dark-background h1,
 .accessibility-colors .site-footer .dark-background h2,
@@ -1718,9 +1793,9 @@ a img {
 }
 @media screen and (min-width: 1025px) {
   .common-page .sidebar-active .page-content {
-    display: inline-block;
+    float: right;
     vertical-align: top;
-    width: calc(100% - 265px);
+    width: calc(100% - 260px);
   }
 }
 .common-page .main-content .wrap {
@@ -3813,7 +3888,7 @@ a img {
 }
 
 .site-sidebar {
-  display: inline-block;
+  float: left;
   vertical-align: top;
   width: 220px;
   margin: 50px 0 50px 40px;
@@ -4883,6 +4958,7 @@ a img {
 .content-area a {
   color: black;
   text-decoration: underline;
+  cursor: pointer;
 }
 .content-area a:hover {
   text-decoration: none;
@@ -5406,15 +5482,8 @@ a img {
   border: none;
   border-radius: 6px;
 }
-.dark-background .content-area .form_submit input:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
-}
-.light-background .content-area .form_submit input:hover {
-  border-color: #015477;
-  background-color: #015477;
-  color: #fff;
+.content-area .form_submit input:hover {
+  opacity: .7;
 }
 .dark-background .content-area .form_submit input {
   border-color: #0083ba;

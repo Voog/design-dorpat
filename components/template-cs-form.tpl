@@ -1,6 +1,28 @@
 :root {
   /* VoogStyle
     "pathI18n": ["form"],
+    "titleI18n": "label_size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --form-label-font-size: 14px;
+  /* VoogStyle
+    "pathI18n": ["form"],
+    "titleI18n": "field_size",
+    "editor": "rangePicker",
+    "min": 8,
+    "max": 100,
+    "unit": "px",
+    "scope": "global",
+    "featured": true
+  */
+  --form-field-font-size: 16px;
+  /* VoogStyle
+    "pathI18n": ["form"],
     "titleI18n": "font_weight",
     "type": "button",
     "editor": "toggleIcon",
