@@ -157,6 +157,33 @@
 .accessibility-colors .toggle-sub-menu svg {
   fill: #f9ec5a;
 }
+.accessibility-colors .site-sidebar .sidebar-title a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .sidebar-title a {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-sidebar .submenu a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu a {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-sidebar .submenu .selected {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu .selected {
+  color: #f9ec5a;
+}
+.accessibility-colors .site-sidebar .submenu .submenu-lvl2 a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu .submenu-lvl2 a {
+  color: #f9ec5a;
+}
+.dark-background .accessibility-colors .site-sidebar .submenu .submenu-lvl2 .selected {
+  color: #f9ec5a;
+}
 .accessibility-colors .site-footer .dark-background h1,
 .accessibility-colors .site-footer .dark-background h2,
 .accessibility-colors .site-footer .dark-background h3,

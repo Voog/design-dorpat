@@ -196,6 +196,50 @@
       fill: $yellow;
     }
   }
+  .site-sidebar {
+    .sidebar-title {
+      a {
+        color: $yellow;
+
+        .dark-background & {
+          color: $yellow;
+        }
+      }
+    }
+
+    .submenu {
+      a {
+        color: $yellow;
+
+        .dark-background & {
+          color: $yellow;
+        }
+      }
+
+      .selected {
+        color: $yellow;
+
+        .dark-background & {
+          color: $yellow;
+        }
+      }
+
+      .submenu-lvl2 {
+        a {
+          color: $yellow;
+
+          .dark-background & {
+            color: $yellow;
+          }
+        }
+        .selected {
+          .dark-background & {
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
 
   .site-footer,
   .site-header {
