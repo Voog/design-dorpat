@@ -7,6 +7,8 @@
     </button>
   {% endif %}
 
+  {% menulink level2 %}
+
   {% if editmode or level2.children? %}
     <ul class="sub-menu menu-level-3">
       {% for level3 in level2.visible_children %}
@@ -21,6 +23,4 @@
       {% endif %}
     </ul>
   {% endif %}
-
-  {% menulink level2 %}
 </li>
