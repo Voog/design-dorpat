@@ -71,6 +71,13 @@
     {
       "content_type": "component",
       "component": true,
+      "file": "components/buy-button.tpl",
+      "layout_name": "buy-button",
+      "title": "buy-button"
+    },
+    {
+      "content_type": "component",
+      "component": true,
       "file": "components/common-page-variables.tpl",
       "layout_name": "common-page-variables",
       "title": "common-page-variables"
@@ -95,6 +102,13 @@
       "file": "components/html-head.tpl",
       "layout_name": "html-head",
       "title": "html-head"
+    },
+    {
+      "content_type": "component",
+      "component": true,
+      "file": "components/menu-breadcrumbs-sd.tpl",
+      "layout_name": "menu-breadcrumbs-sd",
+      "title": "menu-breadcrumbs-sd"
     },
     {
       "content_type": "component",
@@ -326,6 +340,13 @@
       "file": "components/template-variables.tpl",
       "layout_name": "template-variables",
       "title": "template-variables"
+    },
+    {
+      "content_type": "product",
+      "component": false,
+      "file": "layouts/auto_generated_product.tpl",
+      "layout_name": "auto_generated_product",
+      "title": "Auto-generated product"
     },
     {
       "content_type": "blog",
