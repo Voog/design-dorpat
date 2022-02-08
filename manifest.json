@@ -411,6 +411,12 @@
       "filename": "ico-flags.svg"
     },
     {
+      "content_type": "image/svg+xml",
+      "file": "assets/ico-placeholder.svg",
+      "kind": "assets",
+      "filename": "ico-placeholder.svg"
+    },
+    {
       "content_type": "image/jpeg",
       "file": "images/article-header-bg.jpg",
       "kind": "images",
