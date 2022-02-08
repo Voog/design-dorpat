@@ -1585,6 +1585,38 @@ a img {
   margin: 20px 0;
 }
 
+.product-content .product-price {
+  padding: 12px 0 24px 0;
+}
+.product-content .product-price-divider {
+  margin: 4px;
+}
+.product-content .product-description {
+  padding-bottom: 12px;
+}
+.product-content .content-gallery {
+  margin: 32px 0;
+}
+
+.flex-col {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.flex-col .content-illustrations, .flex-col .content-body {
+  max-width: 100%;
+}
+.flex-col .content-body {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 64px;
+}
+
 .front-page .page-content .content-header {
   font-size: 50px;
   font-weight: 700;
@@ -4241,13 +4273,19 @@ a img {
   width: 100%;
   height: auto;
 }
-.with-image .item-top .top-inner {
+.with-image:not(.product-page) .item-top .top-inner {
   background-color: rgba(0, 0, 0, 0.02);
 }
 .without-image .item-top .top-inner {
   border-color: rgba(0, 0, 0, 0.1);
   border-style: solid;
   border-width: 1px;
+}
+.product-page .item-top .top-inner .item-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 @media screen and (max-width: 240px) {
   .item-top .top-inner {
@@ -4394,12 +4432,12 @@ a img {
 }
 
 @media screen and (max-width: 640px) {
-  .item-page .content-body {
+  .item-page .content-body:not(.product-content-right) {
     padding-top: 40px;
   }
 }
 @media screen and (min-width: 641px) {
-  .item-page .content-body {
+  .item-page .content-body:not(.product-content-right) {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -5085,15 +5123,15 @@ a img {
   background-color: #0083ba;
   color: #fff;
 }
-.publicmode .dark-background .content-area .custom-btn-disabled, .publicmode .light-background .content-area .custom-btn-disabled {
+.dark-background .content-area .custom-btn-disabled, .dark-background .content-area .custom-btn.edy-buy-button-disabled, .light-background .content-area .custom-btn-disabled, .light-background .content-area .custom-btn.edy-buy-button-disabled {
   background-color: transparent;
 }
-.publicmode .dark-background .content-area .custom-btn-disabled, .publicmode .dark-background .content-area .custom-btn-disabled:hover, .publicmode .light-background .content-area .custom-btn-disabled, .publicmode .light-background .content-area .custom-btn-disabled:hover {
+.dark-background .content-area .custom-btn-disabled, .dark-background .content-area .custom-btn-disabled:hover, .dark-background .content-area .custom-btn.edy-buy-button-disabled, .dark-background .content-area .custom-btn.edy-buy-button-disabled:hover, .light-background .content-area .custom-btn-disabled, .light-background .content-area .custom-btn-disabled:hover, .light-background .content-area .custom-btn.edy-buy-button-disabled, .light-background .content-area .custom-btn.edy-buy-button-disabled:hover {
   color: #999;
   cursor: default;
   border: 2px solid #999;
 }
-.publicmode .dark-background .content-area .custom-btn-disabled:hover, .publicmode .light-background .content-area .custom-btn-disabled:hover {
+.dark-background .content-area .custom-btn-disabled:hover, .dark-background .content-area .custom-btn.edy-buy-button-disabled:hover, .light-background .content-area .custom-btn-disabled:hover, .light-background .content-area .custom-btn.edy-buy-button-disabled:hover {
   background-color: transparent;
 }
 .content-area .custom-btn:hover {
@@ -5555,7 +5593,7 @@ a img {
 }
 
 .content-area .edy-buy-button-container .form_field {
-  padding-top: 12px;
+  padding: 12px 0;
 }
 .content-area .edy-buy-button-variants .form_field {
   padding-top: 6px;

@@ -365,20 +365,20 @@
 
     .dark-background &,
     .light-background & {
-      &-disabled {
+      &-disabled,
+      &.edy-buy-button-disabled {
         // scss-lint:disable NestingDepth
-        .publicmode & {
-          background-color: transparent;
-          &,
-          &:hover {
-            color: $disabled-color;
-            cursor: default;
-            border: 2px solid $disabled-color;
-          }
+        background-color: transparent;
 
-          &:hover {
-            background-color: transparent;
-          }
+        &,
+        &:hover {
+          color: $disabled-color;
+          cursor: default;
+          border: 2px solid $disabled-color;
+        }
+
+        &:hover {
+          background-color: transparent;
         }
         // scss-lint:enable NestingDepth
       }
