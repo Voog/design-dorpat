@@ -1,7 +1,7 @@
 {%- assign breadcrumbsString = breadcrumbsScript | replace: '<script type="application/ld+json">', '' | replace: "</script>", '' | replace: site.url, '' | replace: '@', '' -%}
 {%- assign breadcrumbsObj = breadcrumbsString | json_parse -%}
 
-<ul class="menu menu-item-list{% if sidebar_active and site.root_item.selected? == false %} is-hidden-desktop{% endif %}">
+<ul class="menu menu-item-list">
   {%- for listItem in breadcrumbsObj.itemListElement %}
     {%- assign pageUrl = page.url | remove_first: "/" -%}
 

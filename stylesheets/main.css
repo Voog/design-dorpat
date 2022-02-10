@@ -1585,6 +1585,13 @@ a img {
   margin: 20px 0;
 }
 
+.product-content .without-image .item-top {
+  background-image: url("../assets/ico-placeholder.svg");
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F2F2F2;
+}
 .product-content .product-price {
   padding: 12px 0 24px 0;
 }
@@ -1607,6 +1614,7 @@ a img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-width: 50%;
 }
 .flex-col .content-illustrations, .flex-col .content-body {
   max-width: 100%;

@@ -61,7 +61,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "600",
-      "off": "400"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global",
@@ -77,7 +77,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "600",
-      "off": "400"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global"
@@ -195,7 +195,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      "off": "400"
+      300"
     },
     "icon": "bold",
     "scope": "global"
@@ -266,7 +266,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      "off": "400"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global"
@@ -316,7 +316,7 @@
     "unit": "px",
     "scope": "global"
   */
-  --content-area-product-description__font-size: 18px;
+  --content-area-product-description__font-size: 16px;
   /* VoogStyle
     "pathI18n": ["product", "description"],
     "titleI18n": "font_size",
@@ -324,7 +324,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      "off": "400"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global"
