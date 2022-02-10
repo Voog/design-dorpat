@@ -4284,7 +4284,7 @@ a img {
   width: 100%;
   height: auto;
 }
-.with-image:not(.product-page) .item-top .top-inner {
+.with-image .item-top .top-inner:not(.product-page-image) {
   background-color: rgba(0, 0, 0, 0.02);
 }
 .without-image .item-top .top-inner {
@@ -4292,7 +4292,7 @@ a img {
   border-style: solid;
   border-width: 1px;
 }
-.product-page .item-top .top-inner .item-image {
+.product-content .item-top .top-inner .item-image {
   height: 100%;
   width: 100%;
   -o-object-fit: contain;

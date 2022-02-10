@@ -1196,25 +1196,22 @@
 
   // Enables the usage of the initiations outside this file.
   window.site = $.extend(window.site || {}, {
-    bgPickerPreview: bgPickerPreview,
-    bgPickerCommit: bgPickerCommit,
     bgPickerColorScheme: bgPickerColorScheme,
-    initWindowResize: initWindowResize,
-    initBlogPage: initBlogPage,
+    bgPickerCommit: bgPickerCommit,
+    bgPickerPreview: bgPickerPreview,
+    bindContentItemImageCropToggle: bindContentItemImageCropToggle,
+    bindContentItemImgDropAreas: bindContentItemImgDropAreas,
+    bindLanguageMenuSettings: bindLanguageMenuSettings,
+    bindRootItemSettings: bindRootItemSettings,
+    bindSiteSearch: bindSiteSearch,
+    handleProductImageClick: handleProductImageClick,
+    handleProductPageContent: handleProductPageContent,
     initArticlePage: initArticlePage,
+    initBlogPage: initBlogPage,
     initCommonPage: initCommonPage,
     initFrontPage: initFrontPage,
-    bindLanguageMenuSettings: bindLanguageMenuSettings,
     initItemsPage: initItemsPage,
-    bindContentItemImgDropAreas: bindContentItemImgDropAreas,
-    bindContentItemImageCropToggle: bindContentItemImageCropToggle,
-    bindRootItemSettings: bindRootItemSettings,
-    bindSiteSearch: bindSiteSearch
-  });
-
-  window.template = $.extend(window.template || {}, {
-    handleProductPageContent: handleProductPageContent,
-    handleProductImageClick: handleProductImageClick
+    initWindowResize: initWindowResize
   });
 
   init();

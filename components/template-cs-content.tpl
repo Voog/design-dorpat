@@ -195,7 +195,7 @@
     "editor": "toggleIcon",
     "states": {
       "on": "700",
-      300"
+      "off": "300"
     },
     "icon": "bold",
     "scope": "global"

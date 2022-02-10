@@ -223,8 +223,10 @@
       // scss-lint:enable SelectorDepth
     }
 
-    .with-image:not(.product-page) & {
-      background-color: rgba($black, .02);
+    .with-image & {
+      &:not(.product-page-image) {
+        background-color: rgba($black, .02);
+      }
     }
 
     .without-image & {
@@ -233,7 +235,7 @@
       border-width: 1px;
     }
 
-    .product-page & .item-image {
+    .product-content & .item-image {
       height: 100%;
       width: 100%;
       object-fit: contain;

@@ -52,10 +52,10 @@
                           {% assign item_image_state = "without-image" %}
                         {% endif -%}
 
-                        <div class="content-item-box {{ item_image_state }} js-content-item-box product-page">
+                        <div class="content-item-box {{ item_image_state }} js-content-item-box">
                           <div class="item-top product-image">
                             {%- if product.image != blank -%}
-                              <div class="top-inner aspect-ratio-inner">
+                              <div class="top-inner aspect-ratio-inner product-page-image">
                                 {%- assign image_class = "item-image not-cropped" -%}
                                 {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
                               </div>
@@ -124,11 +124,13 @@
   {% include "template-tools" with "item_list_page" %}
 
   <script>
-    site && site.initWindowResize();
-    template && template.handleProductPageContent();
-    {%- if product and editmode %}
-      template && template.handleProductImageClick({{ product.id }});
-    {% endif -%}
+    if (site) {
+      site.initWindowResize();
+      site.handleProductPageContent();
+      {%- if product and editmode %}
+        site.handleProductImageClick({{ product.id }});
+      {% endif -%}
+    }
   </script>
 </body>
 
