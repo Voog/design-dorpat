@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 {% include "template-variables" %}
 
-<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}">
+<html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
 <head prefix="og: http://ogp.me/ns#">
   {% include "template-variables" %}
   {% include "html-head" sidebar: true %}
@@ -53,7 +53,7 @@
                         {% endif -%}
 
                         <div class="content-item-box {{ item_image_state }} js-content-item-box product-page">
-                          <div class="item-top">
+                          <div class="item-top product-image">
                             {%- if product.image != blank -%}
                               <div class="top-inner aspect-ratio-inner">
                                 {%- assign image_class = "item-image not-cropped" -%}
@@ -126,6 +126,9 @@
   <script>
     site && site.initWindowResize();
     template && template.handleProductPageContent();
+    {%- if product and editmode %}
+      template && template.handleProductImageClick({{ product.id }});
+    {% endif -%}
   </script>
 </body>
 
