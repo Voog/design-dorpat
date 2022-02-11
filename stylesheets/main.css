@@ -1623,6 +1623,7 @@ a img {
   position: -webkit-sticky;
   position: sticky;
   top: 64px;
+  z-index: 10601;
 }
 
 .front-page .page-content .content-header {
