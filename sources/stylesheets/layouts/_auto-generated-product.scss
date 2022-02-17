@@ -38,5 +38,6 @@
   .content-body {
     position: sticky;
     top: 64px;
+    z-index: $zindex-ca-interaction-button + 1;
   }
 }

@@ -187,20 +187,20 @@
     "unit": "px",
     "scope": "global"
   */
-  --content-area-product-title__font-size: 32px;
+  --content-area-product-title__font-size: 30px;
   /* VoogStyle
     "pathI18n": ["product", "title"],
     "titleI18n": "font_size",
     "type": "button",
     "editor": "toggleIcon",
     "states": {
-      "on": "700",
+      "on": "500",
       "off": "300"
     },
     "icon": "bold",
     "scope": "global"
   */
-  --content-area-product-title__font-weight: 700;
+  --content-area-product-title__font-weight: 300;
   /* VoogStyle
     "pathI18n": ["product", "title"],
     "titleI18n": "font_style",
@@ -265,13 +265,13 @@
     "type": "button",
     "editor": "toggleIcon",
     "states": {
-      "on": "700",
+      "on": "500",
       "off": "300"
     },
     "icon": "bold",
     "scope": "global"
   */
-  --content-area-product-price__font-weight: 700;
+  --content-area-product-price__font-weight: 500;
   /* VoogStyle
     "pathI18n": ["product", "price"],
     "titleI18n": "font_style",
@@ -323,7 +323,7 @@
     "type": "button",
     "editor": "toggleIcon",
     "states": {
-      "on": "700",
+      "on": "500",
       "off": "300"
     },
     "icon": "bold",
