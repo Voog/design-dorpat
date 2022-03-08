@@ -173,6 +173,13 @@
   }
   {% endif %}
 
+  {% comment %}/* Product page content area background*/ {% endcomment %}
+  {% if product_body_bg_color != blank %}
+  .product-page .page-body .background-color {
+    background-color: {{ product_body_bg_color }}
+  }
+  {% endif %}
+
   {% comment %}/* FOOTER BACKGROUND */{% endcomment %}
   {% comment %}/* Front page content area 1 background color style. */{% endcomment %}
   {% if footer_bg_color != blank %}

@@ -987,6 +987,14 @@ body {
     text-decoration: var(--content-area-product-title__text-decoration);
     text-transform: var(--content-area-product-title__text-transform);
   }
+
+  .dark-background & {
+    .product-price,
+    .product-description,
+    .content-item-title h1 {
+      color: var(--third-color);
+    }
+  }
 }
 
 .dark-background {

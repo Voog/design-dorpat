@@ -738,6 +738,11 @@ body {
           text-decoration: var(--content-area-product-title__text-decoration);
   text-transform: var(--content-area-product-title__text-transform);
 }
+.dark-background .product-content .product-price,
+.dark-background .product-content .product-description,
+.dark-background .product-content .content-item-title h1 {
+  color: var(--third-color);
+}
 
 .dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-title,
 .dark-background .edy-product-widget-grid .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-link {
