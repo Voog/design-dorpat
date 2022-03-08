@@ -1626,6 +1626,14 @@ a img {
   z-index: 10601;
 }
 
+.dark-background .edy-product-widget-filter-sort,
+.dark-background .edy-product-widget-filter-search-input {
+  opacity: .7;
+}
+.dark-background .edy-product-widget-filter-label {
+  opacity: .5;
+}
+
 .front-page .page-content .content-header {
   font-size: 50px;
   font-weight: 700;
@@ -5414,6 +5422,9 @@ a img {
 }
 .light-background .content-area .form_field_select {
   background-image: url("../assets/ico-arrow.svg");
+}
+.light-background .content-area .form_field_select > option {
+  background-color: #fff;
 }
 .content-area .form_field_select::-ms-expand {
   display: none;
