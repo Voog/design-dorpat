@@ -822,7 +822,7 @@ body {
   }
 
   // Code blocks and preformatted content.
-  a.custom-btn:not(.custom-btn-disabled), div.custom-btn:not(.custom-btn-disabled) {
+  a.custom-btn:not(.custom-btn-disabled), div.custom-btn:not(.custom-btn-disabled), .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
     padding: calc(var(--button-padding) - 22px) calc(var(--button-padding) - 10px);
     font-size: var(--button-font-size);
     border-color: var(--button-background-color);
@@ -837,15 +837,19 @@ body {
     }
 
     .dark-background & {
-      border-color: var(--button-background-color);
-      background-color: var(--button-background-color);
-      color: var(--third-color);
+      &, &:hover {
+        border-color: var(--button-background-color);
+        background-color: var(--button-background-color);
+        color: var(--third-color);
+      }
     }
 
     .light-background & {
-      border-color: var(--button-background-color);
-      background-color: var(--button-background-color);
-      color: var(--third-color);
+      &, &:hover {
+        border-color: var(--button-background-color);
+        background-color: var(--button-background-color);
+        color: var(--third-color);
+      }
     }
   }
 

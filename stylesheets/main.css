@@ -5100,7 +5100,7 @@ a img {
 .map .content-area iframe {
   margin-top: 0;
 }
-.content-area .custom-btn {
+.content-area .custom-btn, .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   display: inline-block;
   background-color: #0083ba;
   border-color: #0083ba;
@@ -5120,51 +5120,52 @@ a img {
   text-decoration: none;
   border-radius: 6px;
 }
-.publicmode .content-area .custom-btn {
+.publicmode .content-area .custom-btn,
+.publicmode .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   cursor: pointer;
 }
-.site-header .content-area .custom-btn {
+.site-header .content-area .custom-btn, .site-header .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.site-header .content-area .custom-btn:first-child {
+.site-header .content-area .custom-btn:first-child, .site-header .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:first-child {
   margin-top: 0;
 }
-.site-header .content-area .custom-btn:last-child {
+.site-header .content-area .custom-btn:last-child, .site-header .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:last-child {
   margin-bottom: 0;
 }
-.dark-background .content-area .custom-btn {
+.dark-background .content-area .custom-btn, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   border: 2px solid #0083ba;
   background-color: #0083ba;
   color: #fff;
 }
-.light-background .content-area .custom-btn {
+.light-background .content-area .custom-btn, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   border: 2px solid #0083ba;
   background-color: #0083ba;
   color: #fff;
 }
-.dark-background .content-area .custom-btn-disabled, .dark-background .content-area .custom-btn.edy-buy-button-disabled, .light-background .content-area .custom-btn-disabled, .light-background .content-area .custom-btn.edy-buy-button-disabled {
+.dark-background .content-area .custom-btn-disabled, .dark-background .content-area .custom-btn.edy-buy-button-disabled, .light-background .content-area .custom-btn-disabled, .light-background .content-area .custom-btn.edy-buy-button-disabled, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled {
   background-color: transparent;
 }
-.dark-background .content-area .custom-btn-disabled, .dark-background .content-area .custom-btn-disabled:hover, .dark-background .content-area .custom-btn.edy-buy-button-disabled, .dark-background .content-area .custom-btn.edy-buy-button-disabled:hover, .light-background .content-area .custom-btn-disabled, .light-background .content-area .custom-btn-disabled:hover, .light-background .content-area .custom-btn.edy-buy-button-disabled, .light-background .content-area .custom-btn.edy-buy-button-disabled:hover {
+.dark-background .content-area .custom-btn-disabled, .dark-background .content-area .custom-btn-disabled:hover, .dark-background .content-area .custom-btn.edy-buy-button-disabled, .dark-background .content-area .custom-btn.edy-buy-button-disabled:hover, .light-background .content-area .custom-btn-disabled, .light-background .content-area .custom-btn-disabled:hover, .light-background .content-area .custom-btn.edy-buy-button-disabled, .light-background .content-area .custom-btn.edy-buy-button-disabled:hover, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled:hover, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled:hover, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled:hover, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled:hover {
   color: #999;
   cursor: default;
   border: 2px solid #999;
 }
-.dark-background .content-area .custom-btn-disabled:hover, .dark-background .content-area .custom-btn.edy-buy-button-disabled:hover, .light-background .content-area .custom-btn-disabled:hover, .light-background .content-area .custom-btn.edy-buy-button-disabled:hover {
+.dark-background .content-area .custom-btn-disabled:hover, .dark-background .content-area .custom-btn.edy-buy-button-disabled:hover, .light-background .content-area .custom-btn-disabled:hover, .light-background .content-area .custom-btn.edy-buy-button-disabled:hover, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled:hover, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled:hover, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn-disabled:hover, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn.edy-buy-button-disabled:hover {
   background-color: transparent;
 }
-.content-area .custom-btn:hover {
+.content-area .custom-btn:hover, .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   -webkit-transition: 500ms;
   -o-transition: 500ms;
   transition: 500ms;
 }
-.dark-background .content-area .custom-btn:hover {
+.dark-background .content-area .custom-btn:hover, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   border: 2px solid #015477;
   background-color: #015477;
   color: #fff;
 }
-.light-background .content-area .custom-btn:hover {
+.light-background .content-area .custom-btn:hover, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   border: 2px solid #015477;
   background-color: #015477;
   color: #fff;

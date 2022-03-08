@@ -579,7 +579,7 @@ body {
 .dark-background .content-area a {
   color: var(--third-color);
 }
-.content-area a.custom-btn:not(.custom-btn-disabled), .content-area div.custom-btn:not(.custom-btn-disabled) {
+.content-area a.custom-btn:not(.custom-btn-disabled), .content-area div.custom-btn:not(.custom-btn-disabled), .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn {
   padding: calc(var(--button-padding) - 22px) calc(var(--button-padding) - 10px);
   font-size: var(--button-font-size);
   border-color: var(--button-background-color);
@@ -590,15 +590,15 @@ body {
           text-decoration: var(--button-text-decoration);
   text-transform: var(--button-text-transform);
 }
-.content-area a.custom-btn:not(.custom-btn-disabled):hover, .content-area div.custom-btn:not(.custom-btn-disabled):hover {
+.content-area a.custom-btn:not(.custom-btn-disabled):hover, .content-area div.custom-btn:not(.custom-btn-disabled):hover, .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   opacity: .7;
 }
-.dark-background .content-area a.custom-btn:not(.custom-btn-disabled), .dark-background .content-area div.custom-btn:not(.custom-btn-disabled) {
+.dark-background .content-area a.custom-btn:not(.custom-btn-disabled), .dark-background .content-area a.custom-btn:not(.custom-btn-disabled):hover, .dark-background .content-area div.custom-btn:not(.custom-btn-disabled), .dark-background .content-area div.custom-btn:not(.custom-btn-disabled):hover, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn, .dark-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   border-color: var(--button-background-color);
   background-color: var(--button-background-color);
   color: var(--third-color);
 }
-.light-background .content-area a.custom-btn:not(.custom-btn-disabled), .light-background .content-area div.custom-btn:not(.custom-btn-disabled) {
+.light-background .content-area a.custom-btn:not(.custom-btn-disabled), .light-background .content-area a.custom-btn:not(.custom-btn-disabled):hover, .light-background .content-area div.custom-btn:not(.custom-btn-disabled), .light-background .content-area div.custom-btn:not(.custom-btn-disabled):hover, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn, .light-background .content-area .edy-product-widget-list .edy-product-widget-item-wrap .edy-product-widget-item .edy-product-widget-item-details-wrap .edy-product-widget-item-btn-wrap .edy-product-widget-item-btn:hover {
   border-color: var(--button-background-color);
   background-color: var(--button-background-color);
   color: var(--third-color);
