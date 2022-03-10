@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-{% include "template-variables" %}
+{%- assign product_page = true -%}
+{%- include "template-settings" -%}
+{%- include "template-variables" -%}
 
 <html class="{{ view_mode }} {{ language_flags_mode }} {{ language_names_mode }} {{ language_menu_mode }}" lang="{{ page.language_code }}" data-view-state="{{ view_mode }}">
 <head prefix="og: http://ogp.me/ns#">
@@ -25,7 +27,7 @@
 
 {% assign gallery_content_size = gallery_content_html | strip | size %}
 
-<body class="{% if sidebar_active %}common-page sidebar-active{% else %}sidebar-inactive{% endif %} item-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
+<body class="product-page {% if sidebar_active %}common-page sidebar-active{% else %}sidebar-inactive{% endif %} item-page{% if site.data.has_header_bg_color %} header-top-with-bg{% endif %}">
   {% include "template-svg-spritesheet" %}
 
   <div class="site-container">
@@ -33,8 +35,19 @@
     {% include "site-header" %}
     {% include "common-page-variables" %}
 
-    <div class="page-body">
-      <div class="js-background-type {{ body_bg_type }}">
+    <div class="page-body js-bg-picker-area">
+      <div class="js-background-type {{ product_body_bg_type }}">
+        {% if editmode %}
+           <button class="voog-bg-picker-btn js-background-settings" 
+            data-bg-key="{{ product_body_bg_key }}" 
+            data-bg-picture-boolean="false" 
+            data-bg-default-image-color="rgb(255, 255, 255)" 
+            data-bg-color="{{ product_body_bg_color }}" 
+            data-bg-color-data="{{ product_body_bg_color_data_str | escape }}">
+          </button>
+        {% endif %}
+        <div class="background-color js-background-color"></div>
+        
         <main class="page-content" role="main">
           <div class="main-inner-row content-full">
             <div class="main-content top-row">
@@ -57,7 +70,7 @@
                             {%- if product.image != blank -%}
                               <div class="top-inner aspect-ratio-inner product-page-image">
                                 {%- assign image_class = "item-image not-cropped" -%}
-                                {% image product.image target_width: "1280" class: image_class loading: "lazy" %}
+                                {% image product.image target_width: "600" class: image_class loading: "lazy" %}
                               </div>
                             {%- endif -%}
                           </div>
@@ -121,7 +134,7 @@
   {% include "menu-mobile" %}
   {% include "site-signout" %}
   {% include "site-javascripts" %}
-  {% include "template-tools" with "item_list_page" %}
+  {% include "template-tools" with "product_page" %}
 
   <script>
     if (site) {
