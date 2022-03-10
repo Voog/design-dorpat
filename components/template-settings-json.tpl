@@ -9,5 +9,5 @@
       "value": {}
     }
   },
-  "version": "dorpat-1.1.1"
+  "version": "dorpat-1.1.2"
 }
