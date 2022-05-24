@@ -55,24 +55,26 @@
             <button class="type-btn js-type-btn{% if photo_article %} is-active{% endif %}" data-article-type="photo-article">Photo</button>
           </div>
         {% else %}
-          <button class="voog-bg-picker-btn js-background-settings" 
+          <button class="voog-bg-picker-btn js-background-settings"
             data-bg-key="{% if product_page %}{{ header_bg_key }}{% else %}header_bg{% endif %}"
-            data-bg-picture-boolean="true" 
-            data-bg-default-image-color="{% if front_page %}rgb(142, 156, 169){% else %}rgb(41, 42, 39){% endif %}" 
-            data-target-width="600" data-bg-image="{{ header_bg_image }}" 
-            data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}" 
-            data-bg-color="{{ header_bg_color | escape_once }}" 
+            data-bg-picture-boolean="true"
+            data-bg-default-image-color="{% if front_page %}rgb(142, 156, 169){% else %}rgb(41, 42, 39){% endif %}"
+            data-target-width="600" data-bg-image="{{ header_bg_image }}"
+            data-bg-image-sizes="{{ header_bg_image_sizes_str | escape }}"
+            data-bg-color="{{ header_bg_color | escape_once }}"
             data-bg-color-data="{{ header_bg_color_data_str | escape }}">
           </button>
         {% endif %}
       {% endif %}
 
       <div class="header-bottom-inner{% unless render_header_top %} header-bottom-only{% endunless %}">
+        {%- assign content_header_title = "title" | lce -%}
+        {%- assign content_header_title_tooltip = "content_tooltip_current_page_title" | lce -%}
 
         {% if front_page %}
           <div class="wrap">
-            <div class="header-body content-area" {{ edy_intro_edit_text }}>
-              {% content name="header" %}
+            <div class="header-body content-area">
+              {% content name="header" title=content_header_title title_tooltip=content_header_title_tooltip %}
             </div>
             <div class="header-logo-wrap {% if editmode != true and feature_image_5 == nil %} empty-hidden{% endif %}">
               <div class="header-logo">
@@ -107,8 +109,15 @@
           </div>
         {% else %}
           <div class="wrap">
-            <div class="header-body content-area" {{ edy_intro_edit_text }}>
-              {% contentblock name="header" publish_default_content="true" %}<h1 style="text-align: center;">{{ page.title }}</h1>{% endcontentblock %}
+            <div class="header-body content-area">
+              {% contentblock
+                name="header"
+                publish_default_content="true"
+                title=content_header_title
+                title_tooltip=content_header_title_tooltip
+              %}
+                <h1 style="text-align: center;">{{ page.title }}</h1>
+              {% endcontentblock %}
             </div>
           </div>
         {% endif %}

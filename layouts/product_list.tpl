@@ -34,7 +34,11 @@
               <div class="main-inner-row content-full">
                 <div class="main-content top-row">
                   <div class="wrap">
-                      <div class="inner no-bottom-padding content-body content-area" data-search-indexing-allowed="true">{% content %}</div>
+                    <div class="inner no-bottom-padding content-body content-area" data-search-indexing-allowed="true">
+                      {%- assign content_default_title = "content" | lce -%}
+                      {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                      {% content title=content_default_title title_tooltip=content_default_title_tooltip %}
+                    </div>
 
                     <div class="inner">
                       {% include "menu-breadcrumbs" %}

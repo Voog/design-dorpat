@@ -33,7 +33,7 @@
       {% if editmode %}<button class="voog-bg-picker-btn js-background-settings" data-bg-key="footer_bg" data-bg-picture-boolean="false" data-bg-default-image-color="rgb(255, 255, 255)" data-bg-color="{{ footer_bg_color }}" data-bg-color-data="{{ footer_bg_color_data_str | escape }}"></button>{% endif %}
       <div class="footer-social-wrap">
         <div class="footer-social content-area">
-        {% xcontent name="footer-social" %}
+          {% xcontent name="footer-social" %}
         </div>
       </div>
       <div class="footer-content-wrap">
@@ -51,7 +51,11 @@
           {% include "footer-menu" %}
         </div>
         <div class="footer-contact-wrap">
-          <div class="footer-contact content-area">{% xcontent name="footer" %}</div>
+          <div class="footer-contact content-area">
+            {%- assign footer_content_title = "footer" | lce -%}
+            {%- assign footer_content_title_tooltip = "content_tooltip_all_pages_same_language" | lce -%}
+            {% xcontent name="footer" title_tooltip=footer_content_title_tooltip %}
+          </div>
         </div>
       </div>
     </div>

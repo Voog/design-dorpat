@@ -1604,6 +1604,9 @@ a img {
 .product-content .content-gallery {
   margin: 32px 0;
 }
+.product-content .product-cross-page-info {
+  margin-bottom: 32px;
+}
 
 .flex-col {
   width: 100%;
