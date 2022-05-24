@@ -4704,10 +4704,12 @@ a img {
 }
 .site-footer .footer-body .footer-content-wrap .footer-contact-wrap .footer-contact {
   padding: 0 24px;
+  min-width: 300px;
 }
 @media screen and (max-width: 640px) {
   .site-footer .footer-body .footer-content-wrap .footer-contact-wrap .footer-contact {
     padding-right: 32px;
+    min-width: calc(100% - 108px);
   }
 }
 .site-footer .footer-body .footer-content-wrap .footer-menu-wrap {
