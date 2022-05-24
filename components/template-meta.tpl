@@ -2,7 +2,7 @@
 {% comment %}https://developers.facebook.com/tools/debug - Debug after each modification{% endcomment %}
 {% if site.data.fb_admin %}<meta property="fb:admins" content="{{ site.data.fb_admin }}">{% endif %}
 
-{%- if article -%} 
+{%- if article -%}
   {%- assign og_obj = article -%}
 {%- elsif product -%}
   {%- assign og_obj = product -%}
@@ -27,8 +27,8 @@
     {% endfor %}
   {% endif %}
 {% else %}
-  {% if og_obj.image? %}
-    {% assign og_image = og_obj.image.for-width-1200 %}
+  {% if og_obj.og_image? %}
+    {% assign og_image = og_obj.og_image.for-width-1200 %}
   {% endif %}
 {% endif %}
 

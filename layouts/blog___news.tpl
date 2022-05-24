@@ -28,7 +28,11 @@
               <div class="main-content">
                 <div class="wrap">
                   <div class="inner">
-                    <div class="blog-intro-content content-area" data-search-indexing-allowed="true">{% content %}</div>
+                    <div class="blog-intro-content content-area" data-search-indexing-allowed="true">
+                      {%- assign content_default_title = "content" | lce -%}
+                      {%- assign content_default_title_tooltip = "content_tooltip_specific_page" | lce -%}
+                      {% content title=content_default_title title_tooltip=content_default_title_tooltip %}
+                    </div>
 
                     {% include "blog-news-tags" %}
 
