@@ -56,8 +56,9 @@ module.exports = function(grunt) {
     sass: {
       build_main: {
         options: {
+          implementation: require('sass'),
           style: 'expanded',
-          sourcemap: 'none'
+          sourceMap: false
         },
         files: [{
           expand: true,
@@ -71,8 +72,9 @@ module.exports = function(grunt) {
       // Builds custom style components to temporary folder.
       build_custom_styles: {
         options: {
+          implementation: require('sass'),
           style: 'expanded',
-          sourcemap: 'none'
+          sourceMap: false
         },
         files: [{
           expand: true,
@@ -266,17 +268,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-imagemin');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-exec');
-  grunt.loadNpmTasks('grunt-modernizr-builder');
-  grunt.loadNpmTasks('grunt-postcss');
+  require('load-grunt-tasks')(grunt);
 
   grunt.registerTask('default', ['clean:reset', 'modernizr_builder', 'concat', 'uglify', 'sass', 'postcss:main_styles', 'cssmin', 'imagemin', 'postcss:custom_styles', 'copy', 'clean:remove']);
 
