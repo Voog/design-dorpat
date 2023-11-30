@@ -103,8 +103,10 @@
 .item-top {
   @include aspect-ratio(1, 1);
 
-  [data-view-state="editmode"] & {
-    cursor: pointer;
+  &:not(.without-pointer) {
+    [data-view-state="editmode"] & {
+      cursor: pointer;
+    }
   }
 
   &:hover {
