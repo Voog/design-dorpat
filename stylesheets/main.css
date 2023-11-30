@@ -1593,7 +1593,7 @@ a img {
   margin: 20px 0;
 }
 
-.product-content .without-image .item-top {
+.product-content .without-images .item-top {
   background-image: url("../assets/ico-placeholder.svg");
   background-size: 40px;
   background-repeat: no-repeat;
@@ -4204,7 +4204,7 @@ a img {
   bottom: 0;
   left: 0;
 }
-[data-view-state=editmode] .item-top {
+[data-view-state=editmode] .item-top:not(.without-pointer) {
   cursor: pointer;
 }
 .item-top:hover .btn,
